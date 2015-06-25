@@ -94,6 +94,7 @@ body{
 	text-align: center;
 	color: rgba(255,255,255,0.6);
 	padding-top: 50px;
+	width: 100%;
 }
 .m-about{
 	margin: auto;
