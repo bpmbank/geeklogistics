@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}订单查询{% endblock %}
+
+{% block content %}
+<style type="text/css">
+	.order-form{
+		width: 800px;
+		margin: 40px auto;
+		margin-left: 0px;
+	}
+</style>
+<div class="m-banner"></div>
+<div class="container m-main">
+	<h3 style="text-align:center;margin-top:40px;">订单号查询</h3>
+
+	<form class="form-horizontal order-form">
+	  <div class="form-group">
+	    <label for="inputEmail3" class="col-sm-2 control-label">订单号</label>
+	    <div class="col-sm-8">
+	      <input type="email" class="form-control" id="inputEmail3" placeholder="14019870000">
+	    </div>
+	  	<button type="submit" class="btn btn-primary col-sm-2">查询</button>
+
+	  </div>
+	 </form>
+
+	 <div style="width:800px;margin:10px auto;border-top:solid 1px #eee;">
+	 	<p>极客冷链配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。此服务在满足生鲜业态个性化、定制化需求的同时，使消费者也获得一种高品质的快递体验。黑狗启用了包括优先配载、优先派送、直发操作、特别包装等等环节的运作模式。对于商户而言，快递的品质可增强其产品优势；对于消费者而言，“快”已经不是消费者对快递的唯一考量，品质快递才是更需要的。</p>
+	 </div>
+</div>
+{% endblock %}

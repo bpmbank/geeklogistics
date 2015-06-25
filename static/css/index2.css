@@ -1,0 +1,64 @@
+/*main：#85B6E2*/
+
+.carousel-wrapper{
+	width: 960px;
+	padding: 10px;
+	border-radius: 5px;
+	background: rgba(255,255,255,0.5);
+	margin: auto;
+	margin-bottom: 10px;
+
+}
+.carousel{
+	width: 940px;
+}
+.carousel-inner img{
+  margin: auto;
+  width: 100%;
+}
+.m-intro{
+	background: white;
+	padding: 10px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.m-news{
+	background:  #eee;
+	/*margin-top: 30px;*/
+	padding: 20px 10px;
+	text-align: center;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	color: #666;
+	text-align: left;
+}
+.icon{
+  background: transparent url('imgs/sprites-home.png') no-repeat;
+  display: block;
+  width: 180px;
+  height: 126px;
+  /*position: absolute;*/
+  z-index: 2;
+  /*top: -18px;*/
+  /*left: 20px;*/
+  margin: auto;
+  margin-bottom: -15px;
+
+}
+.cold{
+	background-position: -180px 0;
+}
+.transport{
+	background-position: -360px 0;
+}
+.rental{
+	background-position: -180px -126px;
+}
+.m-intro h4{
+	text-align: center;
+}
+/*.m-intro .col-md-4{
+	box-shadow: 5px 2px 5px #EFEFEF;
+}
+*/

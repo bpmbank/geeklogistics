@@ -1,0 +1,119 @@
+.cf:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+
+.m-navbar-wrapper{
+	/*background: rgba(118, 172, 219, 0.9);*/
+	/*background: rgba(169, 213, 250, 0.6);*/
+/*	background:linear-gradient(rgba(125, 185, 232,0.5) 0%, rgba(41, 137, 216,0.5) 50%, rgba(30, 87, 153,0.5) 100%);
+	color: white;
+	box-shadow: 0px 2px 5px #888888;
+*/	
+	background: linear-gradient(rgba(195, 215, 242, 1) 0%, rgba(41, 137, 216,0.5) 80%, rgba(30, 87, 153, 0.64) 100%);
+  	color: white;
+  	box-shadow: 0px 1px 6px #3D3D3D;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+}
+.logo{
+	width: 150px;
+	display: block;
+	float: left;
+}
+.m-navbar{
+	width: 960px;
+	/*height: 80px;*/
+	line-height: 60px;
+	padding: 10px;
+	margin: auto;
+}
+.m-navs{
+	width: 780px;
+	margin-left: 180px;
+}
+.m-navbar .m-nav {
+	color: white;
+	width: 120px;
+	display: inline-block;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 500;
+}
+.m-navbar .m-nav:hover, .m-navbar .m-nav.current{
+	background: rgba(0,0,0,.1);
+	border-radius: 5px;
+	text-decoration: none;
+	/*color: rgba(255,255,255,0.7);*/
+}
+.carousel-inner img{
+  margin: auto;
+  width: 100%;
+}
+.m-intro{
+	width:960px;
+	margin:auto;
+	margin-top: 20px;
+}
+.icon{
+  background: transparent url('imgs/sprites-home.png') no-repeat;
+  display: block;
+  width: 180px;
+  height: 126px;
+  /*position: absolute;*/
+  z-index: 2;
+  /*top: -18px;*/
+  /*left: 20px;*/
+  margin: auto;
+  margin-bottom: -15px;
+
+}
+.cold{
+	background-position: -180px 0;
+}
+.transport{
+	background-position: -360px 0;
+}
+.rental{
+	background-position: -180px -126px;
+}
+.m-intro h4{
+	text-align: center;
+}
+.m-intro .col-md-4{
+	box-shadow: 5px 2px 5px #EFEFEF;
+}
+.m-about-wrapper{
+	background:  #333;
+	/*margin-top: 20px;*/
+	padding: 10px 0;
+	text-align: center;
+	color: rgba(255,255,255,0.6);
+}
+.m-about, .m-news{
+	margin: auto;
+	color: white;
+	width: 960px;
+}
+.m-about a{
+	color: rgba(255,255,255,0.6);
+}
+
+.m-news-wrapper{
+	background:  #eee;
+	margin-top: 30px;
+	padding: 20px 0;
+	text-align: center;
+}
+.m-news{
+	color: #666;
+	text-align: left;
+}

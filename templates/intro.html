@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}极客冷链配{% endblock %}
+
+{% block content %}
+<style type="text/css">
+.intro-nav{
+	padding: 10px 0;
+}
+.intro-nav li{
+	font-size: 15px;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+.intro-content{
+	/*padding: 10px;*/
+	margin: 10px 0;
+}
+.intro{
+	text-align: center;
+
+}
+
+.intro .cover{
+	margin-bottom: 20px;
+}
+.intro p{
+	text-indent: 2em;
+	text-align: left;
+}
+.intro h4{
+	margin-top: 0;
+	margin-bottom: 30px;
+	text-align: left;
+}
+.intro img{
+	margin-bottom: 20px;
+}
+
+.intro-nav .active{
+	font-weight: 700;
+	/*color: #5A9AD3;*/
+}
+</style>
+<div class="m-banner"></div>
+<div class="container m-main">
+	<div class="col-md-3" role="complementary">
+		<ul class="nav intro-nav" id="j-intro-nav">
+			<li class="active" data-intro="intro1">极客简介</li>
+			<li data-intro="intro2">生鲜电商托管</li>
+			<li data-intro="intro3">冷链快递服务</li>
+			<li data-intro="intro4">动态仓储</li>
+			<li data-intro="intro5">冷链食品包装</li>
+		</ul>
+	</div>
+	<div class="col-md-9 intro-content" role="main">
+		<div id="intro1" class="intro">
+			<h4>极客简介</h4>
+			<img class="cover" src="/static/images/logo.png">
+			<p>极客冷链配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。此服务在满足生鲜业态个性化、定制化需求的同时，使消费者也获得一种高品质的快递体验。黑狗启用了包括优先配载、优先派送、直发操作、特别包装等等环节的运作模式。对于商户而言，快递的品质可增强其产品优势；对于消费者而言，“快”已经不是消费者对快递的唯一考量，品质快递才是更需要的。</p>
+			<p>为了保证生鲜类快件的时效，我们安排专人跟进、监控生鲜速配快件，研发配套适用的系统工具，配备专项理赔。我们在中转环节会设置专门生鲜品速配快件的操作区域，以便快件得到优先配载，在派送环节要求收派员优先派送生鲜速配快件。</p>
+		</div>
+		<div id="intro2" class="intro m-hide">
+			<h4>生鲜电商托管</h4>
+			<img src="/static/images/process.png">
+			<p>极客冷链配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。此服务在满足生鲜业态个性化、定制化需求的同时，使消费者也获得一种高品质的快递体验。黑狗启用了包括优先配载、优先派送、直发操作、特别包装等等环节的运作模式。对于商户而言，快递的品质可增强其产品优势；对于消费者而言，“快”已经不是消费者对快递的唯一考量，品质快递才是更需要的。</p>
+			<p>为了保证生鲜类快件的时效，我们安排专人跟进、监控生鲜速配快件，研发配套适用的系统工具，配备专项理赔。我们在中转环节会设置专门生鲜品速配快件的操作区域，以便快件得到优先配载，在派送环节要求收派员优先派送生鲜速配快件。</p>
+		</div>
+		<div id="intro3" class="intro m-hide">
+			<h4>冷链快递服务</h4>
+			<img src="/static/images/store.jpg">
+			<p>冷链快递服务是一项征对生鲜食品类商户的专属、专享服务，此服务在满足生鲜业态个性化、定制化需求的同时，使消费者也获得一种高品质的快递体验。黑狗启用了包括优先配载、优先派送、直发操作、物别包装等等环节的运作模式。对于商户而言，快递的品质可增强其产品优势；对于消费者而言，“快”已经不是消费者对快递的唯一考量，品质快递才是更需要的。</p>
+			<p>为了保证生鲜类快件的时效，我们安排专人跟进、监控生鲜速配快件，研发配套适用的系统工具，配备专项理赔。我们在中转环节会设置专门生鲜品速配快件的操作区域，以便快件得到优先配载，在派送环节要求收派员优先派送生鲜速配快件。</p>
+		</div>
+
+		<div id="intro4" class="intro m-hide">
+			<h4>动态仓储</h4>
+			<img src="/static/images/dynamic.jpg">
+			<p>我们凭借强大的自建标准化仓库优势，根据客户需求，在以前静态仓储的模式下，推出动态仓储服务，可根据客户需求按流量提供仓储服务，且依靠强大的系统和设备优势，对货物从进库到出库所有环节对温度进行程的监控管理，且可与客户的现有业务系统进行联网，实现数据的动态共享。</p>
+		</div>
+
+		<div id="intro5" class="intro m-hide">
+			<h4>冷链食品包装</h4>
+			<img src="/static/images/package.jpg">
+			<p>为了更好的服务于客户，我们更加注重物流过程中的增值服务。作为专业的第三方食品物流服务供应商，百富达可以提供优质安全的食品级和非食品级产品包装。我们所有的食品包装QS认证以及食品级无尘车间及设备，使得我们的客户从其包装产品定制到包装设计再到制造成品全过程都可以一站式无缝解决，最大化的简化物流操作流程、降低人力与物流成本。</p>
+		</div>
+
+
+	</div>
+
+</div>
+{% endblock %}
