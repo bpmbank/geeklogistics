@@ -7,7 +7,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^hello/$', 'geeklogistics.views.hello', name='hello'),
     url(r'^$', 'geeklogistics.views.home', name='home'),
     url(r'^coop/$', 'geeklogistics.views.coop', name='coop'),
     url(r'^list/$', 'geeklogistics.views.list', name='list'),
