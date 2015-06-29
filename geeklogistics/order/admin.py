@@ -9,3 +9,4 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ('-order_id',) #降序
 
 admin.site.register(Order, OrderAdmin)
+
