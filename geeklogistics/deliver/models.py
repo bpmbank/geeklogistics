@@ -9,8 +9,8 @@ class Dispatcher(models.Model):
 	current_location = models.CharField('当前位置id', max_length=30)
 	phone = models.CharField('手机', max_length=30)
 	photo = models.CharField('照片', max_length=60)
-	ctime = models.DateField('创建时间', max_length=30)
-	utime = models.DateField('最新修改时间', max_length=30)
+	ctime = models.DateTimeField('创建时间', max_length=30)
+	utime = models.DateTimeField('最新修改时间', max_length=30)
 	status = models.CharField('状态', max_length=3)
 
 	class Meta:

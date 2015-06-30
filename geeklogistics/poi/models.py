@@ -9,8 +9,8 @@ class Merchant(models.Model):
 	address = models.CharField('商家地址', max_length=50)
 	tel = models.CharField('商家电话', max_length=30)
 	logo = models.CharField('商家图标', max_length=50)
-	ctime = models.DateField('创建时间', max_length=30)
-	utime = models.DateField('最新修改时间', max_length=30)
+	ctime = models.DateTimeField('创建时间', max_length=30)
+	utime = models.DateTimeField('最新修改时间', max_length=30)
 	status = models.CharField('状态', max_length=3)
 
 	class Meta:
