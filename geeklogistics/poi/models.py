@@ -18,4 +18,4 @@ class Merchant(models.Model):
 		verbose_name_plural = '商家'
 
 	def __unicode__(self):
-		return self.id
+		return self.name
