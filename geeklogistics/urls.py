@@ -13,7 +13,9 @@ urlpatterns = patterns('',
     url(r'^intro/$', 'geeklogistics.views.intro', name='intro'),
     url(r'^area/$', 'geeklogistics.views.area', name='area'),
     url(r'^order/$', 'geeklogistics.views.order', name='order'),
+    url(r'^order/detail$', 'geeklogistics.views.order_detail', name='order_detail'),
     url(r'^custom/$', 'geeklogistics.views.custom', name='custom'),
+    url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
 
     # url(r'^blog/', include('blog.urls')),
 

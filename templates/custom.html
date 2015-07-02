@@ -14,28 +14,12 @@
 <div class="container m-main">
 	<h3>我们的客户</h3>
 	<ul class="list-unstyled logo-list cf">
+		{% for customer in customer_list %}
 		<li>
-			<img src="/static/images/logo/1.jpg">
-			<p>星巴克</p>
+			<img src="/{{customer.poi.logo}}">
+			<p>{{customer.poi.name}}</p>
 		</li>
-		<li>
-			<img src="/static/images/logo/2.jpg">
-			<p>星巴克</p>
-		</li>
-		<li>
-			<img src="/static/images/logo/3.jpg">
-			<p>星巴克</p>
-		</li>
-		<li>
-			<img src="/static/images/logo/4.jpg">
-			<p>星巴克</p>
-		</li>
-		<li>
-			<img src="/static/images/logo/5.jpg">
-			<p>星巴克</p>
-		</li>
-
-
+		{% endfor %}
 	</ul>
 </div>
 {% endblock %}

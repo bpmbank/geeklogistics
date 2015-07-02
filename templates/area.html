@@ -4,7 +4,7 @@
 
 {% block content %}
 <style type="text/css">
-#allmap {height: 700px;overflow: hidden;margin:0;font-family:"微软雅黑";}
+#allmap {height: 600px;overflow: hidden;margin:0;font-family:"微软雅黑";}
 .m-main{
 	width: 920px;
   padding: 10px 30px;
@@ -20,11 +20,13 @@
 			<div id="allmap" class="col-md-9"></div>
 			<div class="col-md-3">
 				<ul class="list-unstyled">
+					{% for a in area_list %}
 					<li>
-						<h4>大兴站</h4>
-						<p><strong>地址：</strong>北京市大兴区黄村镇芦求路周村中街东路临11号</p>
-						<p><strong>服务电话</strong>：400-110-0000</p>
+						<h4>{{a.name}}</h4>
+						<p><strong>地址：</strong>{{a.address}}</p>
+						<p><strong>服务电话</strong>：{{a.tel}}</p>
 					</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>

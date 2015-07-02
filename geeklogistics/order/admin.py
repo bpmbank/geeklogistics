@@ -5,7 +5,7 @@ from geeklogistics.poi.models import Merchant
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('id', 'order_id', 'dispatcher_name', 'poi_name', 'current_location')
+    list_display = ('id', 'order_id', 'dispatcher_name', 'poi_name', 'start_time', 'current_location')
     list_filter = ('ctime',) 
     search_fields = ('order_id', 'deliver_id') #刷新浏览器，你会在页面顶端看到一个查询栏。 添加了一个根据姓名查询的查询框。
     ordering = ('-order_id',) #降序

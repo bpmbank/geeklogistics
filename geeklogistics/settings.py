@@ -77,7 +77,7 @@ DATABASES = {
         'PASSWORD': '', #你的数据库密码
         'HOST': '', #你的数据库主机，留空默认为localhost
         'PORT': '3306', #你的数据库端口
-        'OPTIONS': {'charset': 'utf8mb4'},
+        # 'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
 
@@ -133,5 +133,7 @@ STATICFILES_DIRS = (
     ("js", os.path.join(STATIC_ROOT,'js')),
     ("images", os.path.join(STATIC_ROOT,'images')),
     ("bootstrap", os.path.join(STATIC_ROOT,'bootstrap')),
+    ("ckeditor", os.path.join(STATIC_ROOT,'ckeditor')),
+
 )
 STATIC_URL = '/static/'
