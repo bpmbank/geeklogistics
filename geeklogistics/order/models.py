@@ -23,5 +23,12 @@ class Order(models.Model):
 		verbose_name = '订单'
 		verbose_name_plural = '订单'
 
+	def as_json(self):
+		return dict(
+			order_id=self.order_id,deliver_id=self.deliver_id, 
+			poi=self.poi.name, dispatcher=self.dispatcher.name, 
+			start_time=self.start_time.isoformat(), end_time=self.end_time.isoformat(), 
+			current_location=self.current_location.name)
+
 	def __unicode__(self):
 		return self.order_id

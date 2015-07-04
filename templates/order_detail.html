@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}我的订单{% endblock %}
+
+{% block content %}
+<div class="m-banner"></div>
+<div class="container m-main">
+	<h3>订单详情</h3>
+	<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>订单编号</th>
+          <th>配送编号</th>
+          <th>开始配送时间</th>
+          <th>配送员</th>
+          <th>当前配送位置</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12345678</td>
+          <td>1401111111111</td>
+          <td>2015-06-25 12:00:00</td>
+          <td>morry</td>
+          <td>大兴站</td>
+        </tr> 
+    </tbody>
+    </table>
+</div>
+{% endblock %}

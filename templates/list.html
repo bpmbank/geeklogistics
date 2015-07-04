@@ -6,7 +6,8 @@
 <div class="m-banner"></div>
 <div class="container m-main">
 	<h3>我的订单</h3>
-	<table class="table table-striped">
+  {% if reminder == '' %}
+  	<table class="table table-striped">
       <thead>
         <tr>
           <th>#</th>
@@ -18,56 +19,20 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>12345678</td>
-          <td>1401111111111</td>
-          <td>2015-06-25 12:00:00</td>
-          <td>morry</td>
-          <td>大兴站</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>6579303033</td>
-          <td>1401111111111</td>
-          <td>2015-06-25 12:00:00</td>
-          <td>morry</td>
-          <td>大兴站</td>
-        </tr>   
-        <tr>
-          <th scope="row">2</th>
-          <td>6579303033</td>
-          <td>1401111111111</td>
-          <td>2015-06-25 12:00:00</td>
-          <td>morry</td>
-          <td>大兴站</td>
-        </tr>   
-        <tr>
-          <th scope="row">2</th>
-          <td>6579303033</td>
-          <td>1401111111111</td>
-          <td>2015-06-25 12:00:00</td>
-          <td>morry</td>
-          <td>大兴站</td>
-        </tr>   
-        <tr>
-          <th scope="row">2</th>
-          <td>6579303033</td>
-          <td>1401111111111</td>
-          <td>2015-06-25 12:00:00</td>
-          <td>morry</td>
-          <td>大兴站</td>
-        </tr>   
-        <tr>
-          <th scope="row">2</th>
-          <td>6579303033</td>
-          <td>1401111111111</td>
-          <td>2015-06-25 12:00:00</td>
-          <td>morry</td>
-          <td>大兴站</td>
-        </tr>   
-
-    </tbody>
+        {% for order in order_list%}
+          <tr>
+            <th scope="row">{{order.index}}</th>
+            <td>{{order.order_id}}</td>
+            <td>{{order.deliver_id}}</td>
+            <td>{{order.start_time}}</td>
+            <td>{{order.dispatcher.name}}</td>
+            <td>{{order.current_location.name}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
     </table>
+  {% else %}
+    <p>{{reminder}}</p>
+  {% endif %}
 </div>
 {% endblock %}

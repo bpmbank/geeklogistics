@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}配送范围{% endblock %}
+
+{% block content %}
+<style type="text/css">
+#allmap {height: 700px;overflow: hidden;margin:0;font-family:"微软雅黑";}
+.m-main{
+	width: 920px;
+  padding: 10px 30px;
+}
+</style>
+	<div class="m-banner"></div>
+	<div class="container m-main">
+		<div class="row">
+			<h3>{{news.title}}</h3>
+		</div>
+		{% autoescape off %}
+		<div class="row">
+			{{news.content}}
+		</div>
+		{% endautoescape %}
+	</div>
+</body>
+</html>
+{% endblock %}
