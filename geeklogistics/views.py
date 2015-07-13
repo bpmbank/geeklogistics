@@ -1,16 +1,17 @@
 #-*- coding:utf-8 -*-
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from geeklogistics.station.models import Station
 from geeklogistics.poi.models import Merchant, Show
 from geeklogistics.news.models import News
-from geeklogistics.order.models import Order
+from geeklogistics.order.models import Order, OrderForm
 
 import json  
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
+from django.template import RequestContext
 
 def home(request):
 	news_list = News.objects.all()
@@ -91,3 +92,22 @@ def poi_login(request):
 def order_detail(request, deliver_id):
 	order = Order.objects.get(deliver_id=deliver_id)
 	return render_to_response('order_detail.html', {'current_url': 'order', 'order': order})
+
+@csrf_exempt
+def order_new(request):
+	if request.method == 'POST': # 如果表单被提交
+		form = OrderForm(request.POST) # 获取Post表单数据
+		if form.is_valid(): # 验证表单
+			detail = form.save()
+			print detail.id
+			detail_id = detail.id
+			order = Order(order_detail_id=detail_id)
+			order.save()
+			return HttpResponseRedirect('/') # 跳转
+			# return render_to_response('send.html', {'form': form,})
+			# return render_to_response('send.html', {'form': form,}, context_instance=RequestContext(request))
+		else:
+			return render_to_response('send.html', {'form': form,}, context_instance=RequestContext(request))
+	else:
+		form = OrderForm() #获得表单对象
+		return render_to_response('send.html', {'form': form,})

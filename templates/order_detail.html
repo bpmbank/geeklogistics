@@ -3,28 +3,124 @@
 {% block title %}我的订单{% endblock %}
 
 {% block content %}
+<style type="text/css">
+  h3{
+    text-align: center;
+  }
+  .fl_right {
+    float: right;
+  }
+  .position_dots{ margin-top: 10px; text-align: center; }
+  .position_circles{ display: inline-block; text-align: center; }
+  .position_circles .position_circle{ width: 20px; height: 20px; border-radius: 50%; background: none; border: 1px solid #85B6E2; display: block; margin: 0 auto; margin-bottom: 5px; }
+  .position_circles .position_circle.complete{ background: #85B6E2; }
+  .position_circles p{ font-size: 12px; }
+
+</style>
 <div class="m-banner"></div>
 <div class="container m-main">
 	<h3>订单详情</h3>
-	<table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>订单编号</th>
-          <th>配送编号</th>
-          <th>开始配送时间</th>
-          <th>配送员</th>
-          <th>当前配送位置</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>12345678</td>
-          <td>1401111111111</td>
-          <td>2015-06-25 12:00:00</td>
-          <td>morry</td>
-          <td>大兴站</td>
-        </tr> 
-    </tbody>
-    </table>
+    <div class="row">
+      <div>商家信息</div>
+      <div class="col-xs-12">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="col-xs-12">
+              <strong>订单编号:</strong> <span class="">12312</span>
+            </div>          
+          </li>
+          <li class="list-group-item clearfix">
+            <div class="col-xs-6">
+              <strong>商家名称:</strong> <span class="">12312</span>
+            </div>
+            <div class="col-xs-6">
+              <strong>商家电话:</strong> <span class="">12312</span>
+            </div> 
+          </li>
+          <li class="list-group-item clearfix">
+            <div class="col-xs-6">
+              <strong>商家店址:</strong> <span class="">12312</span>
+            </div>
+            <div class="col-xs-6">
+              <strong>货物名称:</strong> <span class="">12312</span>
+            </div> 
+          </li>
+          <li class="list-group-item">状态<span class="fl_right">已送达</span></li>
+          <li class="list-group-item">开始配送时间<span class="fl_right">2015年4月12日</span></li>
+          <li class="list-group-item">结束配送时间<span class="fl_right">2015年4月12日</span></li>
+          <li class="list-group-item">商家名称<span class="fl_right">小明</span></li> 
+          <li class="list-group-item">商家电话d<span class="fl_right">222233232</span></li> 
+          <li class="list-group-item">货物名称<span class="fl_right">西瓜</span></li> 
+          <li class="list-group-item">送达地址<span class="fl_right">湖北省武汉市武昌区</span></li>
+          <li class="list-group-item">配送费用<span class="fl_right">290元</span></li>  
+          <li class="list-group-item">当前位置
+            <div class="position_dots">
+              <div class="position_circles">
+                <div class="position_circle complete"></div>
+                <p>大兴站</p>
+              </div>
+              <div class="position_circles">
+                <div class="position_circle complete"></div>
+                <p>大兴站</p>
+              </div>
+              <div class="position_circles">
+                <div class="position_circle complete"></div>
+                <p>大兴站</p>
+              </div>
+              <div class="position_circles">
+                <div class="position_circle"></div>
+                <p>大兴站</p>
+              </div>
+              <div class="position_circles">
+                <div class="position_circle"></div>
+                <p>大兴站</p>
+              </div>                                          
+            </div>
+          </li>           
+        </ul>       
+      </div>
+    </div>
+    <div class="row">
+      <div>配送信息</div>
+      <div class="col-xs-12">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="col-xs-12">
+              <strong>配送编号:</strong> <span class="">12312</span>
+            </div>          
+          </li>
+          <li class="list-group-item">
+            <div class="col-xs-12">
+              <strong>配送状态:</strong> <span class="">12312</span>
+            </div>          
+          </li>
+          <li class="list-group-item clearfix">
+            <div class="col-xs-6">
+              <strong>开始配送时间:</strong> <span class="">12312</span>
+            </div>
+            <div class="col-xs-6">
+              <strong>结束配送时间:</strong> <span class="">12312</span>
+            </div> 
+          </li>
+          <li class="list-group-item clearfix">
+            <div class="col-xs-6">
+              <strong>送达地址:</strong> <span class="">12312</span>
+            </div>
+            <div class="col-xs-6">
+              <strong>收件人:</strong> <span class="">12312</span>
+            </div> 
+          </li>
+          <li class="list-group-item clearfix">
+            <div class="col-xs-6">
+              <strong>收件人姓名:</strong> <span class="">12312</span>
+            </div>
+            <div class="col-xs-6">
+              <strong>收件人电话:</strong> <span class="">12312</span>
+            </div> 
+          </li>
+
+        </ul>
+      </div>
+    </div>
 </div>
 {% endblock %}

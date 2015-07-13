@@ -9,7 +9,8 @@ class Merchant(models.Model):
 	name = models.CharField('商家名称', max_length=30)
 	address = models.CharField('商家地址', max_length=50)
 	tel = models.CharField('商家电话', max_length=30)
-	logo = models.ImageField('商家图标', max_length=50, upload_to='static/images/logo/')
+	logo = models.ImageField('商家图标', max_length=50, upload_to='static/images/logo/')  #不必填
+	poi_type = models.CharField('商家类型', max_length=3)  #关联表 int
 	ctime = models.DateTimeField('创建时间', max_length=30, default=datetime.now())
 	utime = models.DateTimeField('最新修改时间', max_length=30, default=datetime.now())
 	status = models.CharField('状态', max_length=3, default=0)

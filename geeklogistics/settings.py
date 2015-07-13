@@ -33,6 +33,12 @@ ALLOWED_HOSTS = []
 # Application definition
 from django.contrib import messages
 
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
+)
+
 INSTALLED_APPS = (
     'suit',
     'django.contrib.admin',
@@ -46,8 +52,13 @@ INSTALLED_APPS = (
     'geeklogistics.poi',
     'geeklogistics.news',
     'geeklogistics.station',
-
-
+    'geeklogistics.webapp',
+    'bootstrapform'
+    # 'django.template.loaders.filesystem.Loader',
+    # 'django.template.loaders.app_directories.Loader',
+    # 'django.template.loaders.eggs.Loader',
+    # 'django.template.loaders.app_directories.load_template_source',
+    # 'geeklogistics.templatetags',
 
 )
 
@@ -110,7 +121,7 @@ SUIT_CONFIG = {
 
 LANGUAGE_CODE = 'zh_CN'  
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -127,6 +138,7 @@ TEMPLATE_DIRS = (
 )
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
+M_MEDIA_SITE = 'static/m/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = (
     ("css", os.path.join(STATIC_ROOT,'css')),
