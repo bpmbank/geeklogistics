@@ -90,8 +90,16 @@ def poi_login(request):
 
 
 def order_detail(request, deliver_id):
+	try:
+		order = Order.objects.get(deliver_id=deliver_id)
+		reminder = ''
+		print orders
+		return render_to_response('order_detail.html', {'current_url': 'order', 'order': order})
+	except ObjectDoesNotExist:
+		reminder = "该订单不存在"
+		return render_to_response('order_detail.html', {'current_url': 'order_detail'})
+
 	order = Order.objects.get(deliver_id=deliver_id)
-	return render_to_response('order_detail.html', {'current_url': 'order', 'order': order})
 
 @csrf_exempt
 def order_new(request):
