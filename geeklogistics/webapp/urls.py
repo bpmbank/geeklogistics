@@ -14,7 +14,8 @@ urlpatterns = patterns('',
     url(r'^order/(?P<deliver_id>\d+)/$', 'geeklogistics.webapp.views.order_result', name='order_result'),
     url(r'^merchant/login/$', 'geeklogistics.webapp.views.merchant_login', name='merchant_login'),
     url(r'^dispatcher/login/$', 'geeklogistics.webapp.views.dispatcher_login', name='dispatcher_login'),
-
+    url(r'^list/(?P<dispatcher_id>\d+)/$', 'geeklogistics.webapp.views.dispatcher_orders', name='dispatcher_orders'),
+    url(r'^location/update$', 'geeklogistics.webapp.views.location_update', name='location_update'),
 
     # url(r'^blog/', include('blog.urls')),
 

@@ -38,36 +38,13 @@
 					  		<tr>					    	
 					  			<th><input type="checkbox" id="checkAll"></th><th>订单编号</th><th>当前站点</th>
 					  		</tr>
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>					    									    	
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>	
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>	
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>
-					  		<tr>
-					    		<td><input type="checkbox" name="subBox"></td><td>123123</td><td>大兴站</td>
-					    	</tr>					    						    						  					  
+					  		{% for order in order_list %}
+						  		<tr>
+						    		<td><input type="checkbox" name="subBox"  data-id="{{order.id}}"></td>
+						    		<td>{{order.deliver_id}}</td>
+						    		<td>{{order.current_location.name}}</td>
+						    	</tr>
+					    	{% endfor %}	  					  
 					  </table>
 					</div>
 				</div>
@@ -86,34 +63,14 @@
 		<div class="box container">
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="main_btn btn_place">大兴站</div>
-					<div class="main_btn btn_place">大兴站</div>
-					<div class="main_btn btn_place">大兴站</div>
-					<div class="main_btn btn_place">大兴站</div>
-					<div class="main_btn btn_place">大兴站</div>
+					{% for area in area_list %}
+						<div class="main_btn btn_place" data-id="{{area.id}}">{{area.name}}</div>
+					{% endfor %}
 				</div>
 			</div>
 		</div>
-		<div class="close_button"><img src="img/return_circle.png" /></div>
+		<div class="close_button"><img src="/m/static/img/return_circle.png" /></div>
 	</div>	
-	<script>
-		$("#checkAll").on('click', function(){
-			if(this.checked){ 
-				$("input[name='subBox']").each(function(){this.checked=true;}); 
-			}else{ 
-				$("input[name='subBox']").each(function(){this.checked=false;}); 
-			}
-		});
-		$("#change_position").on('click', function(){
-			$(".pop_up").show();
-		});
-		$(".btn_place").on('click', function(){
-			$(".pop_up").hide();
-		});
-		$(".close_button").on('click', function(){
-			$(".pop_up").hide();
-		});
-	</script>
 {% endblock %}
 
 
