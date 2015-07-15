@@ -34,7 +34,7 @@
 	text-align: left;
 }
 .icon{
-  background: transparent url('imgs/sprites-home.png') no-repeat;
+  background: transparent url('http://morry.oss-cn-beijing.aliyuncs.com/geek/sprites-home.png') no-repeat;
   display: block;
   width: 180px;
   height: 126px;
@@ -53,7 +53,7 @@
 	background-position: -360px 0;
 }
 .rental{
-	background-position: -180px -126px;
+	background-position: 0px 0px;
 }
 .m-intro h4{
 	text-align: center;
