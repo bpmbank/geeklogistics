@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'geeklogistics.views.home', name='home'),
     url(r'^coop/$', 'geeklogistics.views.coop', name='coop'),
+    url(r'^poi/apply/$', 'geeklogistics.views.poi_apply', name='poi_apply'),
     url(r'^list/(?P<poi_id>\d+)/$', 'geeklogistics.views.list', name='list'),
     url(r'^intro/$', 'geeklogistics.views.intro', name='intro'),
     url(r'^area/$', 'geeklogistics.views.area', name='area'),

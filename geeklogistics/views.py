@@ -23,6 +23,9 @@ def intro(request):
 def coop(request):
 	return render_to_response('coop.html', {'current_url': 'coop'})
 
+def poi_apply(request):
+	return render_to_response('poi/apply.html', {'current_url': 'coop'})
+
 def custom(request):
 	customer_list = Show.objects.all()
 	print customer_list
@@ -93,7 +96,7 @@ def order_detail(request, deliver_id):
 	try:
 		order = Order.objects.get(deliver_id=deliver_id)
 		reminder = ''
-		print orders
+		# print orders
 		return render_to_response('order_detail.html', {'current_url': 'order', 'order': order})
 	except ObjectDoesNotExist:
 		reminder = "该订单不存在"
