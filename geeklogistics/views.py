@@ -156,7 +156,7 @@ def poi_login(request):
 		if poi.password == password:
 			response_data['code'] = 0  
 			response_data['msg'] = 'ok' 
-			response_data['poi'] = poi.id	
+			response_data['data'] = poi.id	
 		else:
 			response_data['code'] = 1 
 			response_data['msg'] = '用户名或密码错误' 	

@@ -31,12 +31,12 @@ var jQloginBtn = $('#j-login-btn');
 jQloginBtn.bind('click', function(){
 	var username = jQusrInput.val();
 	var password = jQpswInput.val();
-	$.post('/user/login/', {
+	$.post('/api/v1/poi/login', {
 		username: username,
 		password: password
 	}, function(ret){
 		if(ret.code ==0){
-			var poiId = ret.poi;
+			var poiId = ret.data;
 			setCookie('poiid', poiId);
 			window.location.href = '/list/'+poiId;
 		}else{

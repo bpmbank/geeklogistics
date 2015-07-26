@@ -22,7 +22,7 @@ urlpatterns = patterns('',
     url(r'^order/add/$', 'geeklogistics.views.poi_order', name='poi_order'),
     url(r'^custom/$', 'geeklogistics.views.custom', name='custom'),
     url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
-    url(r'^user/login/$', 'geeklogistics.views.poi_login', name='poi_login' ),    
+    url(r'^api/v1/poi/login$', 'geeklogistics.views.poi_login', name='poi_login' ),    
     
     # url(r'^blog/', include('blog.urls')),
 

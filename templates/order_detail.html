@@ -63,15 +63,15 @@
         <ul class="list-unstyled order-status-list clearfix">
           <li class="complete">
             <img class="status-cicle-only" src="/static/images/icon/status-circle.png">
-            <p>订单已被确认</p>
+            <p>已从商家取货</p>
           </li>
           <li class="complete">
             <img class="status-cicle" src="/static/images/icon/status.png">
-            <p>已从商家取货</p>
+            <p>已到达望京站</p>
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <p>已到达望京站</p>
+            <p>已到达总部</p>
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
@@ -100,6 +100,11 @@
           <div class="order-info">
             <p><strong>订单编号：</strong>{{order.order_id}}</p>
             <p><strong>货物名称：</strong>{{order.order_detail.stuff}}</p>
+            <p>
+              <span class="first-span"><strong>订单总价：</strong>{{order.order_detail.total_price}}</span>
+              <span><strong>是否需要代收款：</strong>{{order.order_detail.get_to_pay_display}}</span>
+            </p>
+
           </div>
         </div>
         <div>
