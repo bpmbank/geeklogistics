@@ -5,13 +5,18 @@ from django.shortcuts import render_to_response
 from geeklogistics.station.models import Station
 from geeklogistics.poi.models import Merchant, Show
 from geeklogistics.news.models import News
-from geeklogistics.order.models import Order, OrderForm
+from geeklogistics.order.models import Order, Detail, OrderForm
 
 import json  
+from django.utils import simplejson
+import time
+import random
+
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 from django.template import RequestContext
+from django.core import serializers
 
 def home(request):
 	news_list = News.objects.all()
@@ -21,7 +26,7 @@ def intro(request):
 	return render_to_response('intro.html', {'current_url': 'intro'})
 
 def coop(request):
-	return render_to_response('coop.html', {'current_url': 'coop'})
+	return render_to_response('poi/login.html', {'current_url': 'coop'})
 
 def poi_apply(request):
 	return render_to_response('poi/apply.html', {'current_url': 'coop'})
@@ -52,8 +57,78 @@ def list(request, poi_id):
 		print orders
 	except ObjectDoesNotExist:
 		reminder = "该商户不存在"
-	return render_to_response('list.html', {'current_url': 'coop', 'order_list': orders, 'reminder': reminder})
+	js_url = 'poi/order_list'
+	return render_to_response('poi/order_list.html', {'current_url': 'coop', 'order_list': orders, 'js_url': js_url, 'reminder': reminder})
 
+# 订单列表ajax
+@csrf_exempt
+def order_list(request):
+	if request.method == 'POST':
+		poi_id = request.REQUEST.get('poiId', 0)
+		print poi_id
+		response_data = {}
+		try:
+			poi = Merchant.objects.get(id=poi_id)
+			orders = Order.objects.filter(poi=poi_id)
+			response_data['code'] = 0
+			response_data['msg'] = 'ok'
+			myorder = []
+			for order in orders:
+				myorder.append(order.as_json())
+				# print order
+			print myorder
+			# myorder = serializers.serialize('json', myorder)
+			# myorder = json.loads(myorder)
+			response_data['data'] = myorder
+
+			# print(response_data['orderList'][0])
+			# response_data['orderList'] = orders
+		except ObjectDoesNotExist:
+			response_data['code'] = 1 
+			response_data['msg'] = '该商户不存在' 
+		# response_data = json.load(response_data)
+		return HttpResponse(json.dumps(response_data), mimetype="application/json")  
+
+
+# 商家手动下单页面
+@csrf_exempt
+def poi_order(request):
+	if request.method == 'POST': # 如果ajax请求
+		response_data = {}
+		poi_id = request.POST['poiId']
+		poi_name = request.POST['poiName']
+		poi_phone = request.POST['poiPhone']
+		poi_address = request.POST['poiAddress']
+		order_stuff = request.POST['orderStuff']
+		order_id = request.POST['orderId']
+		order_price = request.POST['orderPrice']
+		if order_price == '':
+			order_price = 0
+		order_topay = request.POST['orderTopay']
+		customer_name = request.POST['customerName']
+		customer_phone = request.POST['customerPhone']
+		customer_address = request.POST['customerAddress']
+		detail = Detail(phone=poi_phone, name=poi_name, address=poi_address, stuff=order_stuff, 
+			customer_name=customer_name, customer_phone=customer_phone, customer_address=customer_address,
+			total_price=order_price, to_pay=order_topay)
+		detail.save()
+		poi = Merchant.objects.get(id=poi_id)
+		now = int(time.time())
+		randdigit = random.randint(0, 10)
+		deliver_id = str(now)+str(randdigit)
+		order=Order(order_id=order_id, deliver_id=deliver_id, poi_id=poi_id, order_detail=detail)
+		order.save()
+		response_data['code'] = 0
+		return HttpResponse(json.dumps(response_data), content_type="application/json")  
+	else:
+		reminder = ''
+		js_url = 'poi/order'
+		poi_id = request.COOKIES.get('poiid')
+		try:
+			poi = Merchant.objects.get(id=poi_id)
+		except ObjectDoesNotExist:
+			reminder = "该商户不存在"
+		return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})
 
 @csrf_exempt
 def order_detail_ajax(request):
@@ -90,7 +165,6 @@ def poi_login(request):
 		response_data['msg'] = '用户名不存在'	
 
 	return HttpResponse(json.dumps(response_data), content_type="application/json")  
-
 
 def order_detail(request, deliver_id):
 	try:

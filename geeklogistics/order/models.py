@@ -8,13 +8,20 @@ from geeklogistics.station.models import Station
 from django.forms import ModelForm
 
 class Detail(models.Model):
+	PAY_CHOICES = (
+		('0', '否'),
+		('1', '是'),
+	)
 	phone = models.CharField('订单联系人电话', max_length=20)
-	stuff = models.CharField('需要被配送物件', max_length=200)  #todo 每个物件价格，名称
+	stuff = models.CharField('需要被配送物件', max_length=200, null=True, blank=True)  #todo 每个物件价格，名称
 	name = models.CharField('发货人姓名', max_length=20)
+	address = models.CharField('取货地址', max_length=200)
 	customer_name = models.CharField('收货人姓名', max_length=20)
 	customer_phone = models.CharField('收货人电话', max_length=20)
 	customer_address = models.CharField('收货人地址', max_length=30)
-	total_price = models.FloatField('订单总价')
+	total_price = models.FloatField('订单总价', null=True, blank=True)
+	to_pay = models.CharField('是否需要代收款', max_length=3, default=0, choices=PAY_CHOICES)
+
 
 	def __unicode__(self):
 		return self.id
@@ -26,14 +33,14 @@ class Order(models.Model):
 	)
 	order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)
 	deliver_id = models.CharField('配送编号', max_length=50, null=True, blank=True)  #规则编号
-	poi = models.OneToOneField(Merchant, verbose_name="订单商家", null=True, blank=True)
-	dispatcher = models.OneToOneField(Dispatcher, verbose_name="配送员", null=True, blank=True)
+	poi = models.ForeignKey(Merchant, verbose_name="订单商家", null=True, blank=True)
+	dispatcher = models.ForeignKey(Dispatcher, verbose_name="配送员", null=True, blank=True)
 	start_time = models.DateTimeField(verbose_name="开始配送时间", null=True, blank=True)
 	end_time = models.DateTimeField(verbose_name="送达时间", null=True, blank=True)
-	current_location = models.OneToOneField(Station, verbose_name="当前配送站", null=True, blank=True)
+	current_location = models.ForeignKey(Station, verbose_name="当前配送站", null=True, blank=True)
 	order_status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_CHOICES)
 	price = models.FloatField('配送价格', default=0)
-	order_detail = models.OneToOneField(Detail, verbose_name="订单详情")
+	order_detail = models.ForeignKey(Detail, verbose_name="订单详情")
 	order_type = models.CharField('状态', max_length=3, default=0)
 	ctime = models.DateTimeField('订单创建时间', max_length=30, default=datetime.now())
 	utime = models.DateTimeField('订单最新修改时间', max_length=30, default=datetime.now())
@@ -48,11 +55,27 @@ class Order(models.Model):
 		# proxy = True
 
 	def as_json(self):
+		poi_name=''
+		dispatcher_name=''
+		start_time = ''
+		end_time = ''
+		current_location = ''
+
+		if self.poi:
+			poi_name = self.poi.name
+		if self.dispatcher:
+			dispatcher_name = self.dispatcher.name
+		if self.start_time:
+			start_time = self.start_time.isoformat()
+		if end_time:
+			end_time = self.end_time.isoformat()
+		if self.current_location:
+			current_location = self.current_location.name
 		return dict(
 			order_id=self.order_id,deliver_id=self.deliver_id, 
-			poi=self.poi.name, dispatcher=self.dispatcher.name, 
-			start_time=self.start_time.isoformat(), end_time=self.end_time.isoformat(), 
-			current_location=self.current_location.name)
+			poi=poi_name, dispatcher=dispatcher_name, 
+			start_time=start_time, end_time=end_time, 
+			current_location=current_location)
 
 	def __unicode__(self):
 		return self.order_id

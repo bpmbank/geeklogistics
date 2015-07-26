@@ -12,6 +12,16 @@
 label{
 	max-width: 200px;
 }
+.area-list li{
+  border-bottom: solid 1px #DADADA;
+}
+.area-list li h4{
+	font-size: 1.2em;
+}
+.area-list li p{
+	margin: 5px 0;
+}
+
 </style>
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>	
 	<div class="m-banner"></div>
@@ -22,7 +32,7 @@ label{
 		<div class="row">
 			<div id="j-map" class="col-md-9"></div>
 			<div class="col-md-3">
-				<ul class="list-unstyled">
+				<ul class="list-unstyled area-list">
 					{% for a in area_list %}
 					<li>
 						<h4>{{a.name}}</h4>

@@ -3,9 +3,18 @@
 {% block title %}我的订单{% endblock %}
 
 {% block content %}
+<style type="text/css">
+  .order-btn{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+  }
+</style>
+
 <div class="m-banner"></div>
 <div class="container m-main">
 	<h3>我的订单</h3>
+  <a href="/order/add/"><div class="btn btn-primary order-btn" id="j-order-btn">我要下单</div></a>
   {% if reminder == '' %}
   	<table class="table table-striped">
       <thead>
@@ -21,7 +30,7 @@
       <tbody>
         {% for order in order_list%}
           <tr>
-            <th scope="row">{{order.index}}</th>
+            <th scope="row">{{ forloop.counter }}</th>
             <td>{{order.order_id}}</td>
             <td>{{order.deliver_id}}</td>
             <td>{{order.start_time}}</td>

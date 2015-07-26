@@ -9,6 +9,9 @@
 		float: left;
 		width: 230px;
 	}
+	.poi-logo{
+		width: 150px;
+	}
 </style>
 <div class="m-banner"></div>
 <div class="container m-main">
@@ -16,7 +19,7 @@
 	<ul class="list-unstyled logo-list cf">
 		{% for customer in customer_list %}
 		<li>
-			<img src="/{{customer.poi.logo}}">
+			<img class="poi-logo" src="/{{customer.poi.logo}}">
 			<p>{{customer.poi.name}}</p>
 		</li>
 		{% endfor %}

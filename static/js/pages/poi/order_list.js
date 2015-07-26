@@ -22,25 +22,9 @@ function setCookie(cname, cvalue, exdays) {
 	}
 document.cookie = cname + "=" + encodeURIComponent(cvalue) + "; path=/" +"; expires="+expires;
 }	
-
-
-var jQusrInput = $('#j-user-input');
-var jQpswInput = $('#j-psw-input');
-var jQloginBtn = $('#j-login-btn');
-
-jQloginBtn.bind('click', function(){
-	var username = jQusrInput.val();
-	var password = jQpswInput.val();
-	$.post('/user/login/', {
-		username: username,
-		password: password
-	}, function(ret){
-		if(ret.code ==0){
-			var poiId = ret.poi;
-			setCookie('poiid', poiId);
-			window.location.href = '/list/'+poiId;
-		}else{
-			alert(ret.msg);
-		}
-	})
+var poiId = getCookie('poiid');
+$.post('/order/list', {
+	'poiId': poiId
+}, function(ret){
+	
 })
