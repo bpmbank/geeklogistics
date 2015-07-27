@@ -147,24 +147,25 @@ def order_detail_ajax(request):
 
 @csrf_exempt
 def poi_login(request):
-	username = request.POST['username']
-	password = request.POST['password']
-	response_data = {}
+	if request.method == 'POST':
+		username = request.REQUEST.get('username')
+		password = request.REQUEST.get('password')
+		response_data = {}
 
-	try:
-		poi = Merchant.objects.get(username=username)
-		if poi.password == password:
-			response_data['code'] = 0  
-			response_data['msg'] = 'ok' 
-			response_data['data'] = poi.id	
-		else:
+		try:
+			poi = Merchant.objects.get(username=username)
+			if poi.password == password:
+				response_data['code'] = 0  
+				response_data['msg'] = 'ok' 
+				response_data['data'] = poi.id	
+			else:
+				response_data['code'] = 1 
+				response_data['msg'] = '用户名或密码错误' 	
+		except ObjectDoesNotExist:
 			response_data['code'] = 1 
-			response_data['msg'] = '用户名或密码错误' 	
-	except ObjectDoesNotExist:
-		response_data['code'] = 1 
-		response_data['msg'] = '用户名不存在'	
+			response_data['msg'] = '用户名不存在'	
 
-	return HttpResponse(json.dumps(response_data), content_type="application/json")  
+		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
 def order_detail(request, deliver_id):
 	try:
