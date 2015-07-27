@@ -11,7 +11,7 @@ ORDER_STATUS_CHOICES = (
 	('0', '未下单'),
 	('100', '已下单'),
 	('200', '已取货'),
-	('300', '配送中'),
+	('300', '运输中'),
 	('400', '开始配送'),
 	('500', '已配送'),
 	('600', '已完成'),
@@ -60,33 +60,35 @@ class Order(models.Model):
 		# proxy = True
 
 	def as_json(self):
-		poi_name=''
-		dispatcher_name=''
+		deliver_id = self.deliver_id
+		order_id = self.order_detail.order_id
+		order_stuff = self.order_detail.stuff
+		order_price = self.order_detail.total_price
+		order_topay = self.order_detail.to_pay
+		customer_name = self.order_detail.customer_name
+		customer_phone = self.order_detail.customer_phone
+		customer_address = self.order_detail.customer_address
 		start_time = ''
 		end_time = ''
-		current_location = ''
-
-		if self.poi:
-			poi_name = self.poi.name
 		if self.start_time:
 			start_time = self.start_time.isoformat()
 		if end_time:
 			end_time = self.end_time.isoformat()
 		return dict(
-			order_id=self.order_id,deliver_id=self.deliver_id, 
-			poi=poi_name, dispatcher=dispatcher_name, 
-			start_time=start_time, end_time=end_time, 
-			current_location=current_location)
+			order_id=order_id, deliver_id=deliver_id, order_stuff=order_stuff,
+			order_price=order_price, order_topay=order_topay, customer_name=customer_name,
+			customer_phone = customer_phone, customer_address=customer_address,
+			start_time=start_time, end_time=end_time)
 
 	def __unicode__(self):
-		return self.order_id
+		return self.deliver_id
 
 class StatusRecord(models.Model):
 	status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
 	location = models.ForeignKey(Station, verbose_name="当前配送站", null=True, blank=True)
 	time = models.DateTimeField('时间', max_length=30, default=datetime.now())
 	operator = models.ForeignKey(Dispatcher, verbose_name="配送员", null=True, blank=True)
-	order_id = models.ForeignKey(Order, verbose_name="配送编号")
+	order_id = models.ForeignKey(Order, verbose_name="配送订单数据库id")
 
 	def __unicode__(self):
 		return self.status

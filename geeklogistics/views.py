@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 from geeklogistics.station.models import Station
 from geeklogistics.poi.models import Merchant, Show
 from geeklogistics.news.models import News
-from geeklogistics.order.models import Order, Detail, OrderForm
+from geeklogistics.order.models import Order, Detail, StatusRecord, OrderForm
 
 import json  
 import time
@@ -16,6 +16,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 from django.template import RequestContext
 from django.core import serializers
+
+ORDER_STATUS = {'initial': 0, 'ordered': 100, 'get_order': 200,'shipping': 300, 
+			'delivering': 400, 'delivered': 500, 'complete': 600,'cancel': 700}
 
 def home(request):
 	news_list = News.objects.all()
@@ -51,9 +54,10 @@ def order(request):
 def list(request, poi_id):
 	try:
 		poi = Merchant.objects.get(id=poi_id)
+		print poi_id
 		orders = Order.objects.filter(poi=poi_id)
-		reminder = ''
 		print orders
+		reminder = ''
 	except ObjectDoesNotExist:
 		reminder = "该商户不存在"
 	js_url = 'poi/order_list'
@@ -69,16 +73,23 @@ def order_list(request):
 		try:
 			poi = Merchant.objects.get(id=poi_id)
 			orders = Order.objects.filter(poi=poi_id)
+			print orders
 			response_data['code'] = 0
 			response_data['msg'] = 'ok'
-			myorder = []
+			myorderlist = []
 			for order in orders:
-				myorder.append(order.as_json())
+				myorder = order.as_json()
+				try:
+					status = StatusRecord.objects.filter(order_id=order.id).latest('id')
+				except ObjectDoesNotExist:	
+					status = None
+				myorder['status'] = status
+				myorderlist.append(myorder)
 				# print order
-			print myorder
+			# print myorder
 			# myorder = serializers.serialize('json', myorder)
 			# myorder = json.loads(myorder)
-			response_data['data'] = myorder
+			response_data['data'] = myorderlist
 
 			# print(response_data['orderList'][0])
 			# response_data['orderList'] = orders
@@ -86,7 +97,7 @@ def order_list(request):
 			response_data['code'] = 1 
 			response_data['msg'] = '该商户不存在' 
 		# response_data = json.load(response_data)
-		return HttpResponse(json.dumps(response_data), mimetype="application/json")  
+		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
 
 # 商家手动下单页面
@@ -115,7 +126,7 @@ def poi_order(request):
 		now = int(time.time())
 		randdigit = random.randint(0, 10)
 		deliver_id = str(now)+str(randdigit)
-		order=Order(deliver_id=deliver_id, poi_id=poi_id, order_detail=detail, order_status=100)
+		order=Order(deliver_id=deliver_id, poi_id=poi_id, order_detail=detail, order_status=ORDER_STATUS['ordered'])
 		order.save()
 		response_data['code'] = 0
 		return HttpResponse(json.dumps(response_data), content_type="application/json")  
