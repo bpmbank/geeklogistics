@@ -21,6 +21,12 @@ class Merchant(models.Model):
 		verbose_name = '商家'
 		verbose_name_plural = '商家'
 
+	def as_json(self):
+		return dict(
+			name=self.name, tel=self.tel, address=self.address, 
+			logo=str(self.logo), id=self.id, status=self.status)
+
+
 	def __unicode__(self):
 		return self.name
 

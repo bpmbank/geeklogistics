@@ -7,11 +7,23 @@ from geeklogistics.deliver.models import Dispatcher
 from geeklogistics.station.models import Station
 from django.forms import ModelForm
 
+ORDER_STATUS_CHOICES = (
+	('0', '未下单'),
+	('100', '已下单'),
+	('200', '已取货'),
+	('300', '配送中'),
+	('400', '开始配送'),
+	('500', '已配送'),
+	('600', '已完成'),
+	('700', '已取消'),
+)
+
 class Detail(models.Model):
 	PAY_CHOICES = (
 		('0', '否'),
 		('1', '是'),
 	)
+	order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)
 	phone = models.CharField('订单联系人电话', max_length=20)
 	stuff = models.CharField('需要被配送物件', max_length=200, null=True, blank=True)  #todo 每个物件价格，名称
 	name = models.CharField('发货人姓名', max_length=20)
@@ -22,23 +34,16 @@ class Detail(models.Model):
 	total_price = models.FloatField('订单总价', null=True, blank=True)
 	to_pay = models.CharField('是否需要代收款', max_length=3, default=0, choices=PAY_CHOICES)
 
-
 	def __unicode__(self):
 		return self.id
 
 class Order(models.Model):
-	ORDER_CHOICES = (
-		('0', '未配送'),
-		('1', '配送中'),
-	)
-	order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)
 	deliver_id = models.CharField('配送编号', max_length=50, null=True, blank=True)  #规则编号
 	poi = models.ForeignKey(Merchant, verbose_name="订单商家", null=True, blank=True)
-	dispatcher = models.ForeignKey(Dispatcher, verbose_name="配送员", null=True, blank=True)
 	start_time = models.DateTimeField(verbose_name="开始配送时间", null=True, blank=True)
 	end_time = models.DateTimeField(verbose_name="送达时间", null=True, blank=True)
-	current_location = models.ForeignKey(Station, verbose_name="当前配送站", null=True, blank=True)
-	order_status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_CHOICES)
+	order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)	
+	order_status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
 	price = models.FloatField('配送价格', default=0)
 	order_detail = models.ForeignKey(Detail, verbose_name="订单详情")
 	order_type = models.CharField('状态', max_length=3, default=0)
@@ -63,14 +68,10 @@ class Order(models.Model):
 
 		if self.poi:
 			poi_name = self.poi.name
-		if self.dispatcher:
-			dispatcher_name = self.dispatcher.name
 		if self.start_time:
 			start_time = self.start_time.isoformat()
 		if end_time:
 			end_time = self.end_time.isoformat()
-		if self.current_location:
-			current_location = self.current_location.name
 		return dict(
 			order_id=self.order_id,deliver_id=self.deliver_id, 
 			poi=poi_name, dispatcher=dispatcher_name, 
@@ -79,6 +80,16 @@ class Order(models.Model):
 
 	def __unicode__(self):
 		return self.order_id
+
+class StatusRecord(models.Model):
+	status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
+	location = models.ForeignKey(Station, verbose_name="当前配送站", null=True, blank=True)
+	time = models.DateTimeField('时间', max_length=30, default=datetime.now())
+	operator = models.ForeignKey(Dispatcher, verbose_name="配送员", null=True, blank=True)
+	order_id = models.ForeignKey(Order, verbose_name="配送编号")
+
+	def __unicode__(self):
+		return self.status
 
 class OrderForm(ModelForm):
 	class Meta:

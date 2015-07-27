@@ -36,7 +36,7 @@ jQloginBtn.bind('click', function(){
 		password: password
 	}, function(ret){
 		if(ret.code ==0){
-			var poiId = ret.data;
+			var poiId = ret.data.id;
 			setCookie('poiid', poiId);
 			window.location.href = '/list/'+poiId;
 		}else{

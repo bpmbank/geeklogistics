@@ -8,7 +8,6 @@ from geeklogistics.news.models import News
 from geeklogistics.order.models import Order, Detail, OrderForm
 
 import json  
-from django.utils import simplejson
 import time
 import random
 
@@ -108,7 +107,7 @@ def poi_order(request):
 		customer_name = request.POST['customerName']
 		customer_phone = request.POST['customerPhone']
 		customer_address = request.POST['customerAddress']
-		detail = Detail(phone=poi_phone, name=poi_name, address=poi_address, stuff=order_stuff, 
+		detail = Detail(order_id=order_id, phone=poi_phone, name=poi_name, address=poi_address, stuff=order_stuff, 
 			customer_name=customer_name, customer_phone=customer_phone, customer_address=customer_address,
 			total_price=order_price, to_pay=order_topay)
 		detail.save()
@@ -116,7 +115,7 @@ def poi_order(request):
 		now = int(time.time())
 		randdigit = random.randint(0, 10)
 		deliver_id = str(now)+str(randdigit)
-		order=Order(order_id=order_id, deliver_id=deliver_id, poi_id=poi_id, order_detail=detail)
+		order=Order(deliver_id=deliver_id, poi_id=poi_id, order_detail=detail, order_status=100)
 		order.save()
 		response_data['code'] = 0
 		return HttpResponse(json.dumps(response_data), content_type="application/json")  
@@ -157,7 +156,8 @@ def poi_login(request):
 			if poi.password == password:
 				response_data['code'] = 0  
 				response_data['msg'] = 'ok' 
-				response_data['data'] = poi.id	
+				mypoi = poi.as_json()
+				response_data['data'] = mypoi
 			else:
 				response_data['code'] = 1 
 				response_data['msg'] = '用户名或密码错误' 	
