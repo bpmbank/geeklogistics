@@ -17,19 +17,31 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 
+ORDER_STATUS = {'initial': 0, 'ordered': 100, 'get_order': 200,'shipping': 300, 
+			'delivering': 400, 'delivered': 500, 'complete': 600,'cancel': 700}
+
 # 获取订单列表ajax
 @csrf_exempt
 def order_list(request):
 	if request.method == 'POST':
 		poi_id = request.REQUEST.get('poiId', 0)
 		status = request.REQUEST.get('status', -1)
+		# print status
 		response_data = {}
 		try:
+			orders = []
 			poi = Merchant.objects.get(id=poi_id)
 			if status == -1:
 				orders = Order.objects.filter(poi=poi_id)
 			else:
-				orders = Order.objects.filter(poi=poi_id, order_status=status)
+				if status == '10':
+					orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))
+				elif status == '20':
+					orders = Order.objects.filter(Q(order_status=200, poi=poi_id) | Q(order_status=300, poi=poi_id) | Q(order_status=400, poi=poi_id))
+				elif status == '30':
+					orders = Order.objects.filter(Q(order_status=500, poi=poi_id) | Q(order_status=600, poi=poi_id))
+				elif status == '40':
+					orders = Order.objects.filter(Q(order_status=700, poi=poi_id))
 			response_data['code'] = 0
 			response_data['msg'] = 'ok'
 			myorderlist = []
@@ -47,9 +59,6 @@ def order_list(request):
 			response_data['msg'] = '该商户不存在' 
 		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
-
-ORDER_STATUS = {'initial': 0, 'ordered': 100, 'get_order': 200,'shipping': 300, 
-			'delivering': 400, 'delivered': 500, 'complete': 600,'cancel': 700}
 BAIDU_AK = 'GLfzo34AN5Sf7llYeCWlCw8E'
 
 def getLocation(address):
