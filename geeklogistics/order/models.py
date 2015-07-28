@@ -70,6 +70,7 @@ class Order(models.Model):
 		customer_name = self.order_detail.customer_name
 		customer_phone = self.order_detail.customer_phone
 		customer_address = self.order_detail.customer_address
+		order_status = self.order_status
 		start_time = ''
 		end_time = ''
 		if self.start_time:
@@ -80,16 +81,22 @@ class Order(models.Model):
 			order_id=order_id, deliver_id=deliver_id, order_stuff=order_stuff,
 			order_price=order_price, order_topay=order_topay, customer_name=customer_name,
 			customer_phone = customer_phone, customer_address=customer_address,
-			start_time=start_time, end_time=end_time)
+			start_time=start_time, end_time=end_time, status=order_status)
 
 	def __unicode__(self):
 		return self.deliver_id
 
 class StatusRecord(models.Model):
+	OPERATOR_TYPE_CHOICES = (
+		('0', '分拣站'),
+		('1', '配送员'),
+		('2', '司机'),
+	)
 	status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
 	location = models.ForeignKey(Station, verbose_name="当前配送站", null=True, blank=True)
 	time = models.DateTimeField('时间', max_length=30, default=datetime.now())
-	operator = models.ForeignKey(Dispatcher, verbose_name="配送员", null=True, blank=True)
+	operator_type = models.CharField('操作人类型', max_length=3, default=0, choices=OPERATOR_TYPE_CHOICES)
+	operator_id = models.IntegerField(verbose_name="操作人对应id", null=True, blank=True)
 	order_id = models.ForeignKey(Order, verbose_name="配送订单数据库id")
 
 	def __unicode__(self):

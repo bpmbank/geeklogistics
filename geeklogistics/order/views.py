@@ -5,6 +5,7 @@ from django.shortcuts import render_to_response
 from geeklogistics.station.models import Station
 from geeklogistics.poi.models import Merchant
 from geeklogistics.order.models import Order, Detail, StatusRecord, OrderForm
+from django.db.models import Q
 
 import json  
 import urllib2
@@ -21,20 +22,24 @@ from django.core.exceptions import ObjectDoesNotExist
 def order_list(request):
 	if request.method == 'POST':
 		poi_id = request.REQUEST.get('poiId', 0)
+		status = request.REQUEST.get('status', -1)
 		response_data = {}
 		try:
 			poi = Merchant.objects.get(id=poi_id)
-			orders = Order.objects.filter(poi=poi_id)
+			if status == -1:
+				orders = Order.objects.filter(poi=poi_id)
+			else:
+				orders = Order.objects.filter(poi=poi_id, order_status=status)
 			response_data['code'] = 0
 			response_data['msg'] = 'ok'
 			myorderlist = []
 			for order in orders:
 				myorder = order.as_json()
-				try:
-					status = StatusRecord.objects.filter(order_id=order.id).latest('id')
-				except ObjectDoesNotExist:	
-					status = None
-				myorder['status'] = status
+				# try:
+				# 	status = StatusRecord.objects.filter(order_id=order.id).latest('id')
+				# except ObjectDoesNotExist:	
+				# 	status = None
+				# myorder['status'] = status
 				myorderlist.append(myorder)
 			response_data['data'] = myorderlist
 		except ObjectDoesNotExist:
@@ -129,4 +134,18 @@ def order_new(request):
 		response_data['code'] = 0
 		response_data['data'] = deliver_id
 		return HttpResponse(json.dumps(response_data), content_type="application/json")  
+
+
+# 修改订单状态
+@csrf_exempt
+def update_order_status(request):
+	if request.method == 'POST': # 如果ajax请求
+		response_data = {}
+		operator_id = request.REQUEST.get('operatorId')
+		operator_type = request.REQUEST.get('operatorType')
+		order_status = request.REQUEST.get('orderStatus')
+		order_id = request.REQUEST.get('orderId')
+
+
+
 
