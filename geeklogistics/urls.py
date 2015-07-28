@@ -17,11 +17,12 @@ urlpatterns = patterns('',
     url(r'^intro/$', 'geeklogistics.views.intro', name='intro'),
     url(r'^area/$', 'geeklogistics.views.area', name='area'),
     url(r'^order/$', 'geeklogistics.views.order', name='order'),
-    url(r'^api/v1/order/list$', 'geeklogistics.views.order_list', name='order_list'),
     url(r'^order/(?P<deliver_id>\d+)/$', 'geeklogistics.views.order_detail', name='order_detail'),
     url(r'^order/add/$', 'geeklogistics.views.poi_order', name='poi_order'),
     url(r'^custom/$', 'geeklogistics.views.custom', name='custom'),
     url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
+
+    url(r'^api/v1/order/list$', 'geeklogistics.order.views.order_list', name='order_list'),
     url(r'^api/v1/poi/login$', 'geeklogistics.views.poi_login', name='poi_login' ),    
     
     # url(r'^blog/', include('blog.urls')),

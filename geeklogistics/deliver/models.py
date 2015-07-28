@@ -17,7 +17,7 @@ class Dispatcher(models.Model):
 	dispatcher_id = models.CharField('编号', max_length=20)
 	name = models.CharField('姓名', max_length=30)
 	password = models.CharField('密码', max_length=30, default="abcd1234")
-	current_location = models.CharField('当前位置id', max_length=30)  #暂时不需要
+	current_location = models.CharField('当前位置id', max_length=30, default=0)  #暂时不需要
 	work_status = models.CharField('配送员当前状态', max_length=30, choices=WORKSTATUS_CHOICES) #可选状态
 	dispatcher_type = models.CharField('工种', max_length=3,  default=0, choices=TYPE_CHOICES) #可选状态
 	phone = models.CharField('手机', max_length=30)

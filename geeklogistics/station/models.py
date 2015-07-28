@@ -4,6 +4,8 @@ from django.db import models
 from datetime import datetime
 
 class Station(models.Model):
+	# username = models.CharField('配送点用户名', max_length=30)
+	# password = models.CharField('配送点密码', max_length=30)
 	name = models.CharField('配送点名称', max_length=30)
 	address = models.CharField('详细地址', max_length=30)
 	tel = models.CharField('联系电话', max_length=30)

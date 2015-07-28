@@ -28,14 +28,14 @@ def intro(request):
 	return render_to_response('intro.html', {'current_url': 'intro'})
 
 def coop(request):
-	return render_to_response('poi/login.html', {'current_url': 'coop'})
+	js_url = 'coop'
+	return render_to_response('poi/login.html', {'current_url': 'coop', 'js_url': js_url})
 
 def poi_apply(request):
 	return render_to_response('poi/apply.html', {'current_url': 'coop'})
 
 def custom(request):
 	customer_list = Show.objects.all()
-	print customer_list
 	return render_to_response('custom.html', {'current_url': 'custom', 
 											'customer_list': customer_list})
 def news(request, id):
@@ -44,12 +44,13 @@ def news(request, id):
 
 def area(request):
 	area_list = Station.objects.all()
-	print len(area_list)
-	return render_to_response('area.html', {'current_url': 'area', 
+	js_url = 'area'
+	return render_to_response('area.html', {'current_url': 'area', 'js_url': js_url,
 											'area_list' : area_list})
 
 def order(request):
-	return render_to_response('order.html', {'current_url': 'order'})
+	js_url = 'order'
+	return render_to_response('order.html', {'current_url': 'order', 'js_url': js_url})
 
 def list(request, poi_id):
 	try:
@@ -63,41 +64,6 @@ def list(request, poi_id):
 	js_url = 'poi/order_list'
 	return render_to_response('poi/order_list.html', {'current_url': 'coop', 'order_list': orders, 'js_url': js_url, 'reminder': reminder})
 
-# 订单列表ajax
-@csrf_exempt
-def order_list(request):
-	if request.method == 'POST':
-		poi_id = request.REQUEST.get('poiId', 0)
-		print poi_id
-		response_data = {}
-		try:
-			poi = Merchant.objects.get(id=poi_id)
-			orders = Order.objects.filter(poi=poi_id)
-			print orders
-			response_data['code'] = 0
-			response_data['msg'] = 'ok'
-			myorderlist = []
-			for order in orders:
-				myorder = order.as_json()
-				try:
-					status = StatusRecord.objects.filter(order_id=order.id).latest('id')
-				except ObjectDoesNotExist:	
-					status = None
-				myorder['status'] = status
-				myorderlist.append(myorder)
-				# print order
-			# print myorder
-			# myorder = serializers.serialize('json', myorder)
-			# myorder = json.loads(myorder)
-			response_data['data'] = myorderlist
-
-			# print(response_data['orderList'][0])
-			# response_data['orderList'] = orders
-		except ObjectDoesNotExist:
-			response_data['code'] = 1 
-			response_data['msg'] = '该商户不存在' 
-		# response_data = json.load(response_data)
-		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
 
 # 商家手动下单页面
@@ -179,16 +145,16 @@ def poi_login(request):
 		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
 def order_detail(request, deliver_id):
+	js_url = 'order'
 	try:
 		order = Order.objects.get(deliver_id=deliver_id)
 		reminder = ''
 		# print orders
-		return render_to_response('order_detail.html', {'current_url': 'order', 'order': order})
+		return render_to_response('order_detail.html', {'current_url': 'order', 'js_url': js_url,
+			'order': order})
 	except ObjectDoesNotExist:
 		reminder = "该订单不存在"
-		return render_to_response('order_detail.html', {'current_url': 'order_detail'})
-
-	order = Order.objects.get(deliver_id=deliver_id)
+		return render_to_response('order_detail.html', {'current_url': 'order_detail', 'js_url': js_url})
 
 @csrf_exempt
 def order_new(request):

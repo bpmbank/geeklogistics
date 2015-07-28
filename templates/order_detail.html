@@ -51,7 +51,7 @@
     padding: 0 10px;
   }
   .first-span{
-    width: 200px;
+    width: 300px;
     display: inline-block;
   }
 </style>
@@ -98,7 +98,7 @@
         <div>
           <h4 class="order-title">订单内容</h4>
           <div class="order-info">
-            <p><strong>订单编号：</strong>{{order.order_id}}</p>
+            <p><strong>订单编号：</strong>{{order.order_detail.order_id}}</p>
             <p><strong>货物名称：</strong>{{order.order_detail.stuff}}</p>
             <p>
               <span class="first-span"><strong>订单总价：</strong>{{order.order_detail.total_price}}</span>
