@@ -17,9 +17,6 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.template import RequestContext
 from django.core import serializers
 
-ORDER_STATUS = {'initial': 0, 'ordered': 100, 'get_order': 200,'shipping': 300, 
-			'delivering': 400, 'delivered': 500, 'complete': 600,'cancel': 700}
-
 def home(request):
 	news_list = News.objects.all()
 	return render_to_response('index.html', {'current_url': 'index', 'news_list': news_list})
@@ -52,6 +49,11 @@ def order(request):
 	js_url = 'order'
 	return render_to_response('order.html', {'current_url': 'order', 'js_url': js_url})
 
+def order_success(request, deliver_id):
+	poi_id = request.COOKIES.get('poiid')
+	deliver_id = deliver_id
+	return render_to_response('poi/order_success.html', {'current_url': 'coop', 'poi_id': poi_id, 'deliver_id': deliver_id})
+
 def list(request, poi_id):
 	try:
 		poi = Merchant.objects.get(id=poi_id)
@@ -69,42 +71,14 @@ def list(request, poi_id):
 # 商家手动下单页面
 @csrf_exempt
 def poi_order(request):
-	if request.method == 'POST': # 如果ajax请求
-		response_data = {}
-		poi_id = request.POST['poiId']
-		poi_name = request.POST['poiName']
-		poi_phone = request.POST['poiPhone']
-		poi_address = request.POST['poiAddress']
-		order_stuff = request.POST['orderStuff']
-		order_id = request.POST['orderId']
-		order_price = request.POST['orderPrice']
-		if order_price == '':
-			order_price = 0
-		order_topay = request.POST['orderTopay']
-		customer_name = request.POST['customerName']
-		customer_phone = request.POST['customerPhone']
-		customer_address = request.POST['customerAddress']
-		detail = Detail(order_id=order_id, phone=poi_phone, name=poi_name, address=poi_address, stuff=order_stuff, 
-			customer_name=customer_name, customer_phone=customer_phone, customer_address=customer_address,
-			total_price=order_price, to_pay=order_topay)
-		detail.save()
+	reminder = ''
+	js_url = 'poi/order'
+	poi_id = request.COOKIES.get('poiid')
+	try:
 		poi = Merchant.objects.get(id=poi_id)
-		now = int(time.time())
-		randdigit = random.randint(0, 10)
-		deliver_id = str(now)+str(randdigit)
-		order=Order(deliver_id=deliver_id, poi_id=poi_id, order_detail=detail, order_status=ORDER_STATUS['ordered'])
-		order.save()
-		response_data['code'] = 0
-		return HttpResponse(json.dumps(response_data), content_type="application/json")  
-	else:
-		reminder = ''
-		js_url = 'poi/order'
-		poi_id = request.COOKIES.get('poiid')
-		try:
-			poi = Merchant.objects.get(id=poi_id)
-		except ObjectDoesNotExist:
-			reminder = "该商户不存在"
-		return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})
+	except ObjectDoesNotExist:
+		reminder = "该商户不存在"
+	return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})
 
 @csrf_exempt
 def order_detail_ajax(request):
@@ -120,29 +94,7 @@ def order_detail_ajax(request):
 		response_data['msg'] = '没有查到相关订单' 
 
 	return HttpResponse(json.dumps(response_data), content_type="application/json")  
-
-@csrf_exempt
-def poi_login(request):
-	if request.method == 'POST':
-		username = request.REQUEST.get('username')
-		password = request.REQUEST.get('password')
-		response_data = {}
-
-		try:
-			poi = Merchant.objects.get(username=username)
-			if poi.password == password:
-				response_data['code'] = 0  
-				response_data['msg'] = 'ok' 
-				mypoi = poi.as_json()
-				response_data['data'] = mypoi
-			else:
-				response_data['code'] = 1 
-				response_data['msg'] = '用户名或密码错误' 	
-		except ObjectDoesNotExist:
-			response_data['code'] = 1 
-			response_data['msg'] = '用户名不存在'	
-
-		return HttpResponse(json.dumps(response_data), content_type="application/json")  
+  
 
 def order_detail(request, deliver_id):
 	js_url = 'order'

@@ -57,7 +57,7 @@
 </style>
 <div class="m-banner"></div>
 <div class="container m-main">
-	<h3>#14263863782订单详情</h3>
+	<h3>#{{order.deliver_id}}订单详情</h3>
     {% if order %}
       <div class="order-status">
         <ul class="list-unstyled order-status-list clearfix">
@@ -67,7 +67,7 @@
           </li>
           <li class="complete">
             <img class="status-cicle" src="/static/images/icon/status.png">
-            <p>已到达望京站</p>
+            <p>已到达{{order.poi_nearest.name}}</p>
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
@@ -75,7 +75,7 @@
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <p>已到达知春路站</p>
+            <p>已到达{{order.customer_nearest.name}}</p>
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">

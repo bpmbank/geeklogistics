@@ -1,3 +1,5 @@
+#-*- coding:utf-8 -*-
+
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 
@@ -9,7 +11,7 @@ admin.autodiscover()
 # import views
 
 urlpatterns = patterns('',
-    # Examples:
+    # pc页面相关:
     url(r'^$', 'geeklogistics.views.home', name='home'),
     url(r'^coop/$', 'geeklogistics.views.coop', name='coop'),
     url(r'^poi/apply/$', 'geeklogistics.views.poi_apply', name='poi_apply'),
@@ -19,11 +21,14 @@ urlpatterns = patterns('',
     url(r'^order/$', 'geeklogistics.views.order', name='order'),
     url(r'^order/(?P<deliver_id>\d+)/$', 'geeklogistics.views.order_detail', name='order_detail'),
     url(r'^order/add/$', 'geeklogistics.views.poi_order', name='poi_order'),
+    url(r'^order/success/(?P<deliver_id>\d+)/$', 'geeklogistics.views.order_success', name='order_success'),
     url(r'^custom/$', 'geeklogistics.views.custom', name='custom'),
     url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
 
+    # api相关
     url(r'^api/v1/order/list$', 'geeklogistics.order.views.order_list', name='order_list'),
-    url(r'^api/v1/poi/login$', 'geeklogistics.views.poi_login', name='poi_login' ),    
+    url(r'^api/v1/order/add$', 'geeklogistics.order.views.order_new', name='order_new' ),    
+    url(r'^api/v1/poi/login$', 'geeklogistics.poi.views.poi_login', name='poi_login' ),    
     
     # url(r'^blog/', include('blog.urls')),
 

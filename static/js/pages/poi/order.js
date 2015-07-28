@@ -48,7 +48,7 @@ jQorderBtn.bind('click', function(){
 		jQerr.text('请填写收货人地址');
 		return;
 	}else{
-		$.post('/order/add/', {
+		$.post('/api/v1/order/add', {
 			'poiId': poiId,
 			'poiName': poiName,
 			'poiPhone': poiPhone,
@@ -62,7 +62,8 @@ jQorderBtn.bind('click', function(){
 			'customerAddress': customerAddress
 		}, function(ret){
 			if(ret.code == 0){
-				alert("下单成功");
+				window.location.href = '/order/success/'+ ret.data;
+
 			}else{
 				alert(ret.msg);
 			}
