@@ -113,7 +113,7 @@ class StatusRecord(models.Model):
 
 	def record_text(self):
 		text = ''
-		time_format = str(self.time.isoformat())
+		time_format = self.time.strftime("%Y-%m-%d %H:%M:%S")
 		if self.operator_type == '0':
 			operator = Station.objects.get(id=self.operator_id)
 		elif self.operator_type == '1':

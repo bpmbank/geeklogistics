@@ -11,7 +11,7 @@ class Merchant(models.Model):
 	latitude = models.FloatField('纬度', null=True, blank=True)
 	longitude = models.FloatField('经度', null=True, blank=True)	
 	tel = models.CharField('商家电话', max_length=30)
-	logo = models.ImageField('商家图标', max_length=50, upload_to='static/images/logo/', null=True, blank=True)  #不必填
+	logo = models.ImageField('商家图标', max_length=100, upload_to='static/images/logo/', null=True, blank=True)  #不必填
 	poi_type = models.CharField('商家类型', max_length=3, default=0)  #关联表 int
 	ctime = models.DateTimeField('创建时间', max_length=30, default=datetime.now())
 	utime = models.DateTimeField('最新修改时间', max_length=30, default=datetime.now())

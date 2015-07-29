@@ -11,7 +11,7 @@ class Station(models.Model):
 	phone = models.CharField('联系电话', max_length=30)
 	latitude = models.FloatField('纬度')
 	longitude = models.FloatField('经度')
-	image = models.ImageField('站点图片', max_length=50, upload_to='static/images/station/', null=True, blank=True)
+	image = models.ImageField('站点图片', max_length=100, upload_to='static/images/station/', null=True, blank=True)
 	ctime = models.DateTimeField('创建时间', max_length=30, default=datetime.now())
 	utime = models.DateTimeField('最新修改时间', max_length=30, default=datetime.now())
 	status = models.CharField('状态', max_length=3, default=0)
