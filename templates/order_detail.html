@@ -63,23 +63,27 @@
         <ul class="list-unstyled order-status-list clearfix">
           <li class="complete">
             <img class="status-cicle-only" src="/static/images/icon/status-circle.png">
-            <p>已从商家取货</p>
+            <p>已下单</p>
           </li>
           <li class="complete">
             <img class="status-cicle" src="/static/images/icon/status.png">
-            <p>已到达{{order.poi_nearest.name}}</p>
+            <p>已从商家取货</p>
+            <!-- <p>已到达{{order.poi_nearest.name}}</p> -->
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <p>已到达总部</p>
+            <!-- <p>已到达总部</p> -->
+            <p>运输中</p>
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <p>已到达{{order.customer_nearest.name}}</p>
+            <!-- <p>已到达{{order.customer_nearest.name}}</p> -->
+            <p>开始配送</p>
           </li>
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <p>已送达收货人</p>
+            <!-- <p>已送达收货人</p> -->
+            <p>配送完成</p>
           </li>
         </ul>
       </div>
@@ -117,9 +121,12 @@
         <div>
           <h4 class="order-title">配送信息</h4>
           <div class="order-info">
-            <p><strong>配送状态</strong>：已到达商家最近配送站</p>
-            <p><strong>开始配送时间</strong>：2015-07-24 11:20:11</p>
-            <p><strong>结束配送时间</strong>：</p>
+            <!-- <p><strong>配送状态</strong>：已到达商家最近配送站</p> -->
+            <!-- <p><strong>开始配送时间</strong>：2015-07-24 11:20:11</p> -->
+            <!-- <p><strong>结束配送时间</strong>：</p> -->
+            {% for status in record_list %}
+                <p>{{status}}</p>
+            {% endfor %}
           </div>
         </div>
 

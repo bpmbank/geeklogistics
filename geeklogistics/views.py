@@ -22,7 +22,8 @@ def home(request):
 	return render_to_response('index.html', {'current_url': 'index', 'news_list': news_list})
 
 def intro(request):
-	return render_to_response('intro.html', {'current_url': 'intro'})
+	js_url = 'intro'
+	return render_to_response('intro.html', {'current_url': 'intro', 'js_url': js_url})
 
 def coop(request):
 	js_url = 'coop'
@@ -100,10 +101,15 @@ def order_detail(request, deliver_id):
 	js_url = 'order'
 	try:
 		order = Order.objects.get(deliver_id=deliver_id)
+		order_status = StatusRecord.objects.filter(order_id=order.id)
+		record_list = []
+		for status in order_status:
+			record_text = status.record_text()
+			record_list.append(record_text)
+		print record_list
 		reminder = ''
-		# print orders
 		return render_to_response('order_detail.html', {'current_url': 'order', 'js_url': js_url,
-			'order': order})
+			'order': order, 'record_list': record_list})
 	except ObjectDoesNotExist:
 		reminder = "该订单不存在"
 		return render_to_response('order_detail.html', {'current_url': 'order_detail', 'js_url': js_url})

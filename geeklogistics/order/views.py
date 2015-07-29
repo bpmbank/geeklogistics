@@ -154,6 +154,15 @@ def update_order_status(request):
 		operator_type = request.REQUEST.get('operatorType')
 		order_status = request.REQUEST.get('orderStatus')
 		order_id = request.REQUEST.get('orderId')
+		try:
+			record = StatusRecord(status=order_status, order_id=order_id, 
+				operator_type=operator_type, operator_id=operator_id)
+			record.save()
+			response_data['code'] = 0
+		except:
+			response_data['code'] = 1
+			response_data['msg'] = '订单状态更新'
+		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
 
 

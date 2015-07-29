@@ -27,10 +27,9 @@ urlpatterns = patterns('',
 
     # api相关
     url(r'^api/v1/order/list$', 'geeklogistics.order.views.order_list', name='order_list'),
-    url(r'^api/v1/order/add$', 'geeklogistics.order.views.order_new', name='order_new' ),    
+    url(r'^api/v1/order/add$', 'geeklogistics.order.views.order_new', name='order_new' ),
+    url(r'^api/v1/order/updateStatus$', 'geeklogistics.order.views.update_order_status', name='update_order_status'), 
     url(r'^api/v1/poi/login$', 'geeklogistics.poi.views.poi_login', name='poi_login' ),    
-    
-    # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
 

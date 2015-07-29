@@ -3,7 +3,7 @@
 from datetime import datetime
 from django.db import models
 from geeklogistics.poi.models import Merchant
-from geeklogistics.deliver.models import Dispatcher
+from geeklogistics.deliver.models import Dispatcher, Driver
 from geeklogistics.station.models import Station
 from django.forms import ModelForm
 
@@ -78,7 +78,7 @@ class Order(models.Model):
 		if end_time:
 			end_time = self.end_time.isoformat()
 		return dict(
-			order_id=order_id, deliver_id=deliver_id, order_stuff=order_stuff,
+			id=self.id, order_id=order_id, deliver_id=deliver_id, order_stuff=order_stuff,
 			order_price=order_price, order_topay=order_topay, customer_name=customer_name,
 			customer_phone = customer_phone, customer_address=customer_address,
 			start_time=start_time, end_time=end_time, status=order_status)
@@ -93,14 +93,37 @@ class StatusRecord(models.Model):
 		('2', '司机'),
 	)
 	status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
-	location = models.ForeignKey(Station, verbose_name="当前配送站", null=True, blank=True)
 	time = models.DateTimeField('时间', max_length=30, default=datetime.now())
 	operator_type = models.CharField('操作人类型', max_length=3, default=0, choices=OPERATOR_TYPE_CHOICES)
 	operator_id = models.IntegerField(verbose_name="操作人对应id", null=True, blank=True)
-	order_id = models.ForeignKey(Order, verbose_name="配送订单数据库id")
+	order = models.ForeignKey(Order, verbose_name="配送订单数据库id")
 
 	def __unicode__(self):
 		return self.status
+
+	def record_text(self):
+		text = ''
+		time_format = str(self.time.isoformat())
+
+		if self.operator_type == '0':
+			operator = Station.objects.get(id=self.operator_id)
+		elif self.operator_type == '1':
+			operator = Dispatcher.objects.get(id=self.operator_id)
+		elif self.operator_type == '2':
+			operator = Driver.objects.get(id = self.operator_id)
+
+		# todo：加入出库入库等提示？
+		if(self.status == '200'):
+			text = time_format + ' ' + '配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 已从商家取货';
+		elif(self.status == '300'):
+			text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.tel.encode('utf-8')+') 进行分拣';
+		elif(self.status == '400'):
+			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
+		elif(self.status == '500'):
+			text = time_format + ' ' + '货物已由用户签收';
+
+		return text
+
 
 class OrderForm(ModelForm):
 	class Meta:
