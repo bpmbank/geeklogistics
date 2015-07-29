@@ -158,6 +158,9 @@ def update_order_status(request):
 			record = StatusRecord(status=order_status, order_id=order_id, 
 				operator_type=operator_type, operator_id=operator_id)
 			record.save()
+			order = Order.objects.get(id = order_id)
+			order.order_status = order_status
+			order.save()
 			response_data['code'] = 0
 		except:
 			response_data['code'] = 1

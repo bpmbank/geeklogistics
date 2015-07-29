@@ -65,26 +65,52 @@
             <img class="status-cicle-only" src="/static/images/icon/status-circle.png">
             <p>已下单</p>
           </li>
-          <li class="complete">
-            <img class="status-cicle" src="/static/images/icon/status.png">
-            <p>已从商家取货</p>
-            <!-- <p>已到达{{order.poi_nearest.name}}</p> -->
-          </li>
+          {% if order.order_status|add:0 >= 200 %}
+            <li class="complete">
+              <img class="status-cicle" src="/static/images/icon/status.png">
+              <p>已从商家取货</p>
+            </li>
+          {% else %}
+            <li>
+              <img class="status-cicle" src="/static/images/icon/status-gray.png">
+              <p>已从商家取货</p>
+            </li>
+          {% endif %}
+
+          {% if order.order_status|add:0 >= 300 %}
+            <li class="complete">
+              <img class="status-cicle" src="/static/images/icon/status.png">
+              <p>运输中</p>
+            </li>
+          {% else %}
+            <li>
+              <img class="status-cicle" src="/static/images/icon/status-gray.png">
+              <p>运输中</p>
+            </li>
+          {% endif %}
+          {% if order.order_status|add:0 >= 400 %}
+            <li class="complete">
+              <img class="status-cicle" src="/static/images/icon/status.png">
+              <p>开始配送</p>
+            </li>
+          {% else %}
           <li>
             <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <!-- <p>已到达总部</p> -->
-            <p>运输中</p>
-          </li>
-          <li>
-            <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <!-- <p>已到达{{order.customer_nearest.name}}</p> -->
             <p>开始配送</p>
           </li>
-          <li>
-            <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <!-- <p>已送达收货人</p> -->
-            <p>配送完成</p>
-          </li>
+          {% endif %}
+
+          {% if order.order_status|add:0 >= 500 %}
+            <li class="complete">
+              <img class="status-cicle" src="/static/images/icon/status.png">
+              <p>配送完成</p>
+            </li>
+          {% else %}
+            <li>
+              <img class="status-cicle" src="/static/images/icon/status-gray.png">
+              <p>配送完成</p>
+            </li>
+          {% endif %}
         </ul>
       </div>
 
