@@ -10,6 +10,7 @@ from geeklogistics.order.models import Order, Detail, StatusRecord, OrderForm
 import json  
 import time
 import random
+from time import strftime
 
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -56,16 +57,33 @@ def order_success(request, deliver_id):
 	return render_to_response('poi/order_success.html', {'current_url': 'coop', 'poi_id': poi_id, 'deliver_id': deliver_id})
 
 def list(request, poi_id):
+	# todo：分页
+	reminder = ''
+	js_url = 'poi/order_list'
 	try:
 		poi = Merchant.objects.get(id=poi_id)
-		print poi_id
-		orders = Order.objects.filter(poi=poi_id)
-		print orders
-		reminder = ''
+		try:
+			orders = Order.objects.filter(poi=poi_id)
+			record_list = [] 
+			for order in orders:
+				myorder = {} #why必须先初始化？
+				myorder['order_id'] = order.order_detail.order_id
+				myorder['deliver_id'] = order.deliver_id
+				myorder['status'] = order.get_order_status_display()
+				record = StatusRecord.objects.filter(order_id = order.id)
+				record_length = len(record)
+				if(record_length>0):
+					myorder['start_time'] = record[0].time.strftime("%Y-%m-%d %H:%M:%S")
+					myorder['operator'] = record[record_length-1].get_record_operator()
+				else:
+					myorder['start_time'] = ''
+					myorder['operator'] = {}	
+				record_list.append(myorder)
+		except:
+			pass
 	except ObjectDoesNotExist:
 		reminder = "该商户不存在"
-	js_url = 'poi/order_list'
-	return render_to_response('poi/order_list.html', {'current_url': 'coop', 'order_list': orders, 'js_url': js_url, 'reminder': reminder})
+	return render_to_response('poi/order_list.html', {'current_url': 'coop', 'order_list': record_list, 'js_url': js_url, 'reminder': reminder})
 
 
 
@@ -80,25 +98,11 @@ def poi_order(request):
 	except ObjectDoesNotExist:
 		reminder = "该商户不存在"
 	return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})
-
-@csrf_exempt
-def order_detail_ajax(request):
-	deliver_id = request.POST['deliverId']
-	order = Order.objects.get(deliver_id=deliver_id).as_json()
-	response_data = {}  
-	if(order):
-		response_data['code'] = 0  
-		response_data['msg'] = 'ok' 
-		response_data['order'] = order  
-	else:
-		response_data['code'] = 1 
-		response_data['msg'] = '没有查到相关订单' 
-
-	return HttpResponse(json.dumps(response_data), content_type="application/json")  
   
 
 def order_detail(request, deliver_id):
 	js_url = 'order'
+	reminder = ''
 	try:
 		order = Order.objects.get(deliver_id=deliver_id)
 		order_status = StatusRecord.objects.filter(order_id=order.id)
@@ -107,7 +111,6 @@ def order_detail(request, deliver_id):
 			record_text = status.record_text()
 			record_list.append(record_text)
 		print record_list
-		reminder = ''
 		return render_to_response('order_detail.html', {'current_url': 'order', 'js_url': js_url,
 			'order': order, 'record_list': record_list})
 	except ObjectDoesNotExist:

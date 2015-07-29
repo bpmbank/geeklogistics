@@ -167,6 +167,20 @@ def update_order_status(request):
 			response_data['msg'] = '订单状态更新'
 		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
+# 订单详情ajax
+@csrf_exempt
+def order_detail_ajax(request):
+	deliver_id = request.POST['deliverId']
+	order = Order.objects.get(deliver_id=deliver_id).as_json()
+	response_data = {}  
+	if(order):
+		response_data['code'] = 0  
+		response_data['msg'] = 'ok' 
+		response_data['order'] = order  
+	else:
+		response_data['code'] = 1 
+		response_data['msg'] = '没有查到相关订单' 
 
+	return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
 

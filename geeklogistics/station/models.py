@@ -8,7 +8,7 @@ class Station(models.Model):
 	# password = models.CharField('配送点密码', max_length=30)
 	name = models.CharField('配送点名称', max_length=30)
 	address = models.CharField('详细地址', max_length=30)
-	tel = models.CharField('联系电话', max_length=30)
+	phone = models.CharField('联系电话', max_length=30)
 	latitude = models.FloatField('纬度')
 	longitude = models.FloatField('经度')
 	image = models.ImageField('站点图片', max_length=50, upload_to='static/images/station/', null=True, blank=True)

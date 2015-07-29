@@ -101,10 +101,19 @@ class StatusRecord(models.Model):
 	def __unicode__(self):
 		return self.status
 
+	def get_record_operator(self):
+		if self.operator_type == '0':
+			operator = Station.objects.get(id=self.operator_id)
+		elif self.operator_type == '1':
+			operator = Dispatcher.objects.get(id=self.operator_id)
+		elif self.operator_type == '2':
+			operator = Driver.objects.get(id = self.operator_id)
+
+		return operator		
+
 	def record_text(self):
 		text = ''
 		time_format = str(self.time.isoformat())
-
 		if self.operator_type == '0':
 			operator = Station.objects.get(id=self.operator_id)
 		elif self.operator_type == '1':
@@ -116,7 +125,7 @@ class StatusRecord(models.Model):
 		if(self.status == '200'):
 			text = time_format + ' ' + '配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 已从商家取货';
 		elif(self.status == '300'):
-			text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.tel.encode('utf-8')+') 进行分拣';
+			text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 进行分拣';
 		elif(self.status == '400'):
 			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
 		elif(self.status == '500'):
