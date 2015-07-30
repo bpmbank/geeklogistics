@@ -35,4 +35,11 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+
+	config.extraPlugins = 'colorbutton';
+	config.filebrowserUploadUrl = '/image/upload/'
+	config.colorButton_backStyle = {
+	    element: 'span',
+	    styles: { 'background-color': '#(color)' }
+	};
 };

@@ -24,9 +24,11 @@ urlpatterns = patterns('',
     url(r'^order/success/(?P<deliver_id>\d+)/$', 'geeklogistics.views.order_success', name='order_success'),
     url(r'^custom/$', 'geeklogistics.views.custom', name='custom'),
     url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
+    url(r'^image/upload/$', 'geeklogistics.upload.sceneImgUpload', name='sceneImgUpload' ),
+
 
     # 分拣站相关
-    url(r'^station/orders/(?P<station_id>\d+)/$', 'geeklogistics.station.views.list', name='station_order_list'),
+    # url(r'^station/orders/(?P<station_id>\d+)/$', 'geeklogistics.station.views.list', name='station_order_list'),
     url(r'^station/login$', 'geeklogistics.station.views.login', name='station_login'),
 
     # 配送员相关

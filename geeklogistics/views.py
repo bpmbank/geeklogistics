@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 from geeklogistics.station.models import Station
 from geeklogistics.poi.models import Merchant, Show
 from geeklogistics.news.models import News
-from geeklogistics.order.models import Order, Detail, StatusRecord, OrderForm
+from geeklogistics.order.models import Order, Detail, StatusRecord
 
 import json  
 import time
@@ -85,8 +85,6 @@ def list(request, poi_id):
 		reminder = "该商户不存在"
 	return render_to_response('poi/order_list.html', {'current_url': 'coop', 'order_list': record_list, 'js_url': js_url, 'reminder': reminder})
 
-
-
 # 商家手动下单页面
 @csrf_exempt
 def poi_order(request):
@@ -98,7 +96,6 @@ def poi_order(request):
 	except ObjectDoesNotExist:
 		reminder = "该商户不存在"
 	return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})
-  
 
 def order_detail(request, deliver_id):
 	js_url = 'order'
@@ -117,21 +114,4 @@ def order_detail(request, deliver_id):
 		reminder = "该订单不存在"
 		return render_to_response('order_detail.html', {'current_url': 'order_detail', 'js_url': js_url})
 
-@csrf_exempt
-def order_new(request):
-	if request.method == 'POST': # 如果表单被提交
-		form = OrderForm(request.POST) # 获取Post表单数据
-		if form.is_valid(): # 验证表单
-			detail = form.save()
-			print detail.id
-			detail_id = detail.id
-			order = Order(order_detail_id=detail_id)
-			order.save()
-			return HttpResponseRedirect('/') # 跳转
-			# return render_to_response('send.html', {'form': form,})
-			# return render_to_response('send.html', {'form': form,}, context_instance=RequestContext(request))
-		else:
-			return render_to_response('send.html', {'form': form,}, context_instance=RequestContext(request))
-	else:
-		form = OrderForm() #获得表单对象
-		return render_to_response('send.html', {'form': form,})
+

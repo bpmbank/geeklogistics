@@ -183,4 +183,23 @@ def order_detail_ajax(request):
 
 	return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
+# modelform
+@csrf_exempt
+def order_new(request):
+	if request.method == 'POST': # 如果表单被提交
+		form = OrderForm(request.POST) # 获取Post表单数据
+		if form.is_valid(): # 验证表单
+			detail = form.save()
+			print detail.id
+			detail_id = detail.id
+			order = Order(order_detail_id=detail_id)
+			order.save()
+			return HttpResponseRedirect('/') # 跳转
+			# return render_to_response('send.html', {'form': form,})
+			# return render_to_response('send.html', {'form': form,}, context_instance=RequestContext(request))
+		else:
+			return render_to_response('send.html', {'form': form,}, context_instance=RequestContext(request))
+	else:
+		form = OrderForm() #获得表单对象
+		return render_to_response('send.html', {'form': form,})
 

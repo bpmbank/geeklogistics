@@ -140,6 +140,16 @@ TEMPLATE_DIRS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 M_MEDIA_SITE = 'static/m/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+CKEDITOR_CONFIGS = {
+   'default': {
+        'toolbar':[ ['CodeSnippet', ], ],
+        'height': 400,
+        'width': 900,
+        'removePlugins': 'stylesheetparser',
+        'extraPlugins': 'codesnippet',
+   },
+}
 STATICFILES_DIRS = (
     ("css", os.path.join(STATIC_ROOT,'css')),
     ("js", os.path.join(STATIC_ROOT,'js')),
@@ -149,3 +159,4 @@ STATICFILES_DIRS = (
 
 )
 STATIC_URL = '/static/'
+

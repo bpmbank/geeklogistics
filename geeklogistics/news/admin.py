@@ -10,7 +10,7 @@ class NewsAdmin(admin.ModelAdmin):
     ordering = ('-ctime',) #降序
 
     class Media:
-    	js = ('ckeditor/ckeditor.js',)
+    	js = ('ckeditor/configuration-ckeditor.js', 'ckeditor/ckeditor.js')
 
 
 admin.site.register(News, NewsAdmin)
