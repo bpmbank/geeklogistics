@@ -105,7 +105,7 @@
 			<ul class="new-list">
 				{% for news in news_list %}
 					<li>
-						<a href=""><span>{{news.title}}</span><span class="fr">{{news.ctime}}</span></a>
+						<a href="/news/{{news.id}}"><span>{{news.title}}</span><span class="fr">{{news.ctime|date:'Y-m-d H:m:s'}}</span></a>
 					</li>
 				{% endfor %}
 			</ul>
