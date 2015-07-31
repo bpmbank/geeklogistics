@@ -125,12 +125,14 @@ class StatusRecord(models.Model):
 		if(self.status == '200'):
 			text = time_format + ' ' + '配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 已从商家取货';
 		elif(self.status == '300'):
-			text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 进行分拣';
+			if self.operator_type == '0':
+				text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 进行分拣';
+			elif self.operator_type == '2':
+				text = time_format + ' ' + '货物正由司机 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 运往下一分拣站';				
 		elif(self.status == '400'):
 			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
 		elif(self.status == '500'):
 			text = time_format + ' ' + '货物已由用户签收';
-
 		return text
 
 

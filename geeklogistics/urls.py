@@ -33,7 +33,7 @@ urlpatterns = patterns('',
     url(r'^station/list/(?P<station_id>\d+)/$', 'geeklogistics.station.views.order_list', name='order_list'),
 
     # 配送员相关
-    url(r'^api/v1/deliver/login$', 'geeklogistics.deliver.views.dispatcher_login', name='dispatcher_login'),
+    url(r'^api/v1/disptacher/login$', 'geeklogistics.deliver.views.dispatcher_login', name='dispatcher_login'),
     url(r'^api/v1/driver/login$', 'geeklogistics.deliver.views.driver_login', name='driver_login'),
 
 
