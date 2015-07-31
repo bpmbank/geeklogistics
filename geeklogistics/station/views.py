@@ -34,3 +34,21 @@ def login(request):
 			response_data['msg'] = '用户名不存在'	
 
 		return HttpResponse(json.dumps(response_data), content_type="application/json")
+	else:
+		js_url = 'station/login'
+		return render_to_response('station/login.html', {'current_url': 'coop', 'js_url': js_url})
+
+def order_list(request, station_id):
+	# todo：分页
+	reminder = ''
+	js_url = 'station/order_list'
+	try:
+		station = Station.objects.get(id=station_id)
+		try:
+			orders = Order.objects.filter(poi_nearest=station_id)
+		except:
+			pass
+	except ObjectDoesNotExist:
+		reminder = "该配送站不存在"
+	return render_to_response('station/order_list.html', {'current_url': 'area', 'order_list': orders, 'js_url': js_url, 'reminder': reminder})
+
