@@ -20,5 +20,12 @@ class Station(models.Model):
 		verbose_name = '配送点'
 		verbose_name_plural = '配送点'
 
+
+	def as_json(self):
+		return dict(
+			id=self.id, name=self.name, phone=self.phone, address=self.address,
+			latitude = self.latitude, longitude=self.longitude
+		)
+
 	def __unicode__(self):
 		return self.name
