@@ -24,7 +24,8 @@ def home(request):
 
 def intro(request):
 	js_url = 'intro'
-	return render_to_response('intro.html', {'current_url': 'intro', 'js_url': js_url})
+	news_list = News.objects.all()
+	return render_to_response('intro.html', {'current_url': 'intro', 'js_url': js_url, 'news_list': news_list})
 
 def coop(request):
 	js_url = 'coop'

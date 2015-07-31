@@ -41,6 +41,12 @@
 	font-weight: 700;
 	/*color: #5A9AD3;*/
 }
+.new-list{
+	text-align: left;
+}
+.fr{
+	float: right;
+}
 </style>
 <div class="m-banner"></div>
 <div class="container m-main">
@@ -52,7 +58,7 @@
 			<li data-intro="intro4">动态仓储</li>
 			<li data-intro="intro5">冷链食品包装</li>
 			<li data-intro="intro6">联系我们</li>
-
+			<li data-intro="intro7">公司新闻</li>
 		</ul>
 	</div>
 	<div class="col-md-9 intro-content" role="main">
@@ -87,7 +93,23 @@
 			<p>为了更好的服务于客户，我们更加注重物流过程中的增值服务。作为专业的第三方食品物流服务供应商，百富达可以提供优质安全的食品级和非食品级产品包装。我们所有的食品包装QS认证以及食品级无尘车间及设备，使得我们的客户从其包装产品定制到包装设计再到制造成品全过程都可以一站式无缝解决，最大化的简化物流操作流程、降低人力与物流成本。</p>
 		</div>
 
+		<div id="intro6" class="intro m-hide">
+			<h4>联系方式</h4>
+			<img src="/static/images/package.jpg">
+			<p>为了更好的服务于客户，我们更加注重物流过程中的增值服务。作为专业的第三方食品物流服务供应商，百富达可以提供优质安全的食品级和非食品级产品包装。我们所有的食品包装QS认证以及食品级无尘车间及设备，使得我们的客户从其包装产品定制到包装设计再到制造成品全过程都可以一站式无缝解决，最大化的简化物流操作流程、降低人力与物流成本。</p>
+		</div>
 
+		<div id="intro7" class="intro m-hide">
+			<h4>公司新闻</h4>
+			<img class="cover" src="/static/images/logo.png">
+			<ul class="new-list">
+				{% for news in news_list %}
+					<li>
+						<a href=""><span>{{news.title}}</span><span class="fr">{{news.ctime}}</span></a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 
 </div>
