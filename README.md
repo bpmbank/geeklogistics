@@ -6,6 +6,8 @@ pip install django-suit==0.2.13
 
 pip install django-bootstrap-form 
 
+pip install django-import-export
+
 pip install xlrd
 
 CREATE DATABASE geeklogistics DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;

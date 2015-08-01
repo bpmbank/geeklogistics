@@ -14,6 +14,7 @@ import random
 import xlrd
 import os, tempfile
 from math import sin, cos, sqrt, atan2, radians
+from datetime import datetime
 
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -243,6 +244,8 @@ def update_order_status(request):
 				record = StatusRecord(status=order_status, order_id=order_id, 
 					operator_type=operator_type, operator_id=operator_id)
 				record.save()
+				if(order_status == 200):
+					order.start_time = datetime.now()
 				order.order_status = order_status
 				order.save()
 				response_data['code'] = 0
