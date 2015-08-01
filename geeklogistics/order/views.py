@@ -12,6 +12,7 @@ import urllib2
 import time
 import random
 import xlrd
+import os, tempfile
 from math import sin, cos, sqrt, atan2, radians
 
 from django.http import HttpResponse
@@ -28,6 +29,10 @@ def order_list(request):
 	if request.method == 'POST':
 		poi_id = request.REQUEST.get('poiId', 0)
 		status = request.REQUEST.get('status', -1)
+		page_size = int(request.REQUEST.get('pageSize', 20))
+		current_page = int(request.REQUEST.get('currentPage', 0))
+		total_count = int(request.REQUEST.get('totalCount', -1))
+
 		# print status
 		response_data = {}
 		try:
@@ -37,7 +42,22 @@ def order_list(request):
 				orders = Order.objects.filter(poi=poi_id)
 			else:
 				if status == '10':
-					orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))
+					# 分页加载数据
+					if total_count <= 0:
+						total_count = Order.objects.count()
+					if (current_page + 1) * page_size >= total_count:
+						end_position = total_count
+					else:
+						end_position = (current_page + 1) * page_size
+
+					start_position = current_page * page_size
+					print start_position
+					print end_position
+					print total_count
+
+					orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))[start_position:end_position]
+					print type(orders)
+					# orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))
 				elif status == '20':
 					orders = Order.objects.filter(Q(order_status=200, poi=poi_id) | Q(order_status=300, poi=poi_id) | Q(order_status=400, poi=poi_id))
 				elif status == '30':
@@ -55,7 +75,9 @@ def order_list(request):
 				# 	status = None
 				# myorder['status'] = status
 				myorderlist.append(myorder)
-			response_data['data'] = myorderlist
+			page_data = {'totalCount': total_count, 'currentPage': current_page, 'pageSize': page_size,
+                         'list': myorderlist}
+			response_data['data'] = page_data
 		except ObjectDoesNotExist:
 			response_data['code'] = 1 
 			response_data['msg'] = '该商户不存在' 
@@ -106,9 +128,9 @@ def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_st
 	if order_price == '':
 		order_price = 0
 	# 生成订单详情
-	detail = Detail(order_id=order_id, phone=poi_phone, name=poi_name, address=poi_address, stuff=order_stuff, 
-		customer_name=customer_name, customer_phone=customer_phone, customer_address=customer_address,
-		total_price=order_price, to_pay=order_topay)
+	detail = Detail(order_id=order_id, phone=str(poi_phone), name=poi_name, address=poi_address, stuff=order_stuff, 
+		customer_name=customer_name, customer_phone=str(customer_phone), customer_address=customer_address,
+		total_price=order_price, to_pay=str(order_topay))
 	detail.save()
 	poi = Merchant.objects.get(id=poi_id)
 	# 生成配送编号
@@ -134,17 +156,26 @@ def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_st
 @csrf_exempt
 def import_order(request):
 	response_data = {}
-	e_file = request.FILES.get('file', None)
-	data = xlrd.open_workbook('static/excel/order_test.xlsx')
+	# print request.FILES
+	e_file = request.FILES["orderXls"]
+	# print e_file
+	poi_id = request.COOKIES.get('poiid', '1')
+
+	file_test = 'static/excel/order_test.xlsx'
+	data = xlrd.open_workbook(file_contents=e_file.read())
 	table = data.sheets()[0] 
 
 	nrows = table.nrows
-	for i in range(1, nrows ):
-		print i
+	for i in range(1, nrows):
+		row = table.row_values(i)
 		print table.row_values(i)
-
-	response_data['code'] = 0
-	return HttpResponse(json.dumps(response_data), content_type="application/json")  
+		if row[6].encode('utf-8') == '否':
+			topay_str = '0'
+		else:
+			topay_str = '1'
+		new_order_model(poi_id, row[1], row[2], row[3], str(row[0]), row[4], row[5], topay_str, row[7], row[8], row[9])
+	url = '/list/'+poi_id
+	return HttpResponseRedirect(url)  
 
 
 #下单接口

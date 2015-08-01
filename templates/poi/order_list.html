@@ -14,13 +14,21 @@
     top: 30px;
     right: 140px;
   }
+  #orderXls{
+    position: absolute;
+    top: 35px;
+    right: 200px;
+  }
 </style>
 
 <div class="m-banner"></div>
 <div class="container m-main">
 	<h3>我的订单</h3>
   <a href="/order/add/"><div class="btn btn-primary order-btn" id="j-order-btn">我要下单</div></a>
-  <div class="btn btn-success excel-btn" id="j-excel-btn">批量导入</div>
+  <form enctype="multipart/form-data" action="/order/import" method="POST">
+    <input type="file" name="orderXls" id="orderXls"/>
+    <input class="btn btn-success excel-btn" type="submit" id="j-submit-btn" value="批量导入">
+  </form>
 
   {% if reminder == '' %}
   	<table class="table table-striped">
@@ -38,7 +46,7 @@
       <tbody>
         {% for order in order_list%}
           <tr>
-            <th scope="row">{{ forloop.counter }}</th>
+            <th scope="row">{{ order.start_index}}</th>
             <td>{{order.order_id}}</td>
             <td><a href="/order/{{order.deliver_id}}">{{order.deliver_id}}</a></td>
             <td>{{order.start_time}}</td>
@@ -49,6 +57,19 @@
         {% endfor %}
       </tbody>
     </table>
+    <!-- 第一种分页显示方式 -->
+    <ul class="pagination">
+      {# orders.paginator.page_range 这个函数返回包含一个所有页码数的 range 对象 #}
+      {# 即 range(1, orders.paginator.num_pages + 1) #}
+      {% for page_number in orders.paginator.page_range %}
+        {% ifequal page_number  orders.number %}
+          <li class="active"><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+        {% else %}
+          <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+        {% endifequal %}
+      {% endfor %}
+    </ul>
+
   {% else %}
     <p>{{reminder}}</p>
   {% endif %}

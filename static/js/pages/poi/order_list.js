@@ -22,9 +22,4 @@ function setCookie(cname, cvalue, exdays) {
 	}
 document.cookie = cname + "=" + encodeURIComponent(cvalue) + "; path=/" +"; expires="+expires;
 }	
-var poiId = getCookie('poiid');
-$.post('/api/v1/order/list', {
-	'poiId': poiId
-}, function(ret){
-	
-})
+// var poiId = getCookie('poiid');

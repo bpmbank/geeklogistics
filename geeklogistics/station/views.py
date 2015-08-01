@@ -12,6 +12,9 @@ from time import strftime
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 
+from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
 @csrf_exempt
 def login(request):
 	if request.method == 'POST':
@@ -46,6 +49,16 @@ def order_list(request, station_id):
 		station = Station.objects.get(id=station_id)
 		try:
 			orders = Order.objects.filter(poi_nearest=station_id)
+			limit = 20
+			paginator = Paginator(orders, limit)  # 实例化一个分页对象
+			try:
+				orders = paginator.page(page)  # 获取某页对应的记录
+			except PageNotAnInteger:  # 如果页码不是个整数
+				orders = paginator.page(1)  # 取第一页的记录
+			except EmptyPage:  # 如果页码太大，没有相应的记录
+				orders = paginator.page(paginator.num_pages)  # 取最后一页的记录
+			# todo:
+			# 分页count		
 		except:
 			pass
 	except ObjectDoesNotExist:
