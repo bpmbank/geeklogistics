@@ -96,7 +96,7 @@ def poi_order(request):
 		poi = Merchant.objects.get(id=poi_id)
 	except ObjectDoesNotExist:
 		reminder = "该商户不存在"
-	return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})
+	return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})	
 
 def order_detail(request, deliver_id):
 	js_url = 'order'

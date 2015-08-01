@@ -11,6 +11,7 @@ import json
 import urllib2
 import time
 import random
+import xlrd
 from math import sin, cos, sqrt, atan2, radians
 
 from django.http import HttpResponse
@@ -127,7 +128,25 @@ def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_st
 				customer_nearest_id=customer_nearest, order_detail=detail, order_status=ORDER_STATUS['ordered'])
 	order.save()	
 	
-	return order	
+	return order
+
+# 批量倒入订单
+@csrf_exempt
+def import_order(request):
+	response_data = {}
+	e_file = request.FILES.get('file', None)
+	data = xlrd.open_workbook('static/excel/order_test.xlsx')
+	table = data.sheets()[0] 
+
+	nrows = table.nrows
+	for i in range(1, nrows ):
+		print i
+		print table.row_values(i)
+
+	response_data['code'] = 0
+	return HttpResponse(json.dumps(response_data), content_type="application/json")  
+
+
 #下单接口
 @csrf_exempt
 def order_new(request):

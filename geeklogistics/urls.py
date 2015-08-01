@@ -26,9 +26,10 @@ urlpatterns = patterns('',
     url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
     url(r'^image/upload/$', 'geeklogistics.upload.sceneImgUpload', name='sceneImgUpload' ),
 
+    # 订单相关 
+    url(r'^order/import$', 'geeklogistics.order.views.import_order', name='import_order'),
 
     # 分拣站相关
-    # url(r'^station/orders/(?P<station_id>\d+)/$', 'geeklogistics.station.views.list', name='station_order_list'),
     url(r'^api/v1/station/login$', 'geeklogistics.station.views.login', name='station_login'),
     url(r'^station/list/(?P<station_id>\d+)/$', 'geeklogistics.station.views.order_list', name='order_list'),
 
