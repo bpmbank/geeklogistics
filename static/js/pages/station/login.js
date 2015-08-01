@@ -37,7 +37,7 @@ jQloginBtn.bind('click', function(){
 	}, function(ret){
 		if(ret.code ==0){
 			var stationId = ret.data.id;
-			setCookie('poiid', poiId);
+			setCookie('poiid', stationId);
 			window.location.href = '/station/list/'+stationId;
 		}else{
 			alert(ret.msg);

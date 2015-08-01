@@ -40,7 +40,7 @@ def custom(request):
 											'customer_list': customer_list})
 def news(request, id):
 	news = News.objects.get(id=id) 
-	return render_to_response('news.html', {'news': news}) 
+	return render_to_response('news.html', {'current_url': 'intro', 'news': news}) 
 
 def area(request):
 	area_list = Station.objects.all()

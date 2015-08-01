@@ -21,6 +21,7 @@ ORDER_STATUS = {'initial': 0, 'ordered': 100, 'get_order': 200,'shipping': 300,
 			'delivering': 400, 'delivered': 500, 'complete': 600,'cancel': 700}
 
 # 获取订单列表ajax
+# todo：只获取当日的？
 @csrf_exempt
 def order_list(request):
 	if request.method == 'POST':
@@ -100,6 +101,33 @@ def getNearestStation(location, stations):
 			nearest_id = station.id
 	return nearest_id
 
+def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_stuff, order_price, order_topay, customer_name, customer_phone, customer_address):
+	if order_price == '':
+		order_price = 0
+	# 生成订单详情
+	detail = Detail(order_id=order_id, phone=poi_phone, name=poi_name, address=poi_address, stuff=order_stuff, 
+		customer_name=customer_name, customer_phone=customer_phone, customer_address=customer_address,
+		total_price=order_price, to_pay=order_topay)
+	detail.save()
+	poi = Merchant.objects.get(id=poi_id)
+	# 生成配送编号
+	now = int(time.time())
+	randdigit = random.randint(0, 10)
+	deliver_id = str(now)+str(randdigit)
+	# 生成相关站点
+	stations = Station.objects.all()
+	# 商家最近
+	poi_location = getLocation(poi_address)
+	poi_nearest = getNearestStation(poi_location, stations)
+	# 收货人最近
+	customer_location = getLocation(customer_address)
+	customer_nearest = getNearestStation(customer_location, stations)
+	# 插入订单表
+	order=Order(deliver_id=deliver_id, poi_id=poi_id, poi_nearest_id=poi_nearest,
+				customer_nearest_id=customer_nearest, order_detail=detail, order_status=ORDER_STATUS['ordered'])
+	order.save()	
+	
+	return order	
 #下单接口
 @csrf_exempt
 def order_new(request):
@@ -155,16 +183,25 @@ def update_order_status(request):
 		order_status = request.REQUEST.get('orderStatus')
 		order_id = request.REQUEST.get('orderId')
 		try:
-			record = StatusRecord(status=order_status, order_id=order_id, 
-				operator_type=operator_type, operator_id=operator_id)
-			record.save()
-			order = Order.objects.get(id = order_id)
-			order.order_status = order_status
-			order.save()
-			response_data['code'] = 0
+			order = Order.objects.get(id = order_id)			
+			if int(order_status) < int(order.order_status) :
+				response_data['code'] = 1
+				response_data['msg'] = '系统中订单状态高于需要更改状态'
+				response_data['data'] = {}	
+				return HttpResponse(json.dumps(response_data), content_type="application/json")
+			else:
+				record = StatusRecord(status=order_status, order_id=order_id, 
+					operator_type=operator_type, operator_id=operator_id)
+				record.save()
+				order.order_status = order_status
+				order.save()
+				response_data['code'] = 0
+				response_data['msg'] = 'ok'
+				response_data['data'] = {}
 		except:
 			response_data['code'] = 1
-			response_data['msg'] = '订单状态更新'
+			response_data['msg'] = '订单状态更新失败'
+			response_data['data'] = {}	
 		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
 # 订单详情ajax

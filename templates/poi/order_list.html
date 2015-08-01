@@ -9,12 +9,19 @@
     top: 30px;
     right: 40px;
   }
+  .excel-btn{
+    position: absolute;
+    top: 30px;
+    right: 140px;
+  }
 </style>
 
 <div class="m-banner"></div>
 <div class="container m-main">
 	<h3>我的订单</h3>
   <a href="/order/add/"><div class="btn btn-primary order-btn" id="j-order-btn">我要下单</div></a>
+  <div class="btn btn-success excel-btn" id="j-excel-btn">批量导入</div>
+
   {% if reminder == '' %}
   	<table class="table table-striped">
       <thead>
