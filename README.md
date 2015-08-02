@@ -12,6 +12,8 @@ pip install xlrd
 
 CREATE DATABASE geeklogistics DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
+mysqldump --opt -u root -p -t geeklogistics > data.sql
+
 python manage.py syncdb
 
 python manage.py runserver

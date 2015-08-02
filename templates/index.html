@@ -8,13 +8,12 @@
 	  padding-top: 200px;
 	}
 	body{
-	background: white;
-}
-
+		background: white;
+	}
 </style>
 <div style="background:#85B6E2;padding-bottom:40px;padding-top:20px;">
 	<div class="carousel-wrapper">		
-		<div id="myCarousel" class="carousel slide">
+		<div id="myCarousel" class="carousel slide"  data-ride="carousel">
 		   <!-- 轮播（Carousel）指标 -->
 		   <ol class="carousel-indicators">
 		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -24,13 +23,13 @@
 		   <!-- 轮播（Carousel）项目 -->
 		   <div class="carousel-inner">
 		      <div class="item active">
-		         <a href="/intro"><img src="http://morry.oss-cn-beijing.aliyuncs.com/geek/images/1.jpg" alt="First slide"></a>
+		         <a href="/intro"><img src="http://morry.oss-cn-beijing.aliyuncs.com/geek/images/3.jpg" alt="First slide"></a>
 		      </div>
 		      <div class="item">
-		         <a href="/intro"><img src="http://morry.oss-cn-beijing.aliyuncs.com/geek/images/2.jpg" alt="Second slide"></a>
+		         <a href="/intro"><img src="http://morry.oss-cn-beijing.aliyuncs.com/geek/images/1.jpg" alt="Second slide"></a>
 		      </div>
 		      <div class="item">
-		         <a href="/intro"><img src="http://morry.oss-cn-beijing.aliyuncs.com/geek/images/3.jpg" alt="Third slide"></a>
+		         <a href="/intro"><img src="http://morry.oss-cn-beijing.aliyuncs.com/geek/images/2.jpg" alt="Third slide"></a>
 		      </div>
 		   </div>
 		</div> 
@@ -38,36 +37,36 @@
 </div>
 
 <div class="m-cwrapper">
-	<div class="m-intro cf">
-		<div class="col-md-4">
+	<div class="m-intro clearfix row">
+		<div class="span4">
 			<a href="/intro?intro=2"><div class="transport icon"></div></a>
 			<h4>冷链配送</h4>
 			<p>生鲜电商托管服务是一项征食品类商户的专属、专享服务（产品），此服务在满足生鲜业态个性化，定制化需求的同时，使消费者获得一种高品质的快递服务。</p>
 		</div>
-		<div class="col-md-4">
+		<div class="span4">
 			<a href="/intro?intro=1"><div class="rental icon"></div></a>
 			<h4>生鲜电商托管</h4>
 			<p>生鲜电商托管服务是一项征食品类商户的专属、专享服务（产品），此服务在满足生鲜业态个性化，定制化需求的同时，使消费者获得一种高品质的快递服务。</p>
 		</div>
-		<div class="col-md-4">
+		<div class="span4">
 			<a href="/intro"><div class="cold icon"></div></a>
 			<h4>大客户服务</h4>
 			<p>生鲜电商托管服务是一项征食品类商户的专属、专享服务（产品），此服务在满足生鲜业态个性化，定制化需求的同时，使消费者获得一种高品质的快递服务。</p> 			
 		</div>
 	</div>
-	<div class="m-news cf">
-		<div class="col-md-4">
+	<div class="m-news row clearfix">
+		<div class="span4">
 			<h4>公司简介 COMPANY</h4>
 		<p>北京极客冷链物流有限责任公司是为客户提供一整套物流解决方案的第三方冷链物流服务供应商，为客户设计个性化的物流及供应链解决方案，提高物流管理效率、降低供应链成本，赢得竞争优势。</p>		
 	</div>
-		<div class="col-md-4">
+		<div class="span4">
 			<a href="/intro?intro=6"><h4>新闻资讯 NEWS</h4></a>
 			{% for news in news_list %}
 				<p><a href="/news/{{news.id}}">{{news.title}}</a></p>	
 			{% endfor %}
 			<!-- <p style="text-align:right">查看更多>></a></p> -->
 	</div>
-		<div class="col-md-4">
+		<div class="span4">
 			<h4>公司简介 COMPANY</h4>
 		<p>北京极客冷链物流有限责任公司是为客户提供一整套物流解决方案的第三方冷链物流服务供应商，为客户设计个性化的物流及供应链解决方案，提高物流管理效率、降低供应链成本，赢得竞争优势。</p>		
 	</div>
