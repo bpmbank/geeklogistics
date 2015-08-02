@@ -23,3 +23,13 @@ function setCookie(cname, cvalue, exdays) {
 document.cookie = cname + "=" + encodeURIComponent(cvalue) + "; path=/" +"; expires="+expires;
 }	
 // var poiId = getCookie('poiid');
+$('#j-order-list').delegate(".j-delete", 'click', function() {
+	var jQself = $(this);
+	orderId = jQself.data('id');
+	delConfirm = confirm("是否确认删除订单？");
+	if(delConfirm){
+
+	}
+});
+
+$("")

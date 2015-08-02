@@ -88,6 +88,7 @@ def list(request, poi_id):
 			for order in orders:
 				myorder = {} #why必须先初始化？
 				myorder['order_id'] = order.order_detail.order_id
+				myorder['id'] = order.id
 				myorder['deliver_id'] = order.deliver_id
 				myorder['status'] = order.get_order_status_display()
 				myorder['order_status'] = order.order_status
