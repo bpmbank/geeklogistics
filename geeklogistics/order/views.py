@@ -31,7 +31,7 @@ def order_list(request):
 		poi_id = request.REQUEST.get('poiId', 0)
 		status = request.REQUEST.get('status', -1)
 		page_size = int(request.REQUEST.get('pageSize', 20))
-		current_page = int(request.REQUEST.get('currentPage', 0))
+		current_page = int(request.REQUEST.get('currentPage', 1))
 		total_count = int(request.REQUEST.get('totalCount', -1))
 
 		# print status
@@ -45,17 +45,13 @@ def order_list(request):
 				if status == '10':
 					# 分页加载数据
 					if total_count <= 0:
-						total_count = Order.objects.count()
-					if (current_page + 1) * page_size >= total_count:
+						total_count =  Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id)).count()
+					if current_page * page_size >= total_count:
 						end_position = total_count
 					else:
-						end_position = (current_page + 1) * page_size
+						end_position = current_page * page_size
 
-					start_position = current_page * page_size
-					print start_position
-					print end_position
-					print total_count
-
+					start_position = (current_page-1) * page_size
 					orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))[start_position:end_position]
 					print type(orders)
 					# orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))
