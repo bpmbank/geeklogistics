@@ -40,6 +40,9 @@
     border: solid 1px #E4E4E4;
 
   }
+  ul.unstyled{
+    margin-left: auto;
+  }
   .order-title{
     background: #85B6E2;
     padding: 5px;
@@ -60,7 +63,7 @@
 	<h3>#{{order.deliver_id}}订单详情</h3>
     {% if order %}
       <div class="order-status">
-        <ul class="list-unstyled order-status-list clearfix">
+        <ul class="unstyled order-status-list clearfix">
           <li class="complete">
             <img class="status-cicle-only" src="/static/images/icon/status-circle.png">
             <p>已下单</p>

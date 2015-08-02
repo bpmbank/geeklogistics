@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from geeklogistics.station.models import Station
 from geeklogistics.order.models import Order, Detail, StatusRecord, OrderForm
+from django.db.models import Q
 
 import json  
 import time
@@ -50,7 +51,7 @@ def order_list(request, station_id):
 		page = request.GET.get('page')
 		start_index = 0
 		try:
-			orders = Order.objects.filter(poi_nearest=station_id)
+			orders = Order.objects.filter(Q(order_status=0, poi_nearest=station_id) | Q(order_status=100, poi_nearest=station_id))
 			limit = 20
 			paginator = Paginator(orders, limit)  # 实例化一个分页对象
 			try:

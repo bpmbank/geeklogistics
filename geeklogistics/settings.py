@@ -53,7 +53,7 @@ INSTALLED_APPS = (
     'geeklogistics.news',
     'geeklogistics.station',
     'geeklogistics.webapp',
-    'import_export',
+    # 'import_export',
     # 'bootstrapform'
     # 'django.template.loaders.filesystem.Loader',
     # 'django.template.loaders.app_directories.Loader',

@@ -3,16 +3,16 @@ from django.contrib import admin
 from geeklogistics.order.models import Order
 from geeklogistics.poi.models import Merchant
 
-from import_export import resources
-from import_export.admin import ImportExportModelAdmin
+# from import_export import resources
+# from import_export.admin import ImportExportModelAdmin
 
-class OrderResource(resources.ModelResource):
+# class OrderResource(resources.ModelResource):
 
-    class Meta:
-        model = Order
+#     class Meta:
+#         model = Order
 
-class OrderAdmin(ImportExportModelAdmin):
-    resource_class = OrderResource
+class OrderAdmin(admin.ModelAdmin):
+    # resource_class = OrderResource
     list_display = ('id', 'deliver_id', 'order_id', 'poi_name', 
         'start_time', 'order_status', 'poi_nearest')
     list_filter = ('ctime',) 

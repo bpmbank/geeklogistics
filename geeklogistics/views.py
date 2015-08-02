@@ -90,6 +90,7 @@ def list(request, poi_id):
 				myorder['order_id'] = order.order_detail.order_id
 				myorder['deliver_id'] = order.deliver_id
 				myorder['status'] = order.get_order_status_display()
+				myorder['order_status'] = order.order_status
 				myorder['start_index'] = start_index+index
 				record = StatusRecord.objects.filter(order_id = order.id)
 				record_length = len(record)

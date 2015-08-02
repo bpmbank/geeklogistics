@@ -14,6 +14,8 @@ CREATE DATABASE geeklogistics DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci
 
 mysqldump --opt -u root -p -t geeklogistics > data.sql
 
+alter table order_order modify order_status int;
+
 python manage.py syncdb
 
 python manage.py runserver

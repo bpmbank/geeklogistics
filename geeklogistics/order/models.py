@@ -8,14 +8,14 @@ from geeklogistics.station.models import Station
 from django.forms import ModelForm
 
 ORDER_STATUS_CHOICES = (
-	('0', '未下单'),
-	('100', '已下单'),
-	('200', '已取货'),
-	('300', '运输中'),
-	('400', '开始配送'),
-	('500', '已配送'),
-	('600', '已完成'),
-	('700', '已取消'),
+	(0, '未下单'),
+	(100, '已下单'),
+	(200, '已取货'),
+	(300, '运输中'),
+	(400, '开始配送'),
+	(500, '已配送'),
+	(600, '已完成'),
+	(700, '已取消'),
 )
 
 class Detail(models.Model):
@@ -43,10 +43,10 @@ class Order(models.Model):
 	start_time = models.DateTimeField(verbose_name="开始配送时间", null=True, blank=True)
 	end_time = models.DateTimeField(verbose_name="送达时间", null=True, blank=True)
 	order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)	
-	order_status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
+	order_status = models.IntegerField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
 	poi_nearest = models.ForeignKey(Station, verbose_name="商家最近取货站点", related_name='商家最近取货站点', null=True, blank=True)
 	customer_nearest = models.ForeignKey(Station, verbose_name="收货人最近站店", related_name='收货人最近站店', null=True, blank=True)
-	price = models.FloatField('配送价格', default=0)
+	price = models.FloatField('配送价格', default=20)
 	order_detail = models.ForeignKey(Detail, verbose_name="订单详情")
 	order_type = models.CharField('状态', max_length=3, default=0)
 	ctime = models.DateTimeField('订单创建时间', max_length=30, default=datetime.now())
@@ -121,6 +121,8 @@ class StatusRecord(models.Model):
 		elif self.operator_type == '2':
 			operator = Driver.objects.get(id = self.operator_id)
 
+		order = Order.objects.get(id=self.order_id)
+
 		# todo：加入出库入库等提示？
 		if(self.status == '200'):
 			text = time_format + ' ' + '配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 已从商家取货';
@@ -132,7 +134,7 @@ class StatusRecord(models.Model):
 		elif(self.status == '400'):
 			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
 		elif(self.status == '500'):
-			text = time_format + ' ' + '货物已由用户签收';
+			text = time_format + ' ' + '货物已由用户'+order.order_detail.customer_name.encode('utf-8')+'签收';
 		return text
 
 

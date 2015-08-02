@@ -240,6 +240,7 @@ def update_order_status(request):
 				record = StatusRecord(status=order_status, order_id=order_id, 
 					operator_type=operator_type, operator_id=operator_id)
 				record.save()
+				print record.time
 				if(order_status == 200):
 					order.start_time = datetime.now()
 				order.order_status = order_status
