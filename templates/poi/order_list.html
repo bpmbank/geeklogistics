@@ -58,18 +58,19 @@
       </tbody>
     </table>
     <!-- 第一种分页显示方式 -->
-    <ul class="pagination">
-      {# orders.paginator.page_range 这个函数返回包含一个所有页码数的 range 对象 #}
-      {# 即 range(1, orders.paginator.num_pages + 1) #}
-      {% for page_number in orders.paginator.page_range %}
-        {% ifequal page_number  orders.number %}
-          <li class="active"><a href="?page={{ page_number }}">{{ page_number }}</a></li>
-        {% else %}
-          <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
-        {% endifequal %}
-      {% endfor %}
-    </ul>
-
+    <div  class="pagination">
+      <ul>
+        {# orders.paginator.page_range 这个函数返回包含一个所有页码数的 range 对象 #}
+        {# 即 range(1, orders.paginator.num_pages + 1) #}
+        {% for page_number in orders.paginator.page_range %}
+          {% ifequal page_number  orders.number %}
+            <li class="active"><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+          {% else %}
+            <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+          {% endifequal %}
+        {% endfor %}
+      </ul>
+    </div>
   {% else %}
     <p>{{reminder}}</p>
   {% endif %}

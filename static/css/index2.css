@@ -1,13 +1,19 @@
 /*main：#85B6E2*/
 
 .carousel-wrapper{
-	width: 960px;
+	width: 940px;
 	padding: 10px;
 	border-radius: 5px;
-	background: rgba(255,255,255,0.5);
+	/*background: rgba(255,255,255,0.5);*/
+	background: #c1daf0;
 	margin: auto;
 	margin-bottom: 10px;
   height: 380px;
+}
+.carousel-indicators{
+	bottom: 15px;
+	top: auto;
+	right: 440px;
 }
 .carousel{
 	width: 940px;
@@ -22,9 +28,9 @@
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
-.row{
+.row.row-no-margin{
 	margin: 0;
-	
+
 }
 .m-news{
 	background:  #eee;

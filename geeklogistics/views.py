@@ -24,8 +24,9 @@ from django.core.paginator import EmptyPage
 from django.core.paginator import PageNotAnInteger
 
 def home(request):
+	js_url = 'index'
 	news_list = News.objects.all()
-	return render_to_response('index.html', {'current_url': 'index', 'news_list': news_list})
+	return render_to_response('index.html', {'current_url': 'index', 'news_list': news_list, 'js_url': js_url})
 
 def intro(request):
 	js_url = 'intro'
