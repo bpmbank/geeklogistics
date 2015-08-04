@@ -13,8 +13,8 @@ from geeklogistics.poi.models import Merchant
 
 class OrderAdmin(admin.ModelAdmin):
     # resource_class = OrderResource
-    list_display = ('id', 'deliver_id', 'order_id', 'poi_name', 
-        'start_time', 'order_status', 'poi_nearest')
+    list_display = ('id', 'deliver_id', 'poi_name', 'start_time', 
+        'order_status', 'poi_nearest', 'dstatus')
     list_filter = ('ctime',) 
     search_fields = ('order_id', 'deliver_id') #刷新浏览器，你会在页面顶端看到一个查询栏。 添加了一个根据姓名查询的查询框。
     ordering = ('-order_id',) #降序
@@ -23,6 +23,10 @@ class OrderAdmin(admin.ModelAdmin):
     def start_time_format(self, instance):
         return instance.start_time.strftime("%d %b %Y %H:%M:%S")
 
+    def dstatus(self, instance):
+        st = instance.get_status_display()
+        return st
+    dstatus.short_description = '订单删除状态'
     def poi_name(self, instance):
         if not instance.poi is None:
             link = '<a href="">'+instance.poi.name+'</a>'

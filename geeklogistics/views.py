@@ -71,7 +71,7 @@ def list(request, poi_id):
 	try:
 		poi = Merchant.objects.get(id=poi_id)
 		try:
-			orders = Order.objects.filter(poi=poi_id)
+			orders = Order.objects.filter(poi=poi_id, status='0')
 			record_list = [] 
 			limit = 20
 			paginator = Paginator(orders, limit)  # 实例化一个分页对象

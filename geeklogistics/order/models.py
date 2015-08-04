@@ -39,6 +39,10 @@ class Detail(models.Model):
 		return self.id
 
 class Order(models.Model):
+	DSTATUS_CHOICES = (
+		('0', '正常'),
+		('1', '已删除'),
+	)
 	deliver_id = models.CharField('配送编号', max_length=50, null=True, blank=True)  #规则编号
 	poi = models.ForeignKey(Merchant, verbose_name="订单商家", null=True, blank=True)
 	start_time = models.DateTimeField(verbose_name="开始配送时间", null=True, blank=True)
@@ -52,7 +56,7 @@ class Order(models.Model):
 	order_type = models.CharField('状态', max_length=3, default=0)
 	ctime = models.DateTimeField('订单创建时间', max_length=30, default=datetime.now())
 	utime = models.DateTimeField('订单最新修改时间', max_length=30, default=datetime.now())
-	status = models.CharField('状态', max_length=3, default=0)
+	status = models.CharField('状态', max_length=3, default=0, choices=DSTATUS_CHOICES)
 
 	# todo 操作记录表，处理人，处理事件，订单号，
 	# todo 节假日不配送订单开关，单独配置，可以推送到系统，可能要几日后配送,

@@ -26,11 +26,20 @@ document.cookie = cname + "=" + encodeURIComponent(cvalue) + "; path=/" +"; expi
 $('#j-order-list').delegate(".j-delete", 'click', function() {
 	var jQself = $(this);
 	orderId = jQself.data('id');
-	delConfirm = confirm("是否确认删除订单？");
+	delConfirm = confirm("删除订单后将取消配送，是否确认删除订单？");
 	if(delConfirm){
-
+		$.post('/api/v1/order/delete', {
+			orderId: orderId
+		},function(ret){
+			if(ret.code == 0){
+				alert("删除成功！");
+				window.location.reload();
+			}else{
+				alert(ret.msg);
+			}
+		})
 	}
 });
 $('#j-order-list').delegate(".j-cancel", 'click', function() {
-	alert("订单已在配送中")
+	// alert("订单已在配送中")
 });

@@ -40,37 +40,55 @@ def order_list(request):
 			orders = []
 			poi = Merchant.objects.get(id=poi_id)
 			if status == -1:
-				orders = Order.objects.filter(poi=poi_id)
+				orders = Order.objects.filter(poi=poi_id, status='0')
 			else:
 				if status == '10':
 					# 分页加载数据
 					if total_count <= 0:
-						total_count =  Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id)).count()
+						total_count =  Order.objects.filter(Q(order_status=0, poi=poi_id, status='0') | Q(order_status=100, poi=poi_id, status='0')).count()
 					if current_page * page_size >= total_count:
 						end_position = total_count
 					else:
 						end_position = current_page * page_size
 
 					start_position = (current_page-1) * page_size
-					orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))[start_position:end_position]
-					# print type(orders)
-					# orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))
+					orders = Order.objects.filter(Q(order_status=0, poi=poi_id, status='0') | Q(order_status=100, poi=poi_id, status='0'))[start_position:end_position]
 				elif status == '20':
-					orders = Order.objects.filter(Q(order_status=200, poi=poi_id) | Q(order_status=300, poi=poi_id) | Q(order_status=400, poi=poi_id))
+					# 分页加载数据
+					if total_count <= 0:
+						total_count =  Order.objects.filter(Q(order_status=200, poi=poi_id, status='0') | Q(order_status=300, poi=poi_id, status='0') | Q(order_status=400, poi=poi_id, status='0')).count()
+					if current_page * page_size >= total_count:
+						end_position = total_count
+					else:
+						end_position = current_page * page_size
+
+					start_position = (current_page-1) * page_size
+					orders = Order.objects.filter(Q(order_status=200, poi=poi_id, status='0') | Q(order_status=300, poi=poi_id, status='0') | Q(order_status=400, poi=poi_id, status='0'))[start_position:end_position]
 				elif status == '30':
-					orders = Order.objects.filter(Q(order_status=500, poi=poi_id) | Q(order_status=600, poi=poi_id))
+					# 分页加载数据
+					if total_count <= 0:
+						total_count =  Order.objects.filter(Q(order_status=500, poi=poi_id, status='0') | Q(order_status=600, poi=poi_id, status='0')).count()
+					if current_page * page_size >= total_count:
+						end_position = total_count
+					else:
+						end_position = current_page * page_size
+
+					start_position = (current_page-1) * page_size
+					orders = Order.objects.filter(Q(order_status=500, poi=poi_id, status='0') | Q(order_status=600, poi=poi_id, status='0'))[start_position:end_position]
 				elif status == '40':
-					orders = Order.objects.filter(Q(order_status=700, poi=poi_id))
+					if total_count <= 0:
+						total_count =  Order.objects.filter(Q(order_status=700, poi=poi_id, status='0')).count()
+					if current_page * page_size >= total_count:
+						end_position = total_count
+					else:
+						end_position = current_page * page_size
+
+					orders = Order.objects.filter(Q(order_status=700, poi=poi_id, status='0'))[start_position:end_position]
 			response_data['code'] = 0
 			response_data['msg'] = 'ok'
 			myorderlist = []
 			for order in orders:
 				myorder = order.as_json()
-				# try:
-				# 	status = StatusRecord.objects.filter(order_id=order.id).latest('id')
-				# except ObjectDoesNotExist:	
-				# 	status = None
-				# myorder['status'] = status
 				myorderlist.append(myorder)
 			page_data = {'totalCount': total_count, 'currentPage': current_page, 'pageSize': page_size,
                          'list': myorderlist}
@@ -275,6 +293,21 @@ def order_detail_ajax(request):
 
 	return HttpResponse(json.dumps(response_data), content_type="application/json")  
 
+# 删除未配送订单
+@csrf_exempt
+def order_delete(request):
+	if request.method == 'POST': # 如果ajax请求
+		response_data = {}
+		order_id = request.REQUEST.get('orderId')
+		try:
+			order = Order.objects.get(id=order_id)
+			order.status = 1;
+			order.save()
+			response_data['code'] = 0
+		except ObjectDoesNotExist:
+			response_data['code'] = 1
+			response_data['msg'] = '该订单不存在'
+		return HttpResponse(json.dumps(response_data), content_type="application/json")  
 # # modelform
 # @csrf_exempt
 # def order_new(request):

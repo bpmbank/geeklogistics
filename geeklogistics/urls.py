@@ -24,7 +24,6 @@ urlpatterns = patterns('',
     url(r'^order/success/(?P<deliver_id>\d+)/$', 'geeklogistics.views.order_success', name='order_success'),
     url(r'^custom/$', 'geeklogistics.views.custom', name='custom'),
     url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
-    url(r'^image/upload/$', 'geeklogistics.upload.sceneImgUpload', name='sceneImgUpload' ),
 
     # 订单相关 
     url(r'^order/import$', 'geeklogistics.order.views.import_order', name='import_order'),
@@ -41,6 +40,7 @@ urlpatterns = patterns('',
     url(r'^api/v1/order/list$', 'geeklogistics.order.views.order_list', name='order_list'),
     url(r'^api/v1/order/add$', 'geeklogistics.order.views.order_new', name='order_new' ),
     url(r'^api/v1/order/updateStatus$', 'geeklogistics.order.views.update_order_status', name='update_order_status'), 
+    url(r'^api/v1/order/delete$', 'geeklogistics.order.views.order_delete', name='order_delete'), 
     url(r'^api/v1/poi/login$', 'geeklogistics.poi.views.poi_login', name='poi_login' ),    
 
     url(r'^admin/', include(admin.site.urls)),

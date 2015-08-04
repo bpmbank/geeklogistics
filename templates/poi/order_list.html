@@ -41,7 +41,7 @@
           <th>操作人</th>
           <th>操作人联系方式</th>
           <th>订单状态</th>
-          <!-- <th>操作</th> -->
+          <th>操作</th>
         </tr>
       </thead>
       <tbody>
@@ -54,13 +54,13 @@
             <td>{{order.operator.name}}</td>
             <td>{{order.operator.phone}}</td>
             <td>{{order.status}}</td>
-<!--             <td>
+            <td>
               {% if order.order_status < 200 %}
                 <div class="btn j-delete" data-id="{{order.id}}">删除</div>
               {% else %}
                 <div class="btn btn-inverse j-cancel" data-id="{{order.id}}" data-toggle="modal" data-target="#cancelModal">取消</div>             
               {% endif %}
-            </td> -->
+            </td>
           </tr>
         {% endfor %}
       </tbody>
