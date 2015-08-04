@@ -93,7 +93,8 @@ class StatusRecord(models.Model):
 		('1', '配送员'),
 		('2', '司机'),
 	)
-	status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
+	# todo status改int型
+	status = models.IntegerField('订单状态', default=0, choices=ORDER_STATUS_CHOICES)
 	ctime = models.DateTimeField('时间', max_length=30, default=datetime.now())
 	operator_type = models.CharField('操作人类型', max_length=3, default=0, choices=OPERATOR_TYPE_CHOICES)
 	operator_id = models.IntegerField(verbose_name="操作人对应id", null=True, blank=True)
@@ -126,9 +127,9 @@ class StatusRecord(models.Model):
 		order = Order.objects.get(id=self.order_id)
 
 		# todo：加入出库入库等提示？
-		if(self.status == '200'):
+		if(self.status == 200):
 			text = time_format + ' ' + '配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 已从商家取货';
-		elif(self.status == '300'):
+		elif(self.status == 300):
 			if self.operator_type == '0':
 				if self.operator_id == 11:
 					text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 进行分拣';
@@ -136,10 +137,12 @@ class StatusRecord(models.Model):
 					text = time_format + ' ' + '货物已经到达 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+')';
 			elif self.operator_type == '2':
 				text = time_format + ' ' + '货物正由司机 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 运往下一分拣站';				
-		elif(self.status == '400'):
+		elif(self.status == 400):
 			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
-		elif(self.status == '500'):
+		elif(self.status == 500):
 			text = time_format + ' ' + '货物已由用户'+order.order_detail.customer_name.encode('utf-8')+'签收';
+		elif(self.status == 800):
+			text = time_format + ' ' + '货物已被拒收，拒收理由为：'+self.reject_reason.encode('utf-8');			
 		return text
 
 

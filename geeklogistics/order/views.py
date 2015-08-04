@@ -227,7 +227,7 @@ def update_order_status(request):
 		response_data = {}
 		operator_id = request.REQUEST.get('operatorId')
 		operator_type = request.REQUEST.get('operatorType')
-		order_status = request.REQUEST.get('orderStatus')
+		order_status = int(request.REQUEST.get('orderStatus'))
 		order_id = request.REQUEST.get('orderId')
 
 		try:
