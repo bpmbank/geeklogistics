@@ -145,6 +145,8 @@ class StatusRecord(models.Model):
 			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
 		elif(self.status == 500):
 			text = time_format + ' ' + '货物已由用户'+order.order_detail.customer_name.encode('utf-8')+'签收';
+		elif(self.status == 700):
+			text = time_format + ' 订单已被取消';			
 		elif(self.status == 800):
 			text = time_format + ' ' + '货物已被拒收，拒收理由为：'+self.reject_reason.encode('utf-8');			
 		return text
