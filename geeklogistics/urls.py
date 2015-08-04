@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^order/success/(?P<deliver_id>\d+)/$', 'geeklogistics.views.order_success', name='order_success'),
     url(r'^custom/$', 'geeklogistics.views.custom', name='custom'),
     url(r'^news/(?P<id>\d+)/$', 'geeklogistics.views.news', name='news' ),
+    url(r'^app/$', 'geeklogistics.views.app', name='app' ),
 
     # 订单相关 
     url(r'^order/import$', 'geeklogistics.order.views.import_order', name='import_order'),

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}app下载地址{% endblock %}
+
+{% block content %}
+<style type="text/css">
+	li{
+		float: left;
+		margin-right: 30px;
+	}
+	li img{
+		width: 150px;
+	}
+</style>
+	<div class="m-banner"></div>
+	<div class="container m-main">
+		<h3>极客冷链app下载</h3>
+		<ul class="unstyled">
+			<li>
+				<img src="/static/images/app/qr/2.png">
+				<p>极客冷链商家版</p>
+			</li>
+			<li>
+				<img src="/static/images/app/qr/4.png">
+				<p>极客冷链配送员版</p>
+			</li>
+			<li>
+				<img src="/static/images/app/qr/3.png">
+				<p>极客冷链司机版</p>
+			</li>
+			<li>
+				<img src="/static/images/app/qr/1.png">
+				<p>极客冷链站点版</p>
+			</li>			
+		</ul>
+	</div>
+</body>
+</html>
+{% endblock %}

@@ -139,4 +139,5 @@ def order_detail(request, deliver_id):
 		reminder = "该订单不存在"
 		return render_to_response('order_detail.html', {'current_url': 'order_detail', 'js_url': js_url})
 
-
+def app(request):
+	return render_to_response('app.html')
