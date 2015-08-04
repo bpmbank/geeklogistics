@@ -16,6 +16,7 @@ ORDER_STATUS_CHOICES = (
 	(500, '已配送'),
 	(600, '已完成'),
 	(700, '已取消'),
+	(800, '已拒收'),
 )
 
 class Detail(models.Model):
@@ -93,9 +94,10 @@ class StatusRecord(models.Model):
 		('2', '司机'),
 	)
 	status = models.CharField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
-	time = models.DateTimeField('时间', max_length=30, default=datetime.now())
+	ctime = models.DateTimeField('时间', max_length=30, default=datetime.now())
 	operator_type = models.CharField('操作人类型', max_length=3, default=0, choices=OPERATOR_TYPE_CHOICES)
 	operator_id = models.IntegerField(verbose_name="操作人对应id", null=True, blank=True)
+	reject_reason = models.CharField(verbose_name="拒收理由", max_length=300, null=True, blank=True)
 	order = models.ForeignKey(Order, verbose_name="配送订单数据库id")
 
 	def __unicode__(self):
@@ -113,7 +115,7 @@ class StatusRecord(models.Model):
 
 	def record_text(self):
 		text = ''
-		time_format = self.time.strftime("%Y-%m-%d %H:%M:%S")
+		time_format = self.ctime.strftime("%Y-%m-%d %H:%M:%S")
 		if self.operator_type == '0':
 			operator = Station.objects.get(id=self.operator_id)
 		elif self.operator_type == '1':
@@ -128,7 +130,10 @@ class StatusRecord(models.Model):
 			text = time_format + ' ' + '配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 已从商家取货';
 		elif(self.status == '300'):
 			if self.operator_type == '0':
-				text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 进行分拣';
+				if self.operator_id == 11:
+					text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 进行分拣';
+				else:
+					text = time_format + ' ' + '货物已经到达 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+')';
 			elif self.operator_type == '2':
 				text = time_format + ' ' + '货物正由司机 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 运往下一分拣站';				
 		elif(self.status == '400'):

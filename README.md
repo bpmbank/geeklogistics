@@ -16,6 +16,10 @@ mysqldump --opt -u root -p -t geeklogistics > data.sql
 
 alter table order_order modify order_status int;
 
+alter table order_statusrecord change time ctime datetime;
+
+alter table order_statusrecord add reject_reason varchar(300);
+
 python manage.py syncdb
 
 python manage.py runserver

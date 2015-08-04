@@ -96,7 +96,7 @@ def list(request, poi_id):
 				record = StatusRecord.objects.filter(order_id = order.id)
 				record_length = len(record)
 				if(record_length>0):
-					myorder['start_time'] = record[0].time.strftime("%Y-%m-%d %H:%M:%S")
+					myorder['start_time'] = record[0].ctime.strftime("%Y-%m-%d %H:%M:%S")
 					myorder['operator'] = record[record_length-1].get_record_operator()
 				else:
 					myorder['start_time'] = ''
@@ -131,7 +131,7 @@ def order_detail(request, deliver_id):
 		for status in order_status:
 			record_text = status.record_text()
 			record_list.append(record_text)
-		print record_list
+		# print record_list
 		return render_to_response('order_detail.html', {'current_url': 'order', 'js_url': js_url,
 			'order': order, 'record_list': record_list})
 	except ObjectDoesNotExist:

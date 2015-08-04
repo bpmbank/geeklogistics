@@ -31,5 +31,6 @@ $('#j-order-list').delegate(".j-delete", 'click', function() {
 
 	}
 });
-
-$("")
+$('#j-order-list').delegate(".j-cancel", 'click', function() {
+	alert("订单已在配送中")
+});

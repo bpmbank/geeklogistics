@@ -53,7 +53,7 @@ def order_list(request):
 
 					start_position = (current_page-1) * page_size
 					orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))[start_position:end_position]
-					print type(orders)
+					# print type(orders)
 					# orders = Order.objects.filter(Q(order_status=0, poi=poi_id) | Q(order_status=100, poi=poi_id))
 				elif status == '20':
 					orders = Order.objects.filter(Q(order_status=200, poi=poi_id) | Q(order_status=300, poi=poi_id) | Q(order_status=400, poi=poi_id))
@@ -229,6 +229,7 @@ def update_order_status(request):
 		operator_type = request.REQUEST.get('operatorType')
 		order_status = request.REQUEST.get('orderStatus')
 		order_id = request.REQUEST.get('orderId')
+
 		try:
 			order = Order.objects.get(id = order_id)			
 			if int(order_status) < int(order.order_status) :
@@ -237,10 +238,15 @@ def update_order_status(request):
 				response_data['data'] = {}	
 				return HttpResponse(json.dumps(response_data), content_type="application/json")
 			else:
-				record = StatusRecord(status=order_status, order_id=order_id, 
-					operator_type=operator_type, operator_id=operator_id)
+				if order_status== 800 :
+					reject_reason = request.REQUEST.get('rejectReason')
+					record = StatusRecord(status=order_status, order_id=order_id, 
+					operator_type=operator_type, operator_id=operator_id, ctime=datetime.now(), 
+					reject_reason=reject_reason)
+				else:
+					record = StatusRecord(status=order_status, order_id=order_id, 
+						operator_type=operator_type, operator_id=operator_id, ctime=datetime.now())
 				record.save()
-				print record.time
 				if(order_status == 200):
 					order.start_time = datetime.now()
 				order.order_status = order_status
