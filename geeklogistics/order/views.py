@@ -229,7 +229,6 @@ def update_order_status(request):
 		operator_type = request.REQUEST.get('operatorType')
 		order_status = int(request.REQUEST.get('orderStatus'))
 		order_id = request.REQUEST.get('orderId')
-
 		try:
 			order = Order.objects.get(id = order_id)			
 			if int(order_status) < int(order.order_status) :
