@@ -104,6 +104,7 @@ class StatusRecord(models.Model):
 	operator_id = models.IntegerField(verbose_name="操作人对应id", null=True, blank=True)
 	reject_reason = models.CharField(verbose_name="拒收理由", max_length=300, null=True, blank=True)
 	order = models.ForeignKey(Order, verbose_name="配送订单数据库id")
+	receiver_name = models.CharField('真实收货人', max_length=80, default='', null=True, blank=True)
 
 	def __unicode__(self):
 		return self.status
@@ -140,11 +141,14 @@ class StatusRecord(models.Model):
 				else:
 					text = time_format + ' ' + '货物已经到达 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+')';
 			elif self.operator_type == '2':
-				text = time_format + ' ' + '货物正由司机 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 运往下一分拣站';				
+				text = time_format + ' ' + '货物正由司机 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 运往下一站点';				
 		elif(self.status == 400):
 			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
 		elif(self.status == 500):
-			text = time_format + ' ' + '货物已由用户'+order.order_detail.customer_name.encode('utf-8')+'签收';
+			if self.receiver_name :
+				text = time_format + ' ' + '货物已由用户'+self.receiver_name.encode('utf-8')+'签收';
+			else:
+				text = time_format + ' ' + '货物已由用户'+order.order_detail.customer_name.encode('utf-8')+'签收';
 		elif(self.status == 700):
 			text = time_format + ' 订单已被取消';			
 		elif(self.status == 800):

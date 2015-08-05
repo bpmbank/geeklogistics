@@ -4,6 +4,11 @@ from django.db import models
 from datetime import datetime
 
 class Station(models.Model):
+	TYPE_CHOICES = (
+		(0, '总站'),
+		(1, '分店'),
+	)
+
 	username = models.CharField('配送点用户名', max_length=30)
 	password = models.CharField('配送点密码', max_length=30, default='123456')
 	name = models.CharField('配送点名称', max_length=30)
@@ -12,6 +17,7 @@ class Station(models.Model):
 	latitude = models.FloatField('纬度', default=0)
 	longitude = models.FloatField('经度', default=0)
 	image = models.ImageField('站点图片', max_length=100, upload_to='static/images/station/', null=True, blank=True)
+	station_type = models.IntegerField('站点类型', default=1, choices=TYPE_CHOICES)
 	ctime = models.DateTimeField('创建时间', max_length=30, default=datetime.now())
 	utime = models.DateTimeField('最新修改时间', max_length=30, default=datetime.now())
 	status = models.CharField('状态', max_length=3, default=0)
@@ -24,7 +30,7 @@ class Station(models.Model):
 	def as_json(self):
 		return dict(
 			id=self.id, name=self.name, phone=self.phone, address=self.address,
-			latitude = self.latitude, longitude=self.longitude
+			latitude = self.latitude, longitude=self.longitude, station_type=self.station_type
 		)
 
 	def __unicode__(self):

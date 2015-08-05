@@ -42,7 +42,9 @@ urlpatterns = patterns('',
     url(r'^api/v1/order/add$', 'geeklogistics.order.views.order_new', name='order_new' ),
     url(r'^api/v1/order/updateStatus$', 'geeklogistics.order.views.update_order_status', name='update_order_status'), 
     url(r'^api/v1/order/delete$', 'geeklogistics.order.views.order_delete', name='order_delete'), 
-    url(r'^api/v1/poi/login$', 'geeklogistics.poi.views.poi_login', name='poi_login' ),    
+    url(r'^api/v1/order/detail$', 'geeklogistics.order.views.order_detail_ajax', name='order_detail_ajax' ),    
+    url(r'^api/v1/poi/login$', 'geeklogistics.poi.views.poi_login', name='poi_login' ),  
+
 
     url(r'^admin/', include(admin.site.urls)),
 

@@ -83,7 +83,8 @@ def order_list(request):
 					else:
 						end_position = current_page * page_size
 
-					orders = Order.objects.filter(Q(order_status=700, poi=poi_id, status='0'))[start_position:end_position]
+					start_position = (current_page-1) * page_size
+					orders = Order.objects.filter(Q(order_status=700, poi=poi_id, status='0') | Q(order_status=800, poi=poi_id, status='0'))[start_position:end_position]
 			response_data['code'] = 0
 			response_data['msg'] = 'ok'
 			myorderlist = []
@@ -246,31 +247,48 @@ def update_order_status(request):
 		operator_id = request.REQUEST.get('operatorId')
 		operator_type = request.REQUEST.get('operatorType')
 		order_status = int(request.REQUEST.get('orderStatus'))
-		order_id = request.REQUEST.get('orderId')
+		order_id = request.REQUEST.get('orderId', 0)
+		station_type = request.REQUEST.get('stationType', -1)
+
 		try:
-			order = Order.objects.get(id = order_id)			
+			if order_id != 0:
+				order = Order.objects.get(id=order_id)		
+			else:
+				deliver_id = request.REQUEST.get('deliverId')
+				order = Order.objects.get(deliver_id=deliver_id)
+
 			if int(order_status) < int(order.order_status) :
 				response_data['code'] = 1
 				response_data['msg'] = '系统中订单状态高于需要更改状态'
 				response_data['data'] = {}	
 				return HttpResponse(json.dumps(response_data), content_type="application/json")
 			else:
-				if order_status== 800 :
+				# 如果拒收加入拒收理由
+				if order_status == ORDER_STATUS['delivering'] :
 					reject_reason = request.REQUEST.get('rejectReason')
 					record = StatusRecord(status=order_status, order_id=order_id, 
 					operator_type=operator_type, operator_id=operator_id, ctime=datetime.now(), 
 					reject_reason=reject_reason)
-				else:
+				elif order_status == ORDER_STATUS['delivered'] :
+					# 如果为确认收货加入真实收货人
+					receiver_name = request.REQUEST.get('receiverName', order.order_detail.customer_name)
+					record = StatusRecord(status=order_status, order_id=order_id, receiver_name=receiver_name,
+						operator_type=operator_type, operator_id=operator_id, ctime=datetime.now())
+				else:	
 					record = StatusRecord(status=order_status, order_id=order_id, 
 						operator_type=operator_type, operator_id=operator_id, ctime=datetime.now())
 				record.save()
-				if(order_status == 200):
+				if(order_status == ORDER_STATUS['get_order']):
 					order.start_time = datetime.now()
 				order.order_status = order_status
 				order.save()
+				return_data = {}
+				if station_type == 1:
+					# 如果为总站
+					return_data = order.customer_nearest.name
 				response_data['code'] = 0
 				response_data['msg'] = 'ok'
-				response_data['data'] = {}
+				response_data['data'] = return_data
 		except:
 			response_data['code'] = 1
 			response_data['msg'] = '订单状态更新失败'
@@ -280,8 +298,9 @@ def update_order_status(request):
 # 订单详情ajax
 @csrf_exempt
 def order_detail_ajax(request):
-	deliver_id = request.POST['deliverId']
-	order = Order.objects.get(deliver_id=deliver_id).as_json()
+	# deliver_id = request.POST['deliverId']
+	db_id = request.REQUEST.get('id')
+	order = Order.objects.get(id=db_id).as_json()
 	response_data = {}  
 	if(order):
 		response_data['code'] = 0  

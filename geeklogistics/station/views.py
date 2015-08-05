@@ -51,7 +51,7 @@ def order_list(request, station_id):
 		page = request.GET.get('page')
 		start_index = 0
 		try:
-			orders = Order.objects.filter(Q(order_status=0, poi_nearest=station_id) | Q(order_status=100, poi_nearest=station_id))
+			orders = Order.objects.filter(Q(order_status=0, poi_nearest=station_id, status='0') | Q(order_status=100, poi_nearest=station_id, status='0'))
 			limit = 20
 			paginator = Paginator(orders, limit)  # 实例化一个分页对象
 			try:
