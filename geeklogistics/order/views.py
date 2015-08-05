@@ -178,6 +178,8 @@ def import_order(request):
 	e_file = request.FILES["orderXls"]
 	# print e_file
 	poi_id = request.COOKIES.get('poiid', '1')	
+	poi = Merchant.objects.get(id=poi_id)
+
 
 	file_test = 'static/excel/order_test.xlsx'
 	data = xlrd.open_workbook(file_contents=e_file.read())
@@ -192,7 +194,12 @@ def import_order(request):
 			topay_str = '0'
 		else:
 			topay_str = '1'
-		new_order_model(poi_id, row[1], row[2], row[3], str(row[0]), row[4], row[5], topay_str, row[7], row[8], row[9])
+		if row[3].encode('utf-8') != '':
+			customer_phone = row[3].encode('utf-8')
+		else:
+			customer_phone = row[4].encode('utf-8')
+		# poi_id, poi_name, poi_phone, poi_address, order_id, order_stuff, order_price, order_topay, customer_name, customer_phone, customer_address
+		new_order_model(poi_id, poi.name, poi.tel, poi.address, str(row[0]), '', row[5], topay_str, row[1], customer_phone, row[2])
 	url = '/list/'+poi_id
 	return HttpResponseRedirect(url)  
 

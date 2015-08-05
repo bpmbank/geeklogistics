@@ -13,8 +13,8 @@ from geeklogistics.poi.models import Merchant
 
 class OrderAdmin(admin.ModelAdmin):
     # resource_class = OrderResource
-    list_display = ('id', 'deliver_id', 'poi_name', 'start_time', 
-        'order_status', 'poi_nearest','customer_nearest', 'dstatus')
+    list_display = ('id', 'deliver_id', 'poi_name', 'poi_nearest','customer_nearest', 
+        'order_status', 'status')
     list_filter = ('ctime',) 
     search_fields = ('order_id', 'deliver_id') #刷新浏览器，你会在页面顶端看到一个查询栏。 添加了一个根据姓名查询的查询框。
     ordering = ('-order_id',) #降序

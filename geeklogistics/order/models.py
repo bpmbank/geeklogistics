@@ -31,7 +31,7 @@ class Detail(models.Model):
 	address = models.CharField('取货地址', max_length=200)
 	customer_name = models.CharField('收货人姓名', max_length=20)
 	customer_phone = models.CharField('收货人电话', max_length=20)
-	customer_address = models.CharField('收货人地址', max_length=30)
+	customer_address = models.CharField('收货人地址', max_length=200)
 	total_price = models.FloatField('订单总价', null=True, blank=True)
 	to_pay = models.CharField('是否需要代收款', max_length=3, default=0, choices=PAY_CHOICES)
 
