@@ -29,6 +29,7 @@ def login(request):
 				response_data['code'] = 0  
 				response_data['msg'] = 'ok' 
 				mypoi = poi.as_json()
+				print mypoi
 				response_data['data'] = mypoi
 			else:
 				response_data['code'] = 1 

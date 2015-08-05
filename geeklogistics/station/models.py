@@ -5,8 +5,8 @@ from datetime import datetime
 
 class Station(models.Model):
 	TYPE_CHOICES = (
-		(0, '总站'),
-		(1, '分店'),
+		(0, '分店'),
+		(1, '总站'),
 	)
 
 	username = models.CharField('配送点用户名', max_length=30)
@@ -28,6 +28,7 @@ class Station(models.Model):
 
 
 	def as_json(self):
+		print self.station_type
 		return dict(
 			id=self.id, name=self.name, phone=self.phone, address=self.address,
 			latitude = self.latitude, longitude=self.longitude, station_type=self.station_type

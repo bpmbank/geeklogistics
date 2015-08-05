@@ -248,7 +248,7 @@ def update_order_status(request):
 		operator_type = request.REQUEST.get('operatorType')
 		order_status = int(request.REQUEST.get('orderStatus'))
 		order_id = request.REQUEST.get('orderId', 0)
-		station_type = request.REQUEST.get('stationType', -1)
+		station_type = int(request.REQUEST.get('stationType', -1))
 
 		try:
 			if order_id != 0:
@@ -282,9 +282,9 @@ def update_order_status(request):
 					order.start_time = datetime.now()
 				order.order_status = order_status
 				order.save()
-				return_data = {}
+				return_data = ''
 				if station_type == 1:
-					# 如果为总站
+					# 如果为总站					
 					return_data = order.customer_nearest.name
 				response_data['code'] = 0
 				response_data['msg'] = 'ok'
