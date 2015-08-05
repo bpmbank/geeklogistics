@@ -21,7 +21,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 
 ORDER_STATUS = {'initial': 0, 'ordered': 100, 'get_order': 200,'shipping': 300, 
-			'delivering': 400, 'delivered': 500, 'complete': 600,'cancel': 700}
+			'delivering': 400, 'delivered': 500, 'complete': 600,'cancel': 700,
+			'reject': 800}
 
 # 获取订单列表ajax
 # todo：只获取当日的？
@@ -53,6 +54,7 @@ def order_list(request):
 
 					start_position = (current_page-1) * page_size
 					orders = Order.objects.filter(Q(order_status=0, poi=poi_id, status='0') | Q(order_status=100, poi=poi_id, status='0'))[start_position:end_position]
+					print orders
 				elif status == '20':
 					# 分页加载数据
 					if total_count <= 0:
@@ -77,7 +79,7 @@ def order_list(request):
 					orders = Order.objects.filter(Q(order_status=500, poi=poi_id, status='0') | Q(order_status=600, poi=poi_id, status='0'))[start_position:end_position]
 				elif status == '40':
 					if total_count <= 0:
-						total_count =  Order.objects.filter(Q(order_status=700, poi=poi_id, status='0')).count()
+						total_count =  Order.objects.filter(Q(order_status=700, poi=poi_id, status='0') | Q(order_status=800, poi=poi_id, status='0')).count()
 					if current_page * page_size >= total_count:
 						end_position = total_count
 					else:
@@ -175,11 +177,12 @@ def import_order(request):
 	# print request.FILES
 	e_file = request.FILES["orderXls"]
 	# print e_file
-	poi_id = request.COOKIES.get('poiid', '1')
+	poi_id = request.COOKIES.get('poiid', '1')	
 
 	file_test = 'static/excel/order_test.xlsx'
 	data = xlrd.open_workbook(file_contents=e_file.read())
 	table = data.sheets()[0] 
+	# 取货地址默认商家已录入地址，如需手动改，修改地址或单独下单或重开账号
 
 	nrows = table.nrows
 	for i in range(1, nrows):
@@ -247,24 +250,28 @@ def update_order_status(request):
 		operator_id = request.REQUEST.get('operatorId')
 		operator_type = request.REQUEST.get('operatorType')
 		order_status = int(request.REQUEST.get('orderStatus'))
-		order_id = request.REQUEST.get('orderId', 0)
+		order_id = int(request.REQUEST.get('orderId', 0))
 		station_type = int(request.REQUEST.get('stationType', -1))
-
+		print order_id
 		try:
-			if order_id != 0:
-				order = Order.objects.get(id=order_id)		
-			else:
+			if order_id <= 0:
 				deliver_id = request.REQUEST.get('deliverId')
+				print deliver_id
 				order = Order.objects.get(deliver_id=deliver_id)
+				order_id = order.id			
+			else:
+				order = Order.objects.get(id=order_id)		
 
-			if int(order_status) < int(order.order_status) :
+			if int(order_status) < int(order.order_status):
+			# if int(order_status) < int(order.order_status) and (order_status != ORDER_STATUS['reject']) :
 				response_data['code'] = 1
 				response_data['msg'] = '系统中订单状态高于需要更改状态'
 				response_data['data'] = {}	
 				return HttpResponse(json.dumps(response_data), content_type="application/json")
 			else:
 				# 如果拒收加入拒收理由
-				if order_status == ORDER_STATUS['delivering'] :
+				if order_status == ORDER_STATUS['reject'] :
+					print 'reject'
 					reject_reason = request.REQUEST.get('rejectReason')
 					record = StatusRecord(status=order_status, order_id=order_id, 
 					operator_type=operator_type, operator_id=operator_id, ctime=datetime.now(), 
@@ -289,6 +296,10 @@ def update_order_status(request):
 				response_data['code'] = 0
 				response_data['msg'] = 'ok'
 				response_data['data'] = return_data
+		except ObjectDoesNotExist:
+			response_data['code'] = 1
+			response_data['msg'] = '该订单不存在，请重新输入'
+			response_data['data'] = {}				
 		except:
 			response_data['code'] = 1
 			response_data['msg'] = '订单状态更新失败'
