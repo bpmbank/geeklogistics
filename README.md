@@ -22,6 +22,7 @@ alter table order_statusrecord change time ctime datetime;
 
 alter table order_statusrecord add reject_reason varchar(300);
 alter table order_statusrecord add receiver_name varchar(80);
+alter table order_detail modify customer_address varchar(200);
 alter table station_station add station_type int;
 
 alter table order_order drop column receiver_name; 

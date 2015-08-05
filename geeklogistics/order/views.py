@@ -54,7 +54,7 @@ def order_list(request):
 
 					start_position = (current_page-1) * page_size
 					orders = Order.objects.filter(Q(order_status=0, poi=poi_id, status='0') | Q(order_status=100, poi=poi_id, status='0'))[start_position:end_position]
-					print orders
+					# print orders
 				elif status == '20':
 					# 分页加载数据
 					if total_count <= 0:
@@ -189,7 +189,7 @@ def import_order(request):
 	nrows = table.nrows
 	for i in range(1, nrows):
 		row = table.row_values(i)
-		print table.row_values(i)
+		# print table.row_values(i)
 		if row[6].encode('utf-8') == '否':
 			topay_str = '0'
 		else:
@@ -259,7 +259,7 @@ def update_order_status(request):
 		order_status = int(request.REQUEST.get('orderStatus'))
 		order_id = int(request.REQUEST.get('orderId', 0))
 		station_type = int(request.REQUEST.get('stationType', -1))
-		print order_id
+		# print order_id
 		try:
 			if order_id <= 0:
 				deliver_id = request.REQUEST.get('deliverId')
