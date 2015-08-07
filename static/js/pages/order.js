@@ -14,6 +14,7 @@ jQorderBtn.bind('click', function(){
 	if(orderId == ''){
 		alert("请输入订单配送id");
 	}else{
+		orderId = $.trim(orderId);
 		window.location.href="/order/"+orderId;
 	}
 })

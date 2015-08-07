@@ -36,9 +36,10 @@
         <tr>
           <th>#</th>
           <th>订单编号</th>
-          <th>配送编号</th>
-          <th>开始配送时间</th>
-          <th>操作人</th>
+          <th>配送编号</th> 
+          <th>收货人</th>
+          <th>操作时间</th>         
+          <th>操作人</th>        
           <th>操作人联系方式</th>
           <th>订单状态</th>
           <th>操作</th>
@@ -50,7 +51,8 @@
             <th scope="row">{{ order.start_index}}</th>
             <td>{{order.order_id}}</td>
             <td><a href="/order/{{order.deliver_id}}">{{order.deliver_id}}</a></td>
-            <td>{{order.start_time}}</td>
+            <td>{{order.order_detail.customer_name}}</td>
+            <td>{{order.operator.operate_time}}</td>
             <td>{{order.operator.name}}</td>
             <td>{{order.operator.phone}}</td>
             <td>{{order.status}}</td>

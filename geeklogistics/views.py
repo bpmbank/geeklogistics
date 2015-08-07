@@ -94,10 +94,11 @@ def list(request, poi_id):
 				# print order.get_order_status_display()
 				myorder['order_status'] = order.order_status
 				myorder['start_index'] = start_index+index
+				myorder['order_detail'] = order.order_detail
 				record = StatusRecord.objects.filter(order_id = order.id)
 				record_length = len(record)
 				if(record_length>0):
-					myorder['start_time'] = record[0].ctime.strftime("%Y-%m-%d %H:%M:%S")
+					myorder['operate_time'] = record[record_length-1].ctime.strftime("%Y-%m-%d %H:%M:%S")
 					myorder['operator'] = record[record_length-1].get_record_operator()
 				else:
 					myorder['start_time'] = ''

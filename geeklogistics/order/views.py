@@ -269,12 +269,11 @@ def update_order_status(request):
 			else:
 				order = Order.objects.get(id=order_id)		
 
-			if int(order_status) < int(order.order_status):
-			# if int(order_status) < int(order.order_status) and (order_status != ORDER_STATUS['reject']) :
-				response_data['code'] = 1
-				response_data['msg'] = '系统中订单状态高于需要更改状态'
-				response_data['data'] = {}	
-				return HttpResponse(json.dumps(response_data), content_type="application/json")
+			if (int(order_status) < int(order.order_status)) and (order.order_status != 800 ):
+					response_data['code'] = 1
+					response_data['msg'] = '系统中订单状态高于需要更改状态'
+					response_data['data'] = {}	
+					return HttpResponse(json.dumps(response_data), content_type="application/json")
 			else:
 				# 如果拒收加入拒收理由
 				if order_status == ORDER_STATUS['reject'] :
