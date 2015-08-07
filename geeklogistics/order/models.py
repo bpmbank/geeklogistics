@@ -24,6 +24,8 @@ class Detail(models.Model):
 		('0', '否'),
 		('1', '是'),
 	)
+	# todo
+	# 备注
 	order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)
 	phone = models.CharField('订单联系人电话', max_length=20)
 	stuff = models.CharField('需要被配送物件', max_length=200, null=True, blank=True)  #todo 每个物件价格，名称
