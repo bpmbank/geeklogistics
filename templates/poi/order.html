@@ -8,7 +8,7 @@
     text-align: center;
   }
   .order{
-    width: 800px;
+    width: 820px;
     margin: 10px auto;
     /*border: solid 1px #E4E4E4;*/
 
@@ -27,6 +27,7 @@
   .first-span{
     width: 400px;
     display: inline-block;
+    margin-left: 0;
   }  
   input{
     padding: 3px 5px;
@@ -85,7 +86,7 @@
       <div>
         <h4 class="order-title">订单详情</h4>
         <div class="order-info">
-          <p>
+          <p style="  height: 40px;">
             <span class="first-span">
               <strong>订单编号：</strong>
               <input type="text" id="j-order-id" placeholder="请填写商家系统订单编号" value=""/>
@@ -109,6 +110,10 @@
               <strong>需要被配送物件：</strong>
               <input type="text" id="j-order-stuff" class="address-input" placeholder="请填写需要被配送物件名称，如：蔬菜" />
             </span>
+          </p>
+          <p>
+            <strong>订单备注：</strong>
+            <textarea style="width: 605px;" id="j-remark"></textarea>
           </p>
         </div>
       </div>

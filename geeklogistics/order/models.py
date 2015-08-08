@@ -34,6 +34,7 @@ class Detail(models.Model):
 	customer_name = models.CharField('收货人姓名', max_length=20)
 	customer_phone = models.CharField('收货人电话', max_length=20)
 	customer_address = models.CharField('收货人地址', max_length=200)
+	remark = models.CharField('订单备注', max_length=200, null=True, blank=True)
 	total_price = models.FloatField('订单总价', null=True, blank=True)
 	to_pay = models.CharField('是否需要代收款', max_length=3, default=0, choices=PAY_CHOICES)
 
@@ -77,6 +78,7 @@ class Order(models.Model):
 		customer_name = self.order_detail.customer_name
 		customer_phone = self.order_detail.customer_phone
 		customer_address = self.order_detail.customer_address
+		customer_nearest = self.customer_nearest.name
 		order_status = self.order_status
 		start_time = ''
 		end_time = ''
@@ -88,7 +90,7 @@ class Order(models.Model):
 			id=self.id, order_id=order_id, deliver_id=deliver_id, order_stuff=order_stuff,
 			order_price=order_price, order_topay=order_topay, customer_name=customer_name,
 			customer_phone = customer_phone, customer_address=customer_address,
-			start_time=start_time, end_time=end_time, status=order_status)
+			start_time=start_time, end_time=end_time, status=order_status, customer_nearest=customer_nearest)
 
 	def __unicode__(self):
 		return self.deliver_id

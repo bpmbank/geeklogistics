@@ -10,6 +10,7 @@ var jQorderIdInput = $("#j-order-id");
 var jQorderPriceInput = $("#j-order-price");
 var jQorderStuffInput = $("#j-order-stuff");
 var jQorderTopayInput = $("#j-order-topay");
+var jQremarkInput = $("#j-remark");
 // 收货人相关
 var jQcustomerNameInput = $("#j-customer-name");
 var jQcustomerPhoneInput = $("#j-customer-phone");
@@ -26,6 +27,7 @@ jQorderBtn.bind('click', function(){
 	var orderPrice = jQorderPriceInput.val();
 	var orderStuff = jQorderStuffInput.val();
 	var orderTopay = jQorderTopayInput.val();
+	var remark = jQremarkInput.val();
 	var customerName = jQcustomerNameInput.val();
 	var customerPhone = jQcustomerPhoneInput.val();
 	var customerAddress = jQcustomerAddressInput.val();
@@ -59,7 +61,8 @@ jQorderBtn.bind('click', function(){
 			'orderStuff': orderStuff,
 			'customerName': customerName,
 			'customerPhone': customerPhone,
-			'customerAddress': customerAddress
+			'customerAddress': customerAddress,
+			'remark': remark
 		}, function(ret){
 			if(ret.code == 0){
 				window.location.href = '/order/success/'+ ret.data;

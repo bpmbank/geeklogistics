@@ -104,7 +104,7 @@ def order_list(request):
 BAIDU_AK = 'GLfzo34AN5Sf7llYeCWlCw8E'
 
 def getLocation(address):
-	address = address.encode('utf-8')
+	address = address.encode('utf-8').replace(' ', '')
 	baidu_api = 'http://api.map.baidu.com/geocoder/v2/?address='+address+'&city=北京市&output=json&ak='+BAIDU_AK
 	serialized_data = urllib2.urlopen(baidu_api).read()
 	data = json.loads(serialized_data)
@@ -142,13 +142,14 @@ def getNearestStation(location, stations):
 			nearest_id = station.id
 	return nearest_id
 
-def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_stuff, order_price, order_topay, customer_name, customer_phone, customer_address):
+def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_stuff, 
+	order_price, order_topay, customer_name, customer_phone, customer_address, remark=''):
 	if order_price == '':
 		order_price = 0
 	# 生成订单详情
 	detail = Detail(order_id=order_id, phone=str(poi_phone), name=poi_name, address=poi_address, stuff=order_stuff, 
 		customer_name=customer_name, customer_phone=str(customer_phone), customer_address=customer_address,
-		total_price=order_price, to_pay=str(order_topay))
+		total_price=order_price, to_pay=str(order_topay), remark=remark)
 	detail.save()
 	poi = Merchant.objects.get(id=poi_id)
 	# 生成配送编号
@@ -157,12 +158,14 @@ def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_st
 	deliver_id = str(now)+str(randdigit)
 	# 生成相关站点
 	stations = Station.objects.all()
-	# 商家最近
+	# 商家最近 todo:直接关联最近站点
 	poi_location = getLocation(poi_address)
 	poi_nearest = getNearestStation(poi_location, stations)
+	print customer_address+str(poi_nearest)
 	# 收货人最近
 	customer_location = getLocation(customer_address)
 	customer_nearest = getNearestStation(customer_location, stations)
+	print customer_address+str(customer_nearest)
 	# 插入订单表
 	order=Order(deliver_id=deliver_id, poi_id=poi_id, poi_nearest_id=poi_nearest,
 				customer_nearest_id=customer_nearest, order_detail=detail, order_status=ORDER_STATUS['ordered'])
@@ -177,7 +180,7 @@ def import_order(request):
 	# print request.FILES
 	e_file = request.FILES["orderXls"]
 	# print e_file
-	poi_id = request.COOKIES.get('poiid', '1')	
+	poi_id = request.COOKIES.get('poiid', 1)	
 	poi = Merchant.objects.get(id=poi_id)
 
 
@@ -216,6 +219,7 @@ def order_new(request):
 		order_stuff = request.REQUEST.get('orderStuff')
 		order_id = request.REQUEST.get('orderId')
 		order_price = request.REQUEST.get('orderPrice')
+		order_remark = request.REQUEST.get('remark', '')
 		if order_price == '':
 			order_price = 0
 		order_topay = request.REQUEST.get('orderTopay')
@@ -225,7 +229,7 @@ def order_new(request):
 		# 生成订单详情
 		detail = Detail(order_id=order_id, phone=poi_phone, name=poi_name, address=poi_address, stuff=order_stuff, 
 			customer_name=customer_name, customer_phone=customer_phone, customer_address=customer_address,
-			total_price=order_price, to_pay=order_topay)
+			total_price=order_price, to_pay=order_topay, remark=order_remark)
 		detail.save()
 		poi = Merchant.objects.get(id=poi_id)
 		# 生成配送编号
