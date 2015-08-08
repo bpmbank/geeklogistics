@@ -19,10 +19,10 @@
 		        <a href="/"><img class="logo" src="/static/images/logo.png"></a>
 		        <div class="m-navs">
 		        	<a href="/" class="m-nav {% if current_url == 'index' %}current{% endif %}">首页</a>
+		        	<a href="/intro" class="m-nav {% if current_url == 'intro' %}current{% endif %}">极客冷链配</a>
+		        	<a href="/area" class="m-nav {% if current_url == 'area' %}current{% endif %}">配送范围</a>
+		        	<a href="/custom" class="m-nav {% if current_url == 'custom' %}current{% endif %}">我们的客户</a>
 			        <a href="/coop" class="m-nav {% if current_url == 'coop' %}current{% endif %}">商家合作</a>
-			        <a href="/intro" class="m-nav {% if current_url == 'intro' %}current{% endif %}">极客冷链配</a>
-			        <a href="/custom" class="m-nav {% if current_url == 'custom' %}current{% endif %}">我们的客户</a>
-			        <a href="/area" class="m-nav {% if current_url == 'area' %}current{% endif %}">配送范围</a>
 			        <a href="/order" class="m-nav {% if current_url == 'order' %}current{% endif %}">订单查询</a>
 			        <!-- <a href="/order/add/" class="m-nav ">我要发货</a> -->
 		        </div>
@@ -33,33 +33,34 @@
     {% block footer %}
  	<div class="m-about-wrapper">
 	 	<div class="m-about row clearfix">
-	 		<div class="span3">
+	 		<div class="span4">
 	 			<h5>关于我们</h5>
-	 			<p><a href="">极客简介</a></p>
-	 			<p><a href="">联系极客</a></p>
-	 			<p><a href="">加入极客</a></p>
+	 			<p><a href="">极客优势</a></p>
+	 			<p><a href="/news/3">加入极客</a></p>
+	 			<!-- <p><a href="">加入极客</a></p> -->
 	 		</div>
-	 		<div class="span3">
+	 		<div class="span4">
 	 			<h5>网站条款</h5>
 	 			<p><a href="">版权说明</a></p>
 	 			<p><a href="">隐私条款</a></p>
-	 			<p><a href="">权利声明</a></p>
+	 			<!-- <p><a href="">权利声明</a></p> -->
 	 		</div>
-	 		<div class="span3">
+<!-- 	 		<div class="span3">
 	 			<h5>常见问题</h5>
 	 			<p><a href="">关于极客优势</a></p>
 	 			<p><a href="">推荐阅读</a></p>
 	 			<p><a href="">友情链接</a></p>
 	 		</div>
-	 		<div class="span3">
+ -->	 		
+ 			<div class="span4">
 	 			<h5>关注我们</h5>
 	 			<p><a href="">新浪微博</a></p>
-	 			<p><a href="">官方微信</a></p>
-	 			<p><a href="">联系客服</a></p>
+	 			<!-- <p><a href="">官方微信</a></p> -->
+	 			<p><a href="/intro?intro=5">联系极客</a></p>
 	 		</div>
 	 	</div>
-	 	<p style="margin-top:20px;">copyright © 2015 北京极客冷链有限责任公司 电话：400-106-1234 传真：010-61253955</p>
-	 	<p>京ICP备13048455</p>
+	 	<p style="margin-top:20px;">copyright © 2015 极客冷链物流有限公司 电话：400-887-0387</p>
+	 	<!-- <p>京ICP备13048455</p> -->
  	</div>
 	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 	<script src="/static/bootstrap/jquery-1.11.2.min.js"></script>

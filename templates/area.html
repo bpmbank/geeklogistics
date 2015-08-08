@@ -27,7 +27,7 @@ label{
 	<div class="m-banner"></div>
 	<div class="container m-main">
 		<div class="row">
-			<h3>配送范围</h3>
+			<h3>配送范围(北京市)</h3>
 		</div>
 		<div class="row">
 			<div id="j-map" class="span9"></div>
@@ -48,12 +48,9 @@ label{
 
 	<script type="text/javascript">
     	//标注点数组
-		var markerArr = [{title:"极客总部-北京极客罗杰斯特有限公司",
-						content:"电话：400-106-1234<br/>地址：北京百富达物流有限责任公司，成立于2010年5月，总部位于北京市大兴区黄村镇芦求路周村中街东路临11号",
-						point:"116.30533|39.714144",
-						isOpen:0,icon:{w:21,h:21,l:46,t:46,x:1,lb:10} 
-					}];
+		var markerArr = [];
 		{% for area in area_list %}
+
 		 var a = {title:"极客冷链-{{area.name}}",content:"电话：{{area.phone}}<br/>地址：{{area.address}}<br/><br/>详细：极客冷链宅配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。",point:"{{area.longitude}}|{{area.latitude}}",isOpen:0,icon:{w:23,h:25,l:43,t:21,x:6,lb:12}}
 		 markerArr.push(a);
 		{% endfor %}

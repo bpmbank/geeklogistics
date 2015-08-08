@@ -49,7 +49,7 @@ def news(request, id):
 	return render_to_response('news.html', {'current_url': 'intro', 'news': news}) 
 
 def area(request):
-	area_list = Station.objects.all()
+	area_list = Station.objects.all().order_by("-station_type")
 	js_url = 'area'
 	return render_to_response('area.html', {'current_url': 'area', 'js_url': js_url,
 											'area_list' : area_list})

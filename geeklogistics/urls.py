@@ -35,7 +35,9 @@ urlpatterns = patterns('',
 
     # 配送员相关
     url(r'^api/v1/dispatcher/login$', 'geeklogistics.deliver.views.dispatcher_login', name='dispatcher_login'),
+    url(r'^api/v1/dispatcher/password$', 'geeklogistics.deliver.views.dispatcher_change_password', name='dispatcher_change_password'),
     url(r'^api/v1/driver/login$', 'geeklogistics.deliver.views.driver_login', name='driver_login'),
+    url(r'^api/v1/driver/password$', 'geeklogistics.deliver.views.driver_change_password', name='driver_change_password'),
 
     # api相关
     url(r'^api/v1/order/list$', 'geeklogistics.order.views.order_list', name='order_list'),

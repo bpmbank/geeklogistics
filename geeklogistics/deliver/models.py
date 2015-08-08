@@ -11,7 +11,7 @@ WORKSTATUS_CHOICES = (
 class Dispatcher(models.Model):
 	dispatcher_id = models.CharField('编号', max_length=20)
 	name = models.CharField('姓名', max_length=30)
-	password = models.CharField('密码', max_length=30, default="abcd1234")
+	password = models.CharField('密码', max_length=30, default="123456")
 	work_status = models.CharField('配送员当前状态', max_length=30, choices=WORKSTATUS_CHOICES) #可选状态
 	phone = models.CharField('手机', max_length=30)
 	photo = models.ImageField('配送员照片', max_length=100, upload_to='static/images/dispatcher/', null=True, blank=True)	
