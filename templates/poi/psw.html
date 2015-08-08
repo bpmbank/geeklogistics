@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}商家合作{% endblock %}
+
+{% block content %}
+<style type="text/css">
+	.login-form{
+		width: 50%;
+		margin: 20px auto;
+		margin-bottom: 40px;
+	}
+	.checkbox{
+		position: relative;
+	}
+	.psw{
+	  position: absolute;
+	  left: 185px;
+	  top: 1px;
+	}
+	.psw-btn{
+		margin-right: 10px;
+	}
+</style>
+<div class="m-banner"></div>
+<div class="container m-main">
+	<h3 style="text-align:center;margin-top:40px;">更换密码</h3>
+	<form class="form-horizontal login-form">
+	  <div class="control-group">
+	    <label class="control-label" for="inputEmail">商家用户名</label>
+	    <div class="controls">
+	      <input type="text" id="inputEmail" placeholder="请输入您的登陆用户名">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="inputPassword">原始密码</label>
+	    <div class="controls">
+	      <input type="password" id="inputPassword" placeholder="请输入您的原始密码">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="inputPassword">新密码</label>
+	    <div class="controls">
+	      <input type="password" id="inputPassword" placeholder="请输入您的新密码">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="inputPassword">重复密码</label>
+	    <div class="controls">
+	      <input type="password" id="inputPassword" placeholder="请重复输入您的新密码">
+	    </div>
+	  </div>
+
+	  <div class="control-group">
+	    <div class="controls">
+	    	<div class="btn-primary btn psw-btn" >更换密码</div>
+			<a href="/coop"><div class="btn">直接登录</div></a>
+	    </div>
+	  </div>
+	</form>
+</div>
+
+{% endblock %}

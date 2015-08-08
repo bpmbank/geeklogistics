@@ -9,22 +9,28 @@
 		margin: 20px auto;
 		margin-bottom: 40px;
 	}
+	.checkbox{
+		position: relative;
+	}
+	.psw{
+	  position: absolute;
+	  left: 185px;
+	  top: 1px;
+	}
 </style>
 <div class="m-banner"></div>
 <div class="container m-main">
 	<h3 style="text-align:center;margin-top:40px;">商家合作登录</h3>
 	<form class="center-block login-form">
 	  <div class="form-group">
-	    <!-- <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label> -->
-    	<div class="input-group">
-      		<div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+    	<div class="input-prepend">
+  			<span class="add-on"><span class="icon-user"></span></span>
       		<input type="text" class="form-control" id="j-user-input" placeholder="商家用户名"></input>
 	  	</div>
 	  </div>
 	  <div class="form-group">
-	    <!-- <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label> -->
-    	<div class="input-group">
-      		<div class="input-group-addon"><span class="glyphicon glyphicon glyphicon-lock"></span></div>
+    	<div class="input-prepend">
+  			<span class="add-on"><span class="icon-lock"></span></span>
       		<input type="password" class="form-control" id="j-psw-input" placeholder="密码"></input>
 	  	</div>
 	  </div>
@@ -32,8 +38,9 @@
 	    <label>
 	      <input type="checkbox"> 记住密码
 	    </label>
+	    <a class="psw" href="/poi/psw">更换密码</a>
 	  </div>
-	  <div class="btn btn-primary" id="j-login-btn" style="  margin-right: 5px;">登录</div>
+	  <div class="btn btn-primary" id="j-login-btn" style="margin-right: 5px;">登录</div>
 	  <a href="/poi/apply"><div class="btn btn-default">申请商家合作</div></a>
 
 	</form>

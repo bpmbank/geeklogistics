@@ -123,6 +123,34 @@ def poi_order(request):
 		reminder = "该商户不存在"
 	return render_to_response('poi/order.html', {'current_url': 'coop', 'js_url': js_url, 'poi': poi, 'reminder': reminder})	
 
+def poi_psw(request):
+	js_url = 'poi/psw'
+	if request.method == 'POST':
+		username = request.REQUEST.get('username')
+		origin_password = request.REQUEST.get('originPassword')
+		new_password = request.REQUEST.get('newPassword')
+
+		response_data = {}
+
+		try:
+			poi = Merchant.objects.get(username=username)
+			if poi.password == origin_password:
+				dispatcher.password = new_password
+				dispatcher.save()
+				response_data['code'] = 0  
+				response_data['msg'] = 'ok' 
+				response_data['data'] = {}
+			else:
+				response_data['code'] = 1 
+				response_data['msg'] = '用户名或密码错误' 	
+		except ObjectDoesNotExist:
+			response_data['code'] = 1 
+			response_data['msg'] = '用户名不存在'	
+
+		return HttpResponse(json.dumps(response_data), content_type="application/json")
+
+	return render_to_response('poi/psw.html', {'current_url': 'coop', 'js_url': js_url})	
+
 def order_detail(request, deliver_id):
 	js_url = 'order'
 	reminder = ''
