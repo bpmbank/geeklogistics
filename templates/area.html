@@ -21,9 +21,11 @@ label{
 .area-list li p{
 	margin: 5px 0;
 }
-
+img{
+   max-width: 10000px
+}
 </style>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=0gMe1V1Gvrxy6LyT1Tz5jGmW"></script>	
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>	
 	<div class="m-banner"></div>
 	<div class="container m-main">
 		<div class="row">
@@ -51,7 +53,7 @@ label{
 		var markerArr = [];
 		{% for area in area_list %}
 
-		 var a = {title:"极客冷链-{{area.name}}",content:"电话：{{area.phone}}<br/>地址：{{area.address}}<br/><br/>详细：极客冷链宅配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。",point:"{{area.longitude}}|{{area.latitude}}",isOpen:0,icon:{w:23,h:25,l:43,t:21,x:6,lb:12}}
+		 var a = {title:"极客冷链-{{area.name}}",content:"电话：{{area.phone}}<br/>地址：{{area.address}}<br/><br/>详细：极客冷链宅配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。",point:"{{area.longitude}}|{{area.latitude}}",isOpen:0,icon:{w:23,h:25,l:43,t:21,x:6,lb:14}}
 		 markerArr.push(a);
 		{% endfor %}
 	</script>
