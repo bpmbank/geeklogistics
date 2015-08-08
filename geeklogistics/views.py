@@ -25,12 +25,12 @@ from django.core.paginator import PageNotAnInteger
 
 def home(request):
 	js_url = 'index'
-	news_list = News.objects.all()
+	news_list = News.objects.filter(status='0')
 	return render_to_response('index.html', {'current_url': 'index', 'news_list': news_list, 'js_url': js_url})
 
 def intro(request):
 	js_url = 'intro'
-	news_list = News.objects.all()
+	news_list = News.objects.filter(status='0')
 	return render_to_response('intro.html', {'current_url': 'intro', 'js_url': js_url, 'news_list': news_list})
 
 def coop(request):

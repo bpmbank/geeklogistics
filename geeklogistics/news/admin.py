@@ -8,6 +8,7 @@ class NewsAdmin(admin.ModelAdmin):
     formfield_overrides = { models.TextField: {'widget': forms.Textarea(attrs={'class':'ckeditor'})}, }
     list_display = ('id', 'title', 'ctime', 'utime')    
     ordering = ('-ctime',) #降序
+    readonly_fields = ('ctime', )
 
     class Media:
     	js = ('ckeditor/configuration-ckeditor.js', 'ckeditor/ckeditor.js')
