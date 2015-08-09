@@ -2,6 +2,8 @@
 
 pip install django ==1.6
 
+pip install pillow
+
 pip install django-suit==0.2.13
 
 pip install django-bootstrap-form 
@@ -13,6 +15,8 @@ pip install xlrd
 CREATE DATABASE geeklogistics DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 mysqldump --opt -u root -p -t geeklogistics > data.sql
+
+mysqldump -uroot -p geeklogistics station_station > station.sql
 
 alter table order_order modify order_status int;
 
