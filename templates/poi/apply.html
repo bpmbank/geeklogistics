@@ -2,161 +2,188 @@
 {% block title %}申请商家合作{% endblock %}
 
 {% block content %}
-<style type="text/css">
-/*	.register-form{
-		width: 30%;
-		margin: 20px auto;
-		margin-bottom: 40px;
-	}
-*/
-.register-form{
-	width: 60%;
-	margin: 20px auto;
-}
-.form-legend {
-  border-bottom: 2px solid #2C9FC8;
-  padding: 8px;
-  margin-top: 20px;
-}
-.form-box .row{
-	width: 500px;
-	margin: auto;
-	margin-bottom: 10px;
-}
-.control-label, .form-control{
-	float: left;
-}
-.form-horizontal .form-group {
-  width: 550px;
-  margin-left: 0;
-  margin-right: 0;
-}
-.form-bottom{
-	text-align: center;
-}
-.register-btn{
-	width: 100%;
-	background: #85B6E2;
-	padding: 10px;
-	color: white;
-	text-align: center;
-	border-radius: 5px;
-	font-size: 1.2em;
-	cursor: pointer;
-}
-.title{
-	text-align:center;
-	margin-top:40px;
-	margin-bottom: 20px;
-}
-.reminder{
-	text-align: center;
-}
-.control-label{
-	margin-right: 20px;
-}
-</style>
+    <style type="text/css">
+        /*	.register-form{
+                width: 30%;
+                margin: 20px auto;
+                margin-bottom: 40px;
+            }
+        */
+        .register-form {
+            width: 60%;
+            margin: 20px auto;
+        }
 
-<div class="m-banner"></div>
-<div class="container m-main">
-	<h3 class="title">申请商家合作</h3>
-	<div class="reminder">
-		<img src="/static/images/logo.png">
-		<p></p>
-	</div>
-	<form class="center-block register-form form-horizontal">
-		<h4 class="form-legend">商店信息</h4>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">商家名称</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">商家地址</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">商家图标</label>
-			<div class="col-sm-9">
-			  <input type="file" id="exampleInputFile">				
-			</div>
-		</div>
+        .form-legend {
+            border-bottom: 2px solid #2C9FC8;
+            padding: 8px;
+            margin-top: 20px;
+        }
 
-		<h4 class="form-legend">公司信息</h4>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">公司名称</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">负责人姓名</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
+        .form-box .row {
+            width: 500px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
 
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">营业执照</label>
-			<div class="col-sm-9">
-			  <input type="file" id="exampleInputFile">				
-			</div>
-		</div>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">食品安全许可证</label>
-			<div class="col-sm-9">
-			  <input type="file" id="exampleInputFile">				
-			</div>
-		</div>
+        .control-label, .form-control {
+            float: left;
+        }
 
-		<h4 class="form-legend">账户信息</h4>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
+        .form-horizontal .form-group {
+            width: 550px;
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">密码</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
+        .form-bottom {
+            text-align: center;
+        }
 
-		<h4 class="form-legend">联系人信息</h4>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">联系人姓名</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">联系电话</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
-		<div class="control-group">
-			<label for="inputEmail3" class="col-sm-3 control-label">联系邮箱</label>
-			<div class="col-sm-9">
-			  <input type="text" class="form-control" id="inputEmail3" placeholder="">
-			</div>
-		</div>
+        .register-btn {
+            width: 100%;
+            background: #85B6E2;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
 
-		<div class="control-group">
-		  <div class="checkbox">
-		    <label>
-		      <input type="checkbox"> 我已同意极客冷链注册协议
-		    </label>
-		  </div>
-		</div>
-		<div class="register-btn" id="j-login-btn">申 请</div>
+        .title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
 
-	</form>
-</div>
+        .reminder {
+            text-align: center;
+        }
+
+        .control-label {
+            margin-right: 20px;
+        }
+    </style>
+
+    <div class="m-banner"></div>
+    <div class="container m-main">
+        <h3 class="title">申请商家合作</h3>
+
+        <div class="reminder">
+            <img src="/static/images/logo.png">
+
+            <p></p>
+        </div>
+        <form class="center-block register-form form-horizontal">
+            <h4 class="form-legend">商店信息</h4>
+
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">商家名称</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">商家地址</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">商家图标</label>
+
+                <div class="col-sm-9">
+                    <input type="file" id="exampleInputFile">
+                </div>
+            </div>
+
+            <h4 class="form-legend">公司信息</h4>
+
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">公司名称</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">负责人姓名</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">营业执照</label>
+
+                <div class="col-sm-9">
+                    <input type="file" id="exampleInputFile">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">食品安全许可证</label>
+
+                <div class="col-sm-9">
+                    <input type="file" id="exampleInputFile">
+                </div>
+            </div>
+
+            <h4 class="form-legend">账户信息</h4>
+
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">密码</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+
+            <h4 class="form-legend">联系人信息</h4>
+
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">联系人姓名</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">联系电话</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="inputEmail3" class="col-sm-3 control-label">联系邮箱</label>
+
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> 我已同意极客冷链注册协议
+                    </label>
+                </div>
+            </div>
+            <div class="register-btn" id="j-login-btn">申 请</div>
+
+        </form>
+    </div>
 
 {% endblock %}

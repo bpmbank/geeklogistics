@@ -1,5 +1,5 @@
-#coding:utf-8
-#-*- coding:utf-8 -*-
+# coding:utf-8
+# -*- coding:utf-8 -*-
 """
 Django settings for geeklogistics project.
 
@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -39,7 +40,7 @@ from django.contrib import messages
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #     'django.template.loaders.eggs.Loader',
 )
 
 INSTALLED_APPS = (
@@ -87,16 +88,16 @@ WSGI_APPLICATION = 'geeklogistics.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'geeklogistics',    #你的数据库名称
-        'USER': 'root',   #你的数据库用户名
-        'PASSWORD': 'Gl_123456', #你的数据库密码
-        'HOST': '', #你的数据库主机，留空默认为localhost
-        'PORT': '3306', #你的数据库端口
+        'NAME': 'geeklogistics',  # 你的数据库名称
+        'USER': 'root',  # 你的数据库用户名
+        'PASSWORD': 'Gl_123456',  # 你的数据库密码
+        'HOST': '',  # 你的数据库主机，留空默认为localhost
+        'PORT': '3306',  # 你的数据库端口
         # 'OPTIONS': {'charset': 'utf8mb4'},
     }
 }
 
-#admin
+# admin
 # DAB_FIELD_RENDERER = 'django_admin_bootstrapped.renderers.BootstrapFieldRenderer'
 # MESSAGE_TAGS = {
 #     messages.SUCCESS: 'alert-success success',
@@ -107,23 +108,23 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
 )
 
-SUIT_CONFIG = {  
-    'ADMIN_NAME': u'极客冷链管理后台',  
-    'MENU': (  
-        'sites',  
-        {'app': 'order', 'label': u'订单管理'}, 
-        {'app': 'deliver', 'label': u'配送员管理'}, 
-        {'app': 'poi', 'label': u'商家管理'},  
-        {'app': 'news', 'label': u'新闻管理'},  
-        {'app': 'station', 'label': u'配送点管理'},  
+SUIT_CONFIG = {
+    'ADMIN_NAME': u'极客冷链管理后台',
+    'MENU': (
+        'sites',
+        {'app': 'order', 'label': u'订单管理'},
+        {'app': 'deliver', 'label': u'配送员管理'},
+        {'app': 'poi', 'label': u'商家管理'},
+        {'app': 'news', 'label': u'新闻管理'},
+        {'app': 'station', 'label': u'配送点管理'},
 
-    ),  
-}  
+    ),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'zh_CN'  
+LANGUAGE_CODE = 'zh_CN'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -137,30 +138,29 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR, 'templates').replace('\\','/'),
+    os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
 
 )
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 M_MEDIA_SITE = 'static/m/'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CKEDITOR_CONFIGS = {
-   'default': {
-        'toolbar':[ ['CodeSnippet', ], ],
+    'default': {
+        'toolbar': [['CodeSnippet', ], ],
         'height': 400,
         'width': 900,
         'removePlugins': 'stylesheetparser',
         'extraPlugins': 'codesnippet',
-   },
+    },
 }
 STATICFILES_DIRS = (
-    ("css", os.path.join(STATIC_ROOT,'css')),
-    ("js", os.path.join(STATIC_ROOT,'js')),
-    ("images", os.path.join(STATIC_ROOT,'images')),
-    ("bootstrap", os.path.join(STATIC_ROOT,'bootstrap')),
-    ("ckeditor", os.path.join(STATIC_ROOT,'ckeditor')),
+    ("css", os.path.join(STATIC_ROOT, 'css')),
+    ("js", os.path.join(STATIC_ROOT, 'js')),
+    ("images", os.path.join(STATIC_ROOT, 'images')),
+    ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
+    ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
 
 )
 STATIC_URL = '/static/'
-

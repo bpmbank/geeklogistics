@@ -1,69 +1,235 @@
-html, body{ margin: 0px; padding: 0px; color: #333; width: 100%; min-height: 100%; background: #f5f5f5; padding-bottom: 10px; }
-.main_blue{ color: #85B6E2; }
-img{ width: 100%; height: auto; }
-h1{ font-size: 20px; font-weight: 400; }
-p{ font-size: 16px; color: #666; }
-a, a:hover, a:visited{ color: #666; font-size: 16px; }
-.fl_right{ float: right; }
-.fl_left{ float: left; }
-.clear{ clear: both; }
-
-.navi{ background: #85B6E2; height: 50px; }
-.navi .return{ margin-top: 7px; height: 36px; width: auto; }
-.navi p{ color: #fff; font-size: 20px; font-weight: 500; text-align: center; margin-top: -33px; }
-.glyphicon{ padding-right: 10px; }
-
-.item_card{ width: 100%; height: 120px; background: url('../img/contact_us.jpg'); background-size: cover; background-position: center center; position: relative; margin: 15px auto; }
-.item_card .item_card_name{ background: rgba(0, 0, 0, 0.6); color: #fff; font-size: 14px; text-align: center; width: 100%; padding: 2px 0px; position: absolute; bottom: 0px; }
-
-.list-group{ margin-bottom: 0px; }
-nav{ text-align: center; }
-
-.logo{ width: 60%; display: block; margin: 50px auto 10px auto; }
-
-input{
-  width: 100%;
-  background: none;
-  box-shadow: none;
-  border: 1px solid #999;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px 0px;	
+html, body {
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    width: 100%;
+    min-height: 100%;
+    background: #f5f5f5;
+    padding-bottom: 10px;
 }
 
-.main_btn{ background: #85B6E2; padding: 10px 0px; width: 100%; border-radius: 5px; text-align: center; color: #fff; font-size: 18px; margin-top: 10px; }
-
-.btn-group-justified{ margin-top: 10px; }
-.orders{ margin-top: 15px; }
-.panel-body{ padding: 0px; }
-.table{ margin-bottom: 0px; }
-
-.order_detail{ margin-top: 15px; }
-
-.position_dots{ margin-top: 10px; text-align: center; }
-.position_circles{ display: inline-block; text-align: center; }
-.position_circles .position_circle{ width: 20px; height: 20px; border-radius: 50%; background: none; border: 1px solid #85B6E2; display: block; margin: 0 auto; margin-bottom: 5px; }
-.position_circles .position_circle.complete{ background: #85B6E2; }
-.position_circles p{ font-size: 12px; }
-
-.pop_up{ display: none; position: fixed; z-index: 100; width: 100%; height: 100%; top: 0px; left: 0px; }
-.pop_up .cover{ width: 100%; height: 100%; background: rgba( 0, 0, 0, 0.7 ); position: fixed; z-index: 100; }
-.pop_up .box{ position: fixed; z-index: 101; width: 100%; }  
-.pop_up .close_button{
-  position: fixed;
-  bottom: 15px;
-  z-index: 100;
-  width: 100%;
-  height: auto;	
-}
-.pop_up .close_button img{
-	display: block;
-	margin: 0 auto;
-	width: 60px; 
-	height: auto
+.main_blue {
+    color: #85B6E2;
 }
 
-.card{ background: #85B6E2; color: #fff; text-align: center; width: 100%; height: 120px; margin-top: 20px; padding: 10px; }
-.card p{ color: #fff; margin-top: 5px; }
-.card img{ width: 76px; height: auto; display: block; margin: 0px auto; }
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+a, a:hover, a:visited {
+    color: #666;
+    font-size: 16px;
+}
+
+.fl_right {
+    float: right;
+}
+
+.fl_left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.navi {
+    background: #85B6E2;
+    height: 50px;
+}
+
+.navi .return {
+    margin-top: 7px;
+    height: 36px;
+    width: auto;
+}
+
+.navi p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -33px;
+}
+
+.glyphicon {
+    padding-right: 10px;
+}
+
+.item_card {
+    width: 100%;
+    height: 120px;
+    background: url('../img/contact_us.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin: 15px auto;
+}
+
+.item_card .item_card_name {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    padding: 2px 0px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.list-group {
+    margin-bottom: 0px;
+}
+
+nav {
+    text-align: center;
+}
+
+.logo {
+    width: 60%;
+    display: block;
+    margin: 50px auto 10px auto;
+}
+
+input {
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    border: 1px solid #999;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.main_btn {
+    background: #85B6E2;
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.btn-group-justified {
+    margin-top: 10px;
+}
+
+.orders {
+    margin-top: 15px;
+}
+
+.panel-body {
+    padding: 0px;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.order_detail {
+    margin-top: 15px;
+}
+
+.position_dots {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.position_circles {
+    display: inline-block;
+    text-align: center;
+}
+
+.position_circles .position_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid #85B6E2;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+.position_circles .position_circle.complete {
+    background: #85B6E2;
+}
+
+.position_circles p {
+    font-size: 12px;
+}
+
+.pop_up {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.pop_up .cover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 100;
+}
+
+.pop_up .box {
+    position: fixed;
+    z-index: 101;
+    width: 100%;
+}
+
+.pop_up .close_button {
+    position: fixed;
+    bottom: 15px;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+}
+
+.pop_up .close_button img {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: auto
+}
+
+.card {
+    background: #85B6E2;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.card p {
+    color: #fff;
+    margin-top: 5px;
+}
+
+.card img {
+    width: 76px;
+    height: auto;
+    display: block;
+    margin: 0px auto;
+}
 
