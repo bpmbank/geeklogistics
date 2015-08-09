@@ -1,3 +1,4 @@
+#coding:utf-8
 #-*- coding:utf-8 -*-
 """
 Django settings for geeklogistics project.
@@ -29,6 +30,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+FILE_CHARSET = 'utf-8'
+DEFAULT_CHARSET = 'utf-8'
 
 # Application definition
 from django.contrib import messages
@@ -86,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'geeklogistics',    #你的数据库名称
         'USER': 'root',   #你的数据库用户名
-        'PASSWORD': '', #你的数据库密码
+        'PASSWORD': 'Gl_123456', #你的数据库密码
         'HOST': '', #你的数据库主机，留空默认为localhost
         'PORT': '3306', #你的数据库端口
         # 'OPTIONS': {'charset': 'utf8mb4'},

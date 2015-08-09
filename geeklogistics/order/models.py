@@ -1,4 +1,5 @@
-#-*- coding:utf-8 -*-
+#coding:utf-8
+# -*- coding: utf-8 -*-
 
 from datetime import datetime
 from django.db import models
@@ -52,8 +53,8 @@ class Order(models.Model):
 	end_time = models.DateTimeField(verbose_name="送达时间", null=True, blank=True)
 	order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)	
 	order_status = models.IntegerField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
-	poi_nearest = models.ForeignKey(Station, verbose_name="商家最近取货站点", related_name='商家最近取货站点', null=True, blank=True)
-	customer_nearest = models.ForeignKey(Station, verbose_name="收货人最近站店", related_name='收货人最近站店', null=True, blank=True)
+	poi_nearest = models.ForeignKey(Station, verbose_name="商家最近取货�", null=True, blank=True)
+	customer_nearest = models.ForeignKey(Station, verbose_name="收货人最近�", null=True, blank=True)
 	price = models.FloatField('配送价格', default=20)
 	order_detail = models.ForeignKey(Detail, verbose_name="订单详情")
 	order_type = models.CharField('状态', max_length=3, default=0)
