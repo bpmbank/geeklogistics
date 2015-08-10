@@ -1,0 +1,196 @@
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 00:44:33 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 00:49:10 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:23:31 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:31:04 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:32:47 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:44:13 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:49:31 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:50:56 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:53:45 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 13:57:26 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 21:48:19 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 22:01:23 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 22:03:43 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 22:16:43 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
