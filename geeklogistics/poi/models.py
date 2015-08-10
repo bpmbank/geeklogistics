@@ -34,6 +34,7 @@ class Merchant(models.Model):
 
 class Show(models.Model):
     poi = models.OneToOneField(Merchant, verbose_name="订单商家")
+    position = models.IntegerField('排序', default=0)
 
     class Meta:
         verbose_name = '展示商家'

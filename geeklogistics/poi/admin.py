@@ -12,7 +12,7 @@ class MerchantAdmin(admin.ModelAdmin):
 
 
 class ShowAdmin(admin.ModelAdmin):
-    list_display = ('id', 'poi_name')
+    list_display = ('id', 'poi_name', 'position')
 
     def poi_name(self, instance):
         return instance.poi.name

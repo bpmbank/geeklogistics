@@ -38,7 +38,7 @@ def poi_apply(request):
 
 
 def custom(request):
-    customer_list = Show.objects.all()
+    customer_list = Show.objects.all().order_by('position')
     return render_to_response('custom.html', {'current_url': 'custom',
                                               'customer_list': customer_list})
 

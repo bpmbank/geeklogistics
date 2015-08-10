@@ -55,7 +55,7 @@ class Order(models.Model):
     start_time = models.DateTimeField(verbose_name="开始配送时间", null=True, blank=True)
     end_time = models.DateTimeField(verbose_name="送达时间", null=True, blank=True)
     order_id = models.CharField('订单编号', max_length=30, null=True, blank=True)
-    order_status = models.IntegerField('订单状态', max_length=3, default=0, choices=ORDER_STATUS_CHOICES)
+    order_status = models.IntegerField('订单状态', default=0, choices=ORDER_STATUS_CHOICES)
     poi_nearest = models.ForeignKey(Station, verbose_name="商家最近取货站点", related_name='商家最近取货站点+', null=True, blank=True)
     customer_nearest = models.ForeignKey(Station, verbose_name="收货人最近站店", related_name='收货人最近站店+', null=True,
                                          blank=True)
