@@ -175,7 +175,7 @@ def new_order_model(poi_id, poi_name, poi_phone, poi_address, order_id, order_st
     poi = Merchant.objects.get(id=poi_id)
     # 生成配送编号
     now = int(time.time())
-    randdigit = random.randint(0, 10)
+    randdigit = random.randint(0, 100)
     deliver_id = str(now) + str(randdigit)
     # 生成相关站点
     stations = Station.objects.all()
@@ -222,9 +222,10 @@ def import_order(request):
             customer_phone = row[3].encode('utf-8')
         else:
             customer_phone = row[4].encode('utf-8')
-        # poi_id, poi_name, poi_phone, poi_address, order_id, order_stuff, order_price, order_topay, customer_name, customer_phone, customer_address
+        # poi_id, poi_name, poi_phone, poi_address, order_id, order_stuff, order_price, order_topay, 
+        # customer_name, customer_phone, customer_address, remark
         new_order_model(poi_id, poi.name, poi.tel, poi.address, str(row[0]), '', row[5], topay_str, row[1],
-                        customer_phone, row[2])
+                        customer_phone, row[2], row[7])
     url = '/list/' + poi_id
     return HttpResponseRedirect(url)
 
@@ -256,7 +257,7 @@ def order_new(request):
         poi = Merchant.objects.get(id=poi_id)
         # 生成配送编号
         now = int(time.time())
-        randdigit = random.randint(0, 10)
+        randdigit = random.randint(0, 100)
         deliver_id = str(now) + str(randdigit)
         # 生成相关站点
         stations = Station.objects.all()
