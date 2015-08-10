@@ -141,11 +141,11 @@ class StatusRecord(models.Model):
 		elif(self.status == 300):
 			if self.operator_type == '0':
 				if self.operator_id == 11:
-					text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 进行分拣';
+					text = time_format + ' ' + '货物正在分拣站 '+ operator.name.encode('utf-8') + '进行分拣';
 				else:
-					text = time_format + ' ' + '货物已经到达 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+')';
+					text = time_format + ' ' + '货物已经到达 '+ operator.name.encode('utf-8');
 			elif self.operator_type == '2':
-				text = time_format + ' ' + '货物正由司机 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 运往下一站点';				
+				text = time_format + ' ' + '货物正由司机 '+ operator.name.encode('utf-8') + ' 运往下一站点';				
 		elif(self.status == 400):
 			text = time_format + ' ' + '货物正由配送员 '+ operator.name.encode('utf-8') + '(电话：'+operator.phone.encode('utf-8')+') 开始配送';
 		elif(self.status == 500):
