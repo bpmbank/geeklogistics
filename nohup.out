@@ -1,0 +1,93 @@
+System check identified some issues:
+
+WARNINGS:
+deliver.Dispatcher.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+deliver.Dispatcher.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+deliver.Driver.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+deliver.Driver.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+news.News.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+news.News.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+order.Order.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+order.Order.order_status: (fields.W122) 'max_length' is ignored when used with IntegerField
+	HINT: Remove 'max_length' from field
+order.Order.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+order.StatusRecord.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+poi.Merchant.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+poi.Merchant.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+station.Station.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+station.Station.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+
+System check identified 14 issues (0 silenced).
+[09/Aug/2015 22:36:48]"GET / HTTP/1.1" 200 6350
+[09/Aug/2015 22:36:48]"GET /static/css/global.css HTTP/1.1" 200 1603
+[09/Aug/2015 22:36:48]"GET /static/css/index2.css HTTP/1.1" 200 1207
+[09/Aug/2015 22:36:48]"GET /static/js/pages/index.js HTTP/1.1" 200 45
+[09/Aug/2015 22:36:48]"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 106006
+[09/Aug/2015 22:36:48]"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 28631
+[09/Aug/2015 22:36:48]"GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 95930
+[09/Aug/2015 22:36:48]"GET /static/images/logo.png HTTP/1.1" 200 24491
+[09/Aug/2015 22:36:48]"GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[09/Aug/2015 22:36:54]"GET / HTTP/1.1" 200 6350
+[09/Aug/2015 22:36:54]"GET /static/css/index2.css HTTP/1.1" 304 0
+[09/Aug/2015 22:36:54]"GET /static/css/global.css HTTP/1.1" 304 0
+[09/Aug/2015 22:36:54]"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[09/Aug/2015 22:36:54]"GET /static/images/logo.png HTTP/1.1" 304 0
+[09/Aug/2015 22:36:54]"GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[09/Aug/2015 22:36:54]"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[09/Aug/2015 22:36:54]"GET /static/js/pages/index.js HTTP/1.1" 304 0
+[09/Aug/2015 22:36:54]"GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET / HTTP/1.1" 200 6350
+[09/Aug/2015 22:36:57]"GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET /static/css/index2.css HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET /static/css/global.css HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET /static/images/logo.png HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET /static/js/pages/index.js HTTP/1.1" 304 0
+[09/Aug/2015 22:36:57]"GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+System check identified some issues:
+
+WARNINGS:
+deliver.Dispatcher.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+deliver.Dispatcher.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+deliver.Driver.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+deliver.Driver.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+news.News.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+news.News.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+order.Order.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+order.Order.order_status: (fields.W122) 'max_length' is ignored when used with IntegerField
+	HINT: Remove 'max_length' from field
+order.Order.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+order.StatusRecord.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+poi.Merchant.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+poi.Merchant.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+station.Station.ctime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+station.Station.utime: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+
+System check identified 14 issues (0 silenced).

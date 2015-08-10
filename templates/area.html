@@ -3,58 +3,76 @@
 {% block title %}配送范围{% endblock %}
 
 {% block content %}
-<style type="text/css">
-#j-map {height: 600px;overflow: hidden;margin:0;font-family:"微软雅黑";}
-.m-main{
-	width: 920px;
-  padding: 10px 30px;
-}
-label{
-	max-width: 200px;
-}
-.area-list li{
-  border-bottom: solid 1px #DADADA;
-}
-.area-list li h4{
-	font-size: 1.2em;
-}
-.area-list li p{
-	margin: 5px 0;
-}
-img{
-   max-width: 10000px
-}
-</style>
-<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>	
-	<div class="m-banner"></div>
-	<div class="container m-main">
-		<div class="row">
-			<h3>配送范围(北京市)</h3>
-		</div>
-		<div class="row">
-			<div id="j-map" class="span9"></div>
-			<div class="span3" style="max-height: 600px; overflow: scroll;">
-				<ul class="unstyled area-list">
-					{% for a in area_list %}
-					<li>
-						<h4>{{a.name}}</h4>
-						<p><strong>地址：</strong>{{a.address}}</p>
-						<!-- <p><strong>服务电话</strong>：{{a.phone}}</p> -->
-					</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
+    <style type="text/css">
+        #j-map {
+            height: 600px;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
 
-	</div>
+        .m-main {
+            width: 920px;
+            padding: 10px 30px;
+        }
 
-	<script type="text/javascript">
-    	//标注点数组
-		var markerArr = [];
-		{% for area in area_list %}
+        label {
+            max-width: 200px;
+        }
 
-		 var a = {title:"极客冷链-{{area.name}}",content:"电话：{{area.phone}}<br/>地址：{{area.address}}<br/><br/>详细：极客冷链宅配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。",point:"{{area.longitude}}|{{area.latitude}}",isOpen:0,icon:{w:23,h:25,l:43,t:21,x:6,lb:14}}
-		 markerArr.push(a);
-		{% endfor %}
-	</script>
+        .area-list li {
+            border-bottom: solid 1px #DADADA;
+        }
+
+        .area-list li h4 {
+            font-size: 1.2em;
+        }
+
+        .area-list li p {
+            margin: 5px 0;
+        }
+
+        img {
+            max-width: 10000px
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <div class="m-banner"></div>
+    <div class="container m-main">
+        <div class="row">
+            <h3>配送范围(北京市)</h3>
+        </div>
+        <div class="row">
+            <div id="j-map" class="span9"></div>
+            <div class="span3" style="max-height: 600px; overflow: scroll;">
+                <ul class="unstyled area-list">
+                    {% for a in area_list %}
+                        <li>
+                            <h4>{{ a.name }}</h4>
+
+                            <p><strong>地址：</strong>{{ a.address }}</p>
+                            <!-- <p><strong>服务电话</strong>：{{a.phone}}</p> -->
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        //标注点数组
+        var markerArr = [];
+        {% for area in area_list %}
+
+            var a = {
+                title: "极客冷链-{{area.name}}",
+                content: "电话：{{area.phone}}<br/>地址：{{area.address}}<br/><br/>详细：极客冷链宅配是为了保障对于配送温度控制方面要求较高的生鲜类、冻品类商品品质，通过特殊工具及设备进行同城的全程冷运配送，针对电商客户所推出的专属服务。",
+                point: "{{area.longitude}}|{{area.latitude}}",
+                isOpen: 0,
+                icon: {w: 23, h: 25, l: 43, t: 21, x: 6, lb: 14}
+            }
+            markerArr.push(a);
+        {% endfor %}
+    </script>
 {% endblock %}

@@ -3,34 +3,37 @@
 {% block title %}订单查询{% endblock %}
 
 {% block content %}
-<style type="text/css">
-	.order-form{
-		width: 800px;
-		margin: 40px auto;
-		margin-left: 0px;
-	}
-	.s-btn{
-		position: absolute;
-		right: 100px;
-	}
-</style>
-<div class="m-banner"></div>
-<div class="container m-main">
-	<h3 style="text-align:center;margin-top:40px;">订单号查询</h3>
+    <style type="text/css">
+        .order-form {
+            width: 800px;
+            margin: 40px auto;
+            margin-left: 0px;
+        }
 
-	<form class="form-horizontal order-form">
-	  <div class="form-group row">
-	    <label for="inputEmail3" class="span2 control-label">订单号</label>
-	    <div class="span7">
-	      <input type="text" class="form-control span7" id="j-order-id" placeholder="14019870000">
-	    </div>
-	  	<div type="submit" id="j-search-btn" class="btn s-btn btn-primary span1">查询</div>
-	  </div>
-	 </form>
+        .s-btn {
+            position: absolute;
+            right: 100px;
+        }
+    </style>
+    <div class="m-banner"></div>
+    <div class="container m-main">
+        <h3 style="text-align:center;margin-top:40px;">订单号查询</h3>
 
-	 <div style="width:800px;margin:10px auto;text-align:center;border-top:solid 1px #eee;">
-	 	<p>提供冷链宅配，面向一般消费者和企业的小型货物运输业务。</p>
-	 	<p>提供专业的第三方物流服务，包括、集装箱、冷藏保鲜、普通货物等运输业务。</p>
-	 </div>
-</div>
+        <form class="form-horizontal order-form">
+            <div class="form-group row">
+                <label for="inputEmail3" class="span2 control-label">订单号</label>
+
+                <div class="span7">
+                    <input type="text" class="form-control span7" id="j-order-id" placeholder="14019870000">
+                </div>
+                <div type="submit" id="j-search-btn" class="btn s-btn btn-primary span1">查询</div>
+            </div>
+        </form>
+
+        <div style="width:800px;margin:10px auto;text-align:center;border-top:solid 1px #eee;">
+            <p>提供冷链宅配，面向一般消费者和企业的小型货物运输业务。</p>
+
+            <p>提供专业的第三方物流服务，包括、集装箱、冷藏保鲜、普通货物等运输业务。</p>
+        </div>
+    </div>
 {% endblock %}

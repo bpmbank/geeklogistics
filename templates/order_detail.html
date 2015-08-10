@@ -3,166 +3,195 @@
 {% block title %}我的订单{% endblock %}
 
 {% block content %}
-<style type="text/css">
-  h3{
-    text-align: center;
-  }
+    <style type="text/css">
+        h3 {
+            text-align: center;
+        }
 
-  .order-status-list{
-    width: 800px;
-    margin: auto;
-  }
-  .order-status-list li{
-    float: left;
-    text-align: center;
-    width: 149px;
-  }
-  .status-cicle{
-    width: 150px;
-    margin-left: -1px;
-  }
-  .status-cicle-only{
-    height: 58px;
-    margin-left: 106px;
-  }
-  .order-status-list li p{
-    margin-left: 75px;
-    width: 100px;
-    text-align: center;
-    color: #cdcdcd;
-  }
-  .order-status-list li.complete p{
-    color: #85B6E2
-  }
-  .order{
-    width: 800px;
-    margin: 10px auto;
-    border: solid 1px #E4E4E4;
+        .order-status-list {
+            width: 800px;
+            margin: auto;
+        }
 
-  }
-  ul.unstyled{
-    margin-left: auto;
-  }
-  .order-title{
-    background: #85B6E2;
-    padding: 5px;
-    color: white;
-    font-size: 1.2em;
-    padding-left: 10px;
-  }
-  .order-info{
-    padding: 0 10px;
-  }
-  .first-span{
-    width: 300px;
-    display: inline-block;
-    margin-left: 0;
-  }
-</style>
-<div class="m-banner"></div>
-<div class="container m-main">
-	<h3>#{{order.deliver_id}}订单详情</h3>
-    {% if order %}
-      <div class="order-status">
-        <ul class="unstyled order-status-list clearfix">
-          <li class="complete">
-            <img class="status-cicle-only" src="/static/images/icon/status-circle.png">
-            <p>已下单</p>
-          </li>
-          {% if order.order_status|add:0 >= 200 %}
-            <li class="complete">
-              <img class="status-cicle" src="/static/images/icon/status.png">
-              <p>已从商家取货</p>
-            </li>
-          {% else %}
-            <li>
-              <img class="status-cicle" src="/static/images/icon/status-gray.png">
-              <p>已从商家取货</p>
-            </li>
-          {% endif %}
+        .order-status-list li {
+            float: left;
+            text-align: center;
+            width: 149px;
+        }
 
-          {% if order.order_status|add:0 >= 300 %}
-            <li class="complete">
-              <img class="status-cicle" src="/static/images/icon/status.png">
-              <p>运输中</p>
-            </li>
-          {% else %}
-            <li>
-              <img class="status-cicle" src="/static/images/icon/status-gray.png">
-              <p>运输中</p>
-            </li>
-          {% endif %}
-          {% if order.order_status|add:0 >= 400 %}
-            <li class="complete">
-              <img class="status-cicle" src="/static/images/icon/status.png">
-              <p>开始配送</p>
-            </li>
-          {% else %}
-          <li>
-            <img class="status-cicle" src="/static/images/icon/status-gray.png">
-            <p>开始配送</p>
-          </li>
-          {% endif %}
+        .status-cicle {
+            width: 150px;
+            margin-left: -1px;
+        }
 
-          {% if order.order_status|add:0 >= 500 %}
-            <li class="complete">
-              <img class="status-cicle" src="/static/images/icon/status.png">
-              <p>配送完成</p>
-            </li>
-          {% else %}
-            <li>
-              <img class="status-cicle" src="/static/images/icon/status-gray.png">
-              <p>配送完成</p>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
+        .status-cicle-only {
+            height: 58px;
+            margin-left: 106px;
+        }
 
-      <div class="order">
-        <div>
-          <h4 class="order-title" style="margin-top:0">收货人信息</h4>
-          <div class="order-info">
-            <p>
-              <span class="first-span"><strong>收件人：</strong>{{order.order_detail.customer_name}}</span>
-              <span><strong>收件人电话：</strong>{{order.order_detail.customer_phone}}</span>
-            </p>
-            <p><strong>收件人地址：</strong>{{order.order_detail.customer_address}}</p>
-          </div>
-        </div>
-        <div>
-          <h4 class="order-title">订单内容</h4>
-          <div class="order-info">
-            <p><strong>订单编号：</strong>{{order.order_detail.order_id}}</p>
-            <p><strong>货物名称：</strong>{{order.order_detail.stuff}}</p>
-            <p>
-              <span class="first-span"><strong>订单总价：</strong>{{order.order_detail.total_price}}</span>
-              <span><strong>是否需要代收款：</strong>{{order.order_detail.get_to_pay_display}}</span>
-            </p>
+        .order-status-list li p {
+            margin-left: 75px;
+            width: 100px;
+            text-align: center;
+            color: #cdcdcd;
+        }
 
-          </div>
-        </div>
-        <div>
-          <h4 class="order-title">商家信息</h4>
-          <div class="order-info">
-            <p><span class="first-span"><strong>商家名称：</strong>{{order.order_detail.name}}</span><span><strong>联系人电话：</strong>{{order.order_detail.phone}}</span></p>
-            <p><strong>取货地址：</strong>{{order.order_detail.address}}</p>
-          </div>
-        </div>
-        <div>
-          <h4 class="order-title">配送信息</h4>
-          <div class="order-info">
-            <!-- <p><strong>配送状态</strong>：已到达商家最近配送站</p> -->
-            <!-- <p><strong>开始配送时间</strong>：2015-07-24 11:20:11</p> -->
-            <!-- <p><strong>结束配送时间</strong>：</p> -->
-            {% for status in record_list %}
-                <p>{{status}}</p>
-            {% endfor %}
-          </div>
-        </div>
+        .order-status-list li.complete p {
+            color: #85B6E2
+        }
 
-      </div>
-    {% else %}
-      <p>该订单不存在</p>
-    {% endif %}
-</div>
+        .order {
+            width: 800px;
+            margin: 10px auto;
+            border: solid 1px #E4E4E4;
+
+        }
+
+        ul.unstyled {
+            margin-left: auto;
+        }
+
+        .order-title {
+            background: #85B6E2;
+            padding: 5px;
+            color: white;
+            font-size: 1.2em;
+            padding-left: 10px;
+        }
+
+        .order-info {
+            padding: 0 10px;
+        }
+
+        .first-span {
+            width: 300px;
+            display: inline-block;
+            margin-left: 0;
+        }
+    </style>
+    <div class="m-banner"></div>
+    <div class="container m-main">
+        <h3>#{{ order.deliver_id }}订单详情</h3>
+        {% if order %}
+            <div class="order-status">
+                <ul class="unstyled order-status-list clearfix">
+                    <li class="complete">
+                        <img class="status-cicle-only" src="/static/images/icon/status-circle.png">
+
+                        <p>已下单</p>
+                    </li>
+                    {% if order.order_status|add:0 >= 200 %}
+                        <li class="complete">
+                            <img class="status-cicle" src="/static/images/icon/status.png">
+
+                            <p>已从商家取货</p>
+                        </li>
+                    {% else %}
+                        <li>
+                            <img class="status-cicle" src="/static/images/icon/status-gray.png">
+
+                            <p>已从商家取货</p>
+                        </li>
+                    {% endif %}
+
+                    {% if order.order_status|add:0 >= 300 %}
+                        <li class="complete">
+                            <img class="status-cicle" src="/static/images/icon/status.png">
+
+                            <p>运输中</p>
+                        </li>
+                    {% else %}
+                        <li>
+                            <img class="status-cicle" src="/static/images/icon/status-gray.png">
+
+                            <p>运输中</p>
+                        </li>
+                    {% endif %}
+                    {% if order.order_status|add:0 >= 400 %}
+                        <li class="complete">
+                            <img class="status-cicle" src="/static/images/icon/status.png">
+
+                            <p>开始配送</p>
+                        </li>
+                    {% else %}
+                        <li>
+                            <img class="status-cicle" src="/static/images/icon/status-gray.png">
+
+                            <p>开始配送</p>
+                        </li>
+                    {% endif %}
+
+                    {% if order.order_status|add:0 >= 500 %}
+                        <li class="complete">
+                            <img class="status-cicle" src="/static/images/icon/status.png">
+
+                            <p>配送完成</p>
+                        </li>
+                    {% else %}
+                        <li>
+                            <img class="status-cicle" src="/static/images/icon/status-gray.png">
+
+                            <p>配送完成</p>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="order">
+                <div>
+                    <h4 class="order-title" style="margin-top:0">收货人信息</h4>
+
+                    <div class="order-info">
+                        <p>
+                            <span class="first-span"><strong>收件人：</strong>{{ order.order_detail.customer_name }}</span>
+                            <span><strong>收件人电话：</strong>{{ order.order_detail.customer_phone }}</span>
+                        </p>
+
+                        <p><strong>收件人地址：</strong>{{ order.order_detail.customer_address }}</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="order-title">订单内容</h4>
+
+                    <div class="order-info">
+                        <p><strong>订单编号：</strong>{{ order.order_detail.order_id }}</p>
+
+                        <p><strong>货物名称：</strong>{{ order.order_detail.stuff }}</p>
+
+                        <p>
+                            <span class="first-span"><strong>订单总价：</strong>{{ order.order_detail.total_price }}</span>
+                            <span><strong>是否需要代收款：</strong>{{ order.order_detail.get_to_pay_display }}</span>
+                        </p>
+
+                    </div>
+                </div>
+                <div>
+                    <h4 class="order-title">商家信息</h4>
+
+                    <div class="order-info">
+                        <p><span
+                                class="first-span"><strong>商家名称：</strong>{{ order.order_detail.name }}</span><span><strong>联系人电话：</strong>{{ order.order_detail.phone }}</span>
+                        </p>
+
+                        <p><strong>取货地址：</strong>{{ order.order_detail.address }}</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="order-title">配送信息</h4>
+
+                    <div class="order-info">
+                        <!-- <p><strong>配送状态</strong>：已到达商家最近配送站</p> -->
+                        <!-- <p><strong>开始配送时间</strong>：2015-07-24 11:20:11</p> -->
+                        <!-- <p><strong>结束配送时间</strong>：</p> -->
+                        {% for status in record_list %}
+                            <p>{{ status }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        {% else %}
+            <p>该订单不存在</p>
+        {% endif %}
+    </div>
 {% endblock %}

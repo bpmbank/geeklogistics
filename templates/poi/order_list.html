@@ -3,101 +3,108 @@
 {% block title %}我的订单{% endblock %}
 
 {% block content %}
-<style type="text/css">
-  .order-btn{
-    position: absolute;
-    top: 30px;
-    right: 40px;
-  }
-  .excel-btn{
-    position: absolute;
-    top: 30px;
-    right: 140px;
-  }
-  #orderXls{
-    position: absolute;
-    top: 35px;
-    right: 200px;
-  }
-</style>
+    <style type="text/css">
+        .order-btn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+        }
 
-<div class="m-banner"></div>
-<div class="container m-main">
-	<h3>我的订单</h3>
-  <a href="/order/add/"><div class="btn btn-primary order-btn" id="j-order-btn">我要下单</div></a>
-  <form enctype="multipart/form-data" action="/order/import" method="POST">
-    <input type="file" name="orderXls" id="orderXls"/>
-    <input class="btn btn-success excel-btn" type="submit" id="j-submit-btn" value="批量导入">
-  </form>
+        .excel-btn {
+            position: absolute;
+            top: 30px;
+            right: 140px;
+        }
 
-  {% if reminder == '' %}
-  	<table class="table table-striped" id="j-order-list">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>订单编号</th>
-          <th>配送编号</th> 
-          <th>收货人</th>
-          <th>操作时间</th>         
-          <th>操作人</th>        
-          <th>操作人联系方式</th>
-          <th>订单状态</th>
-          <th>操作</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for order in order_list%}
-          <tr>
-            <th scope="row">{{ order.start_index}}</th>
-            <td>{{order.order_id}}</td>
-            <td><a href="/order/{{order.deliver_id}}">{{order.deliver_id}}</a></td>
-            <td>{{order.order_detail.customer_name}}</td>
-            <td>{{order.operator.operate_time}}</td>
-            <td>{{order.operator.name}}</td>
-            <td>{{order.operator.phone}}</td>
-            <td>{{order.status}}</td>
-            <td>
-              {% if order.order_status < 200 %}
-                <div class="btn j-delete" data-id="{{order.id}}">删除</div>
-              {% else %}
-                <div class="btn btn-inverse j-cancel" data-id="{{order.id}}" data-toggle="modal" data-target="#cancelModal">取消</div>             
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <!-- 第一种分页显示方式 -->
-    <div  class="pagination">
-      <ul>
-        {# orders.paginator.page_range 这个函数返回包含一个所有页码数的 range 对象 #}
-        {# 即 range(1, orders.paginator.num_pages + 1) #}
-        {% for page_number in orders.paginator.page_range %}
-          {% ifequal page_number  orders.number %}
-            <li class="active"><a href="?page={{ page_number }}">{{ page_number }}</a></li>
-          {% else %}
-            <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
-          {% endifequal %}
-        {% endfor %}
-      </ul>
+        #orderXls {
+            position: absolute;
+            top: 35px;
+            right: 200px;
+        }
+    </style>
+
+    <div class="m-banner"></div>
+    <div class="container m-main">
+        <h3>我的订单</h3>
+        <a href="/order/add/">
+            <div class="btn btn-primary order-btn" id="j-order-btn">我要下单</div>
+        </a>
+
+        <form enctype="multipart/form-data" action="/order/import" method="POST">
+            <input type="file" name="orderXls" id="orderXls"/>
+            <input class="btn btn-success excel-btn" type="submit" id="j-submit-btn" value="批量导入">
+        </form>
+
+        {% if reminder == '' %}
+            <table class="table table-striped" id="j-order-list">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>订单编号</th>
+                    <th>配送编号</th>
+                    <th>收货人</th>
+                    <th>操作时间</th>
+                    <th>操作人</th>
+                    <th>操作人联系方式</th>
+                    <th>订单状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for order in order_list %}
+                    <tr>
+                        <th scope="row">{{ order.start_index }}</th>
+                        <td>{{ order.order_id }}</td>
+                        <td><a href="/order/{{ order.deliver_id }}">{{ order.deliver_id }}</a></td>
+                        <td>{{ order.order_detail.customer_name }}</td>
+                        <td>{{ order.operator.operate_time }}</td>
+                        <td>{{ order.operator.name }}</td>
+                        <td>{{ order.operator.phone }}</td>
+                        <td>{{ order.status }}</td>
+                        <td>
+                            {% if order.order_status < 200 %}
+                                <div class="btn j-delete" data-id="{{ order.id }}">删除</div>
+                            {% else %}
+                                <div class="btn btn-inverse j-cancel" data-id="{{ order.id }}" data-toggle="modal"
+                                     data-target="#cancelModal">取消
+                                </div>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <!-- 第一种分页显示方式 -->
+            <div class="pagination">
+                <ul>
+                    {# orders.paginator.page_range 这个函数返回包含一个所有页码数的 range 对象 #}
+                    {# 即 range(1, orders.paginator.num_pages + 1) #}
+                    {% for page_number in orders.paginator.page_range %}
+                        {% ifequal page_number orders.number %}
+                            <li class="active"><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+                        {% else %}
+                            <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+                        {% endifequal %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p>{{ reminder }}</p>
+        {% endif %}
     </div>
-  {% else %}
-    <p>{{reminder}}</p>
-  {% endif %}
-</div>
 
-<div class="modal hide fade" id="cancelModal">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>取消订单</h3>
-  </div>
-  <div class="modal-body">
-    <p>订单已经在配送中，无法取消，若要取消请拨打电话与客服联系确认。</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">关闭</a>
-    <a href="#" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">我知道了</a>
-  </div>
-</div>
+    <div class="modal hide fade" id="cancelModal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>取消订单</h3>
+        </div>
+        <div class="modal-body">
+            <p>订单已经在配送中，无法取消，若要取消请拨打电话与客服联系确认。</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal" aria-hidden="true">关闭</a>
+            <a href="#" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">我知道了</a>
+        </div>
+    </div>
 
 {% endblock %}
