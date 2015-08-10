@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from datetime import datetime
+from geeklogistics.station.models import Station
 
 from django.db import models
 
@@ -10,6 +11,7 @@ class Merchant(models.Model):
     password = models.CharField('商家登录密码', max_length=30)
     name = models.CharField('商家名称', max_length=30)
     address = models.CharField('商家地址', max_length=50)
+    nearest_station = models.OneToOneField(Station, verbose_name='商家最近分站', null=True, blank=True)
     latitude = models.FloatField('纬度', null=True, blank=True)
     longitude = models.FloatField('经度', null=True, blank=True)
     tel = models.CharField('商家电话', max_length=30)

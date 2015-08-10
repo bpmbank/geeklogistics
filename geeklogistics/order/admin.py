@@ -13,7 +13,7 @@ from geeklogistics.order.models import Order
 
 class OrderAdmin(admin.ModelAdmin):
     # resource_class = OrderResource
-    list_display = ('id', 'deliver_id', 'poi_name', 'poi_nearest', 'customer_nearest',
+    list_display = ('id', 'deliver_id', 'poi_name', 'customer', 'poi_nearest', 'customer_nearest',
                     'order_status', 'status')
     list_filter = ('ctime',)
     search_fields = ('order_id', 'deliver_id')  # 刷新浏览器，你会在页面顶端看到一个查询栏。 添加了一个根据姓名查询的查询框。
@@ -27,7 +27,11 @@ class OrderAdmin(admin.ModelAdmin):
         st = instance.get_status_display()
         return st
 
+    def customer(self, instance):
+        return instance.order_detail.customer_name
+
     dstatus.short_description = '订单删除状态'
+    customer.short_description = '收货人'
 
     def poi_name(self, instance):
         if not instance.poi is None:

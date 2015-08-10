@@ -263,7 +263,10 @@ def order_new(request):
         stations = Station.objects.all()
         # 商家最近
         poi_location = getLocation(poi_address)
-        poi_nearest = getNearestStation(poi_location, stations)
+        if poi.nearest_station is None:
+            poi_nearest = getNearestStation(poi_location, stations)
+        else:
+            poi_nearest = poi.nearest_station_id
         # 收货人最近
         customer_location = getLocation(customer_address)
         customer_nearest = getNearestStation(customer_location, stations)
@@ -276,9 +279,7 @@ def order_new(request):
         return HttpResponse(json.dumps(response_data), content_type="application/json")
 
 
-        # 修改订单状态
-
-
+# 修改订单状态
 @csrf_exempt
 def update_order_status(request):
     if request.method == 'POST':  # 如果ajax请求
