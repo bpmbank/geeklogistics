@@ -144,7 +144,7 @@ TEMPLATE_DIRS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 M_MEDIA_SITE = 'static/m/'
-STATIC_ROOT = "/usr/opt/gl/geeklogistics/static"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -168,6 +168,6 @@ STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.AppDirectoriesFinder"
 )
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
-'django.core.context_processors.request',
+    'django.core.context_processors.request',
 )
 STATIC_URL = '/static/'
