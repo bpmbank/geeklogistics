@@ -2456,3 +2456,68 @@ Exception happened during processing of request from ('115.239.212.70', 27636)
 ----------------------------------------
 Exception happened during processing of request from ('115.239.212.65', 31013)
 ----------------------------------------
+Validating models...
+
+0 errors found
+August 12, 2015 - 12:51:05
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[12/Aug/2015 13:17:29] "GET / HTTP/1.0" 200 8018
+[12/Aug/2015 13:17:35] code 400, message Bad request version ('\xbc+\x92\xa8H\x97\xcf\xbd9\x04\xcc\x16')
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 117, in handle
+    if not self.parse_request(): # An error code has been sent, just exit
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 253, in parse_request
+    self.send_error(400, "Bad request version (%r)" % version)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 368, in send_error
+    self.send_response(code, message)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 385, in send_response
+    self.log_request(code)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 138, in log_message
+    msg = "[%s] %s\n" % (self.log_date_time_string(), format % args)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xdc in position 5: invalid continuation byte
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:05:26
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.66', 20660)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.68', 23723)
+----------------------------------------
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:20:57
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.

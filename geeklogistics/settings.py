@@ -144,7 +144,7 @@ TEMPLATE_DIRS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 M_MEDIA_SITE = 'static/m/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = "/usr/opt/gl/geeklogistics/static"
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -163,9 +163,11 @@ STATICFILES_DIRS = (
     ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
 )
 
-# 这个是默认设置，默认会找 STATICFILES_DIRS 中所有文件夹和各app下的 static 文件夹
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder"
+)
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+'django.core.context_processors.request',
 )
 STATIC_URL = '/static/'
