@@ -25,11 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'titww8r+_p*po$rqytl&$z5c_ncp!1im(dno+=a5a!14v_1=_='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 FILE_CHARSET = 'utf-8'
 DEFAULT_CHARSET = 'utf-8'
@@ -161,6 +161,11 @@ STATICFILES_DIRS = (
     ("images", os.path.join(STATIC_ROOT, 'images')),
     ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
     ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
+)
 
+# 这个是默认设置，默认会找 STATICFILES_DIRS 中所有文件夹和各app下的 static 文件夹
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder"
 )
 STATIC_URL = '/static/'
