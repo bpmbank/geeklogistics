@@ -194,3 +194,38 @@ uWSGI running as root, you can use --uid/--gid/--chroot options
 *** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
 chdir() to /usr/opt/gl/geeklogistics
 chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Mon Aug 10 22:42:34 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+chdir(): No such file or directory [core/uwsgi.c line 2581]
+*** Starting uWSGI 2.0.11.1 (64bit) on [Tue Aug 11 00:18:36 2015] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-16) on 10 August 2015 00:35:55
+os: Linux-2.6.32-431.23.3.el6.x86_64 #1 SMP Thu Jul 31 17:20:51 UTC 2014
+nodename: iZ25q0904ciZ
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /usr/opt/gl/geeklogistics
+detected binary path: /root/code/.virtualenvs/gl/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /usr/opt/gl/geeklogistics
+*** WARNING: you are running uWSGI without its master process manager ***
+your processes number limit is 30474
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (:8077).
+bind(): Address already in use [core/socket.c line 764]

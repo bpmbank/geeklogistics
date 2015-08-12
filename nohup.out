@@ -2274,3 +2274,185 @@ error: [Errno 104] Connection reset by peer
 [10/Aug/2015 21:48:23] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
 [10/Aug/2015 22:11:39] "GET / HTTP/1.1" 200 8018
 [10/Aug/2015 22:12:53] "GET / HTTP/1.1" 200 8018
+Validating models...
+
+0 errors found
+August 11, 2015 - 11:55:55
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+CommandError: Usage is runserver [optional port number, or ipaddr:port]
+[11/Aug/2015 11:56:26] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 11:56:26] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 11:56:26] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[11/Aug/2015 11:56:26] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[11/Aug/2015 11:56:26] "GET /static/css/global.css HTTP/1.1" 200 1836
+[11/Aug/2015 11:56:26] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[11/Aug/2015 11:56:26] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[11/Aug/2015 11:56:26] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[11/Aug/2015 11:56:26] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[11/Aug/2015 11:56:26] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[11/Aug/2015 11:56:28] "GET /intro HTTP/1.1" 301 0
+[11/Aug/2015 11:56:28] "GET /intro/ HTTP/1.1" 200 9275
+[11/Aug/2015 11:56:28] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[11/Aug/2015 11:56:28] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[11/Aug/2015 11:56:28] "GET /static/images/process.png HTTP/1.1" 200 84183
+[11/Aug/2015 11:56:29] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 11:56:29] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[11/Aug/2015 11:56:29] "GET /static/images/intro/store.png HTTP/1.1" 200 532480
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[11/Aug/2015 11:56:29] "GET /static/images/intro/store.png HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[11/Aug/2015 11:56:33] "GET /admin HTTP/1.1" 301 0
+[11/Aug/2015 11:56:33] "GET /admin/ HTTP/1.1" 200 16741
+[11/Aug/2015 11:56:33] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[11/Aug/2015 11:56:33] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[11/Aug/2015 11:56:33] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[11/Aug/2015 11:56:33] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[11/Aug/2015 11:56:33] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[11/Aug/2015 11:56:33] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[11/Aug/2015 11:56:33] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[11/Aug/2015 11:56:33] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[11/Aug/2015 11:56:33] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[11/Aug/2015 11:56:33] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+[11/Aug/2015 11:56:37] "GET /admin/order/order/ HTTP/1.1" 200 18492
+[11/Aug/2015 11:56:37] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[11/Aug/2015 11:56:37] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+[11/Aug/2015 11:56:37] "GET /admin/order/order/ HTTP/1.1" 200 18492
+[11/Aug/2015 11:56:37] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[11/Aug/2015 13:28:35] "GET / HTTP/1.0" 200 8018
+[11/Aug/2015 13:28:44] code 400, message Bad request version ('\xbc+\x92\xa8H\x97\xcf\xbd9\x04\xcc\x16')
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 117, in handle
+    if not self.parse_request(): # An error code has been sent, just exit
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 253, in parse_request
+    self.send_error(400, "Bad request version (%r)" % version)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 368, in send_error
+    self.send_response(code, message)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 385, in send_response
+    self.log_request(code)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 138, in log_message
+    msg = "[%s] %s\n" % (self.log_date_time_string(), format % args)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xdc in position 5: invalid continuation byte
+[11/Aug/2015 15:19:37] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 15:19:37] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/css/global.css HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/css/index2.css HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/images/logo.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[11/Aug/2015 15:19:38] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[11/Aug/2015 15:19:53] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 15:19:58] "GET /intro?intro=2 HTTP/1.1" 301 0
+[11/Aug/2015 15:19:58] "GET /intro/?intro=2 HTTP/1.1" 200 9275
+[11/Aug/2015 15:19:58] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:58] "GET /static/images/process.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:58] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[11/Aug/2015 15:19:58] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[11/Aug/2015 15:20:00] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[11/Aug/2015 15:23:55] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 15:31:36] "GET /intro HTTP/1.1" 301 0
+[11/Aug/2015 15:31:36] "GET /intro/ HTTP/1.1" 200 9275
+[11/Aug/2015 16:16:15] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 16:16:25] "GET /intro HTTP/1.1" 301 0
+[11/Aug/2015 16:16:25] "GET /intro/ HTTP/1.1" 200 9275
+[11/Aug/2015 16:20:02] "GET /news/3 HTTP/1.1" 301 0
+[11/Aug/2015 16:20:02] "GET /news/3/ HTTP/1.1" 500 73343
+[11/Aug/2015 16:20:23] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:32:38] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:32:38] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:32:38] "GET /static/css/global.css HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/css/index2.css HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/images/logo.png HTTP/1.1" 304 0
+[12/Aug/2015 10:32:39] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[12/Aug/2015 10:38:36] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:38:36] "GET /static/css/global.css HTTP/1.1" 200 1836
+[12/Aug/2015 10:38:36] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[12/Aug/2015 10:38:36] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[12/Aug/2015 10:38:36] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[12/Aug/2015 10:38:36] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[12/Aug/2015 10:38:36] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[12/Aug/2015 10:38:36] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[12/Aug/2015 10:38:36] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[12/Aug/2015 10:38:41] "GET /admin/ HTTP/1.1" 200 16759
+[12/Aug/2015 10:38:42] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[12/Aug/2015 10:38:42] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[12/Aug/2015 10:38:42] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[12/Aug/2015 10:38:42] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[12/Aug/2015 10:38:42] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[12/Aug/2015 10:38:42] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[12/Aug/2015 10:38:42] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[12/Aug/2015 10:38:42] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[12/Aug/2015 10:38:42] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[12/Aug/2015 10:38:42] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+Validating models...
+
+0 errors found
+August 11, 2015 - 11:56:09
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('114.253.251.39', 50675)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.70', 27636)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.65', 31013)
+----------------------------------------
