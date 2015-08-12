@@ -91,3 +91,2466 @@ station.Station.utime: (fields.W161) Fixed default value provided.
 	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
 
 System check identified 14 issues (0 silenced).
+[10/Aug/2015 01:16:33] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 01:16:34] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 01:16:34] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 01:16:34] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 01:16:34] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 01:16:34] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 01:16:34] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 01:16:34] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 01:16:34] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 10:24:49] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:24:49] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 10:24:49] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 10:24:49] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 10:24:49] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:24:49] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 10:24:49] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:24:49] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 10:24:49] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 10:30:49] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:30:50] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 10:30:51] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 10:30:51] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 10:30:51] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 10:30:52] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:30:52] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 10:30:52] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 10:30:52] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 10:30:52] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 10:30:52] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 10:30:52] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 10:30:52] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 10:30:53] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 10:30:53] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 10:30:53] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 10:30:53] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 10:30:53] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 10:31:17] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:31:17] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 10:31:17] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 10:31:17] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 10:31:17] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 10:31:17] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 10:31:17] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 10:31:17] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 10:31:17] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 10:31:59] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:32:00] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:32:00] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 10:32:00] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 10:32:00] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 10:32:01] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 10:32:03] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[10/Aug/2015 10:32:41] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:32:42] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:32:42] "GET /static/js/pages/area.js HTTP/1.1" 200 5492
+[10/Aug/2015 10:32:51] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:33:26] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:33:49] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:33:49] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:33:49] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 10:33:49] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 10:33:50] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 10:33:54] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[10/Aug/2015 10:33:54] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 10:34:41] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:34:41] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:34:41] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 10:34:41] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 10:34:42] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 10:34:42] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[10/Aug/2015 10:34:43] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 10:34:45] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:34:46] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:34:46] "GET /static/js/pages/area.js HTTP/1.1" 200 5492
+[10/Aug/2015 10:34:48] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 10:34:48] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:34:50] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 10:34:50] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:34:50] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 10:34:50] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 10:34:51] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 10:34:52] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 10:34:52] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 10:34:52] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:34:54] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:34:55] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:34:55] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:34:56] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:34:57] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 10:34:59] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 10:34:59] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:35:00] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:35:00] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:35:06] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:35:07] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:35:07] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:35:09] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:35:11] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:35:17] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:35:17] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:35:18] "GET /static/js/pages/area.js HTTP/1.1" 200 5492
+[10/Aug/2015 10:37:20] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:37:20] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:38:36] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 10:38:36] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:38:44] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 10:38:44] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:38:46] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 10:38:46] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:38:46] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 10:38:46] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 10:38:51] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 10:38:51] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 10:38:51] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 10:38:54] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:38:57] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:38:58] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:39:04] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:39:16] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:39:16] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:39:58] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:39:59] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 10:39:59] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 10:39:59] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 10:39:59] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 10:39:59] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:39:59] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:39:59] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 10:39:59] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 10:40:03] "GET /intro/ HTTP/1.1" 200 10648
+[10/Aug/2015 10:40:03] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 10:40:03] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 10:40:03] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 10:40:03] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 10:40:04] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[10/Aug/2015 10:40:21] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:40:37] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:40:37] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 10:40:37] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 10:40:37] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 10:40:37] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 10:40:37] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:40:37] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:40:40] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:40:42] "GET /poi/apply HTTP/1.1" 301 0
+[10/Aug/2015 10:40:42] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:41:25] "GET /poi/apply/ HTTP/1.1" 200 9147
+Validating models...
+
+0 errors found
+August 10, 2015 - 01:16:32
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[10/Aug/2015 10:42:31] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:42:31] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 10:42:31] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 10:42:31] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 10:42:31] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 10:42:31] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 10:42:31] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 10:42:31] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 10:42:31] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 10:42:32] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 10:42:32] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 10:42:32] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 10:42:37] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:42:38] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:42:38] "GET /static/js/pages/area.js HTTP/1.1" 200 5492
+[10/Aug/2015 10:42:40] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:42:40] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 10:42:40] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 10:42:40] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 10:42:40] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 10:42:41] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 10:42:42] "GET /static/images/intro/intro.png HTTP/1.1" 200 294912
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 104] Connection reset by peer
+[10/Aug/2015 10:42:42] "GET /static/images/intro/intro.png HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 10:42:42] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:42:43] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:42:43] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 10:42:44] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[10/Aug/2015 10:42:44] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:42:44] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:42:51] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:43:04] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:43:04] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 10:43:09] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:43:24] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:43:26] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 10:43:27] "GET /news/3/ HTTP/1.1" 500 71341
+[10/Aug/2015 10:48:21] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 10:48:21] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 10:48:21] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 10:48:24] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 10:48:24] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:48:24] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 10:48:24] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 10:48:27] "GET /poi/apply HTTP/1.1" 301 0
+[10/Aug/2015 10:48:27] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:50:38] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:50:38] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 10:50:38] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 10:50:39] "GET /poi/apply HTTP/1.1" 301 0
+[10/Aug/2015 10:50:39] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:50:41] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:50:47] "GET /poi/psw HTTP/1.1" 301 0
+[10/Aug/2015 10:50:47] "GET /poi/psw/ HTTP/1.1" 200 5579
+[10/Aug/2015 10:50:47] "GET /static/js/pages/poi/psw.js HTTP/1.1" 200 1241
+[10/Aug/2015 10:50:53] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:50:57] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:51:07] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 10:51:07] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:51:09] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:51:09] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:51:28] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:52:09] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 10:52:09] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 10:52:10] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 10:52:10] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:52:12] "GET /poi/apply HTTP/1.1" 301 0
+[10/Aug/2015 10:52:12] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:52:17] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 10:52:18] "GET /news/3/ HTTP/1.1" 500 71359
+[10/Aug/2015 10:52:22] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:52:22] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:52:24] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 10:52:25] "GET /news/3/ HTTP/1.1" 500 71359
+[10/Aug/2015 10:52:29] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:52:30] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 10:52:30] "GET /news/3/ HTTP/1.1" 500 71164
+[10/Aug/2015 10:52:31] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 10:52:31] "GET /news/3/ HTTP/1.1" 500 71359
+[10/Aug/2015 10:52:32] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 10:52:32] "GET /news/3/ HTTP/1.1" 500 71867
+[10/Aug/2015 10:52:47] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:52:51] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:52:53] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 10:52:54] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:52:56] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:52:58] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:52:58] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:52:59] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:53:01] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:53:02] "GET /intro?intro=5 HTTP/1.1" 301 0
+[10/Aug/2015 10:53:02] "GET /intro/?intro=5 HTTP/1.1" 200 9131
+[10/Aug/2015 10:53:04] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:53:06] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:53:07] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:53:07] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 10:53:08] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:53:08] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:53:08] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 10:53:08] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:53:09] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 10:53:09] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 10:53:10] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 10:53:10] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 10:53:11] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 10:53:11] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:53:12] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:53:13] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:53:18] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 10:53:18] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:53:48] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 10:53:58] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 10:54:42] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 10:54:42] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 10:58:08] "GET /area/ HTTP/1.1" 200 18784
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+Traceback (most recent call last):
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[10/Aug/2015 10:59:08] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:59:09] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 10:59:40] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 10:59:43] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:00:07] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 11:00:11] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:00:19] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 11:00:19] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:00:20] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 11:00:20] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 11:00:21] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 11:00:21] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:00:22] "POST /api/v1/poi/login HTTP/1.1" 200 58
+[10/Aug/2015 11:00:24] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 11:00:24] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 11:00:24] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 11:00:26] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:00:27] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:00:27] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 11:00:27] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:00:28] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 11:00:28] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 11:00:33] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 11:01:04] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 11:01:04] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:01:07] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:01:08] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:01:10] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 11:01:10] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:01:11] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 11:01:11] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 11:01:12] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 11:01:12] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:01:13] "GET /poi/psw HTTP/1.1" 301 0
+[10/Aug/2015 11:01:13] "GET /poi/psw/ HTTP/1.1" 200 5579
+[10/Aug/2015 11:01:14] "GET /static/js/pages/poi/psw.js HTTP/1.1" 200 1241
+[10/Aug/2015 11:01:16] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 11:01:16] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:01:20] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 11:01:20] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:01:22] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 11:01:22] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 11:01:22] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 11:01:23] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 11:01:55] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 11:01:55] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 11:02:30] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 11:03:16] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:03:29] "GET /intro?intro=5 HTTP/1.1" 301 0
+[10/Aug/2015 11:03:29] "GET /intro/?intro=5 HTTP/1.1" 200 9131
+[10/Aug/2015 11:04:19] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 11:04:19] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:04:22] "GET /poi/apply HTTP/1.1" 301 0
+[10/Aug/2015 11:04:22] "GET /poi/apply/ HTTP/1.1" 200 9147
+[10/Aug/2015 11:05:06] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:05:29] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 11:05:29] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:05:31] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 11:05:31] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:06:27] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 11:06:40] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 11:06:40] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 11:06:40] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 11:06:42] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 11:06:42] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 11:06:49] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:06:59] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 11:06:59] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 11:06:59] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 11:06:59] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 11:07:01] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:07:23] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 11:11:53] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 11:11:53] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 11:12:27] "GET /area/ HTTP/1.1" 200 18784
+[10/Aug/2015 11:12:53] "GET /admin HTTP/1.1" 301 0
+[10/Aug/2015 11:12:53] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 11:12:53] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[10/Aug/2015 11:12:53] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[10/Aug/2015 11:12:54] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[10/Aug/2015 11:12:54] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[10/Aug/2015 11:12:55] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[10/Aug/2015 11:12:56] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+[10/Aug/2015 11:12:56] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 11:13:55] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:14:08] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:14:17] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:14:35] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:14:42] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:14:58] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:16:04] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:16:15] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:16:32] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:16:41] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:17:33] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:17:33] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 11:17:34] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 11:17:34] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 11:17:35] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 11:17:36] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 11:17:39] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 11:17:42] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 11:17:43] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 11:19:04] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:32:18] "GET /admin HTTP/1.1" 301 0
+[10/Aug/2015 11:32:19] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 11:32:19] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[10/Aug/2015 11:32:19] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[10/Aug/2015 11:32:19] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[10/Aug/2015 11:32:19] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[10/Aug/2015 11:32:19] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[10/Aug/2015 11:32:20] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+[10/Aug/2015 11:32:20] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 11:32:28] "POST /admin/ HTTP/1.1" 302 0
+[10/Aug/2015 11:32:28] "GET /admin/ HTTP/1.1" 200 13139
+[10/Aug/2015 11:32:28] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[10/Aug/2015 11:32:28] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[10/Aug/2015 11:32:28] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[10/Aug/2015 11:32:28] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+[10/Aug/2015 11:43:12] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 11:43:46] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:44:02] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:44:15] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:44:15] "GET /static/suit/css/suit.css HTTP/1.1" 304 0
+[10/Aug/2015 11:44:15] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:44:15] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 11:44:15] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:44:15] "GET /static/suit/js/suit.js HTTP/1.1" 304 0
+[10/Aug/2015 11:44:16] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 304 0
+[10/Aug/2015 11:44:16] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 0
+[10/Aug/2015 11:44:20] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:44:27] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:44:27] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 11:44:27] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 11:44:27] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:44:27] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 11:44:27] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:44:27] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 11:44:27] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 11:44:27] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 11:46:23] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 11:46:23] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 11:47:41] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:47:41] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 11:47:41] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 11:47:41] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 11:47:42] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 11:47:42] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:47:42] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 11:47:42] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:47:42] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:56:08] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 11:56:08] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 11:56:16] "GET /admin HTTP/1.1" 301 0
+[10/Aug/2015 11:56:16] "GET /admin/ HTTP/1.1" 200 13139
+[10/Aug/2015 11:56:38] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 11:56:44] "GET /admin/logout/ HTTP/1.1" 200 4664
+[10/Aug/2015 11:56:47] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 11:56:53] "POST /admin/ HTTP/1.1" 200 3545
+[10/Aug/2015 11:56:58] "POST /admin/ HTTP/1.1" 302 0
+[10/Aug/2015 11:56:58] "GET /admin/ HTTP/1.1" 200 13139
+[10/Aug/2015 11:57:14] "POST /admin/ HTTP/1.1" 302 0
+[10/Aug/2015 11:57:14] "GET /admin/ HTTP/1.1" 200 13139
+[10/Aug/2015 11:57:14] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[10/Aug/2015 11:57:14] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[10/Aug/2015 11:57:14] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[10/Aug/2015 11:57:14] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+[10/Aug/2015 11:57:17] "GET /admin/logout/ HTTP/1.1" 200 4664
+[10/Aug/2015 11:57:34] "GET /admin/news/news/ HTTP/1.1" 200 9281
+[10/Aug/2015 11:57:34] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:57:34] "GET /static/ckeditor/configuration-ckeditor.js HTTP/1.1" 200 0
+[10/Aug/2015 11:57:36] "GET /static/ckeditor/ckeditor.js HTTP/1.1" 200 900588
+[10/Aug/2015 11:57:37] "GET /admin/news/news/ HTTP/1.1" 200 9281
+[10/Aug/2015 11:57:37] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:57:38] "GET /admin/station/station/ HTTP/1.1" 200 20632
+[10/Aug/2015 11:57:38] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:57:41] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 11:57:42] "POST /admin/ HTTP/1.1" 302 0
+[10/Aug/2015 11:57:42] "GET /admin/ HTTP/1.1" 200 13139
+[10/Aug/2015 11:57:44] "GET /admin/station/station/11/ HTTP/1.1" 200 14636
+[10/Aug/2015 11:57:45] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:57:45] "GET /static/suit/js/suit-form-confirm.js HTTP/1.1" 200 2297
+[10/Aug/2015 11:57:56] "POST /admin/station/station/11/ HTTP/1.1" 302 0
+[10/Aug/2015 11:57:56] "GET /admin/station/station/ HTTP/1.1" 200 20868
+[10/Aug/2015 11:57:57] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:58:04] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:58:06] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 11:58:07] "GET /area/ HTTP/1.1" 200 18710
+[10/Aug/2015 11:58:07] "GET /static/js/pages/area.js HTTP/1.1" 304 0
+[10/Aug/2015 11:58:29] "GET /admin/ HTTP/1.1" 200 13534
+[10/Aug/2015 11:58:32] "GET /admin/station/station/ HTTP/1.1" 200 20595
+[10/Aug/2015 11:58:32] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:58:37] "GET /admin/station/station/11/ HTTP/1.1" 200 14562
+[10/Aug/2015 11:58:37] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:58:49] "POST /admin/station/station/11/ HTTP/1.1" 302 0
+[10/Aug/2015 11:58:49] "GET /admin/station/station/ HTTP/1.1" 200 20856
+[10/Aug/2015 11:58:49] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 11:59:01] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 11:59:03] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 11:59:15] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 11:59:15] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 11:59:15] "GET /static/js/pages/area.js HTTP/1.1" 304 0
+[10/Aug/2015 12:00:21] "GET /admin HTTP/1.1" 301 0
+[10/Aug/2015 12:00:21] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 12:00:33] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:00:33] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 12:00:33] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 12:00:33] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 12:00:33] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 12:00:33] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 12:00:33] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 12:00:34] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 12:00:34] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 12:00:58] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:00:58] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:00:58] "GET /static/js/pages/area.js HTTP/1.1" 200 5492
+[10/Aug/2015 12:00:59] "GET /admin/ HTTP/1.1" 200 13894
+[10/Aug/2015 12:01:00] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:01:00] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:01:00] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 12:01:00] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 12:01:00] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 12:01:01] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 12:01:02] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[10/Aug/2015 12:01:03] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:01:04] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:01:04] "GET /admin/poi/merchant/ HTTP/1.1" 200 10395
+[10/Aug/2015 12:01:04] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:01:08] "GET /admin/poi/show/ HTTP/1.1" 200 9147
+[10/Aug/2015 12:01:08] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:01:08] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 12:01:08] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:01:12] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:01:12] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 12:01:12] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 12:01:12] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 12:01:12] "GET /admin/poi/merchant/ HTTP/1.1" 200 10395
+[10/Aug/2015 12:01:12] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:01:14] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:01:14] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:01:24] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 12:01:24] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 12:01:24] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 12:01:26] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:01:26] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:01:35] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:01:35] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:01:42] "GET /admin/poi/show/ HTTP/1.1" 200 9147
+[10/Aug/2015 12:01:42] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:01:44] "GET /admin/poi/show/add/ HTTP/1.1" 200 10365
+[10/Aug/2015 12:01:44] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:01:51] "GET /admin/poi/merchant/add/?_popup=1 HTTP/1.1" 200 8161
+[10/Aug/2015 12:01:51] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:03:04] "GET /admin/poi/show/ HTTP/1.1" 200 9147
+[10/Aug/2015 12:03:04] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:03:05] "GET /admin/deliver/driver/ HTTP/1.1" 200 10407
+[10/Aug/2015 12:03:05] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:03:21] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[10/Aug/2015 12:03:21] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[10/Aug/2015 12:03:21] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[10/Aug/2015 12:09:46] "GET /admin/poi/merchant/ HTTP/1.1" 200 10395
+[10/Aug/2015 12:09:46] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:09:47] "GET /admin/poi/merchant/ HTTP/1.1" 200 10395
+[10/Aug/2015 12:09:47] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:09:50] "GET /admin/poi/merchant/add/ HTTP/1.1" 200 13956
+[10/Aug/2015 12:09:50] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:10:57] "POST /admin/poi/merchant/add/ HTTP/1.1" 200 14339
+[10/Aug/2015 12:10:58] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:11:12] "POST /admin/poi/merchant/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:11:12] "GET /admin/poi/merchant/ HTTP/1.1" 200 14182
+[10/Aug/2015 12:11:12] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:11:24] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:11:27] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 12:11:30] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 12:11:30] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:11:30] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:11:30] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:11:30] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:11:30] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:11:30] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:11:31] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 12:11:31] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:11:31] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:11:31] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:11:31] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:11:31] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:11:31] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:11:36] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:11:38] "GET /custom/ HTTP/1.1" 200 3737
+[10/Aug/2015 12:11:44] "GET /admin/ HTTP/1.1" 200 14260
+[10/Aug/2015 12:11:45] "GET /admin/poi/merchant/ HTTP/1.1" 200 13915
+[10/Aug/2015 12:11:45] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:11:47] "GET /admin/poi/merchant/ HTTP/1.1" 200 13915
+[10/Aug/2015 12:11:47] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:11:51] "GET /admin/poi/show/ HTTP/1.1" 200 9147
+[10/Aug/2015 12:11:52] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:11:54] "GET /admin/poi/show/add/ HTTP/1.1" 200 10401
+[10/Aug/2015 12:11:54] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:11:58] "POST /admin/poi/show/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:11:59] "GET /admin/poi/show/ HTTP/1.1" 200 11583
+[10/Aug/2015 12:11:59] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:12:06] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:12:08] "GET /custom/ HTTP/1.1" 200 3882
+[10/Aug/2015 12:12:08] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:12:14] "GET /custom/ HTTP/1.1" 200 3882
+[10/Aug/2015 12:12:14] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:12:14] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:12:14] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:12:14] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:12:14] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:12:14] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:12:14] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:12:17] "GET /custom/ HTTP/1.1" 200 3882
+[10/Aug/2015 12:12:17] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:12:17] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:12:17] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:12:17] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:12:17] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:12:17] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:12:17] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:13:00] "GET /admin/ HTTP/1.1" 200 14628
+[10/Aug/2015 12:13:02] "GET /admin/poi/merchant/ HTTP/1.1" 200 13915
+[10/Aug/2015 12:13:02] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:13:03] "GET /admin/poi/merchant/ HTTP/1.1" 200 13915
+[10/Aug/2015 12:13:03] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:13:05] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14414
+[10/Aug/2015 12:13:05] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:13:19] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 12:13:19] "GET /admin/poi/merchant/ HTTP/1.1" 200 14182
+[10/Aug/2015 12:13:19] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:13:27] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:13:28] "GET /custom/ HTTP/1.1" 200 3910
+[10/Aug/2015 12:13:28] "GET /static/images/logo/thumb.jpg HTTP/1.1" 200 15273
+[10/Aug/2015 12:13:43] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 12:13:43] "GET /static/js/pages/coop.js HTTP/1.1" 304 0
+[10/Aug/2015 12:13:43] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 0
+[10/Aug/2015 12:13:52] "POST /api/v1/poi/login HTTP/1.1" 200 243
+[10/Aug/2015 12:13:52] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 12:13:53] "GET /list/1/ HTTP/1.1" 200 5927
+[10/Aug/2015 12:13:53] "GET /static/js/pages/poi/order_list.js HTTP/1.1" 200 1457
+[10/Aug/2015 12:13:57] "GET /order/add/ HTTP/1.1" 200 8821
+[10/Aug/2015 12:13:57] "GET /static/js/pages/poi/order.js HTTP/1.1" 200 2551
+[10/Aug/2015 12:14:10] "GET /admin/ HTTP/1.1" 200 14984
+[10/Aug/2015 12:14:12] "GET /admin/poi/merchant/ HTTP/1.1" 200 13915
+[10/Aug/2015 12:14:12] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:14:15] "GET /admin/poi/merchant/add/ HTTP/1.1" 200 13956
+[10/Aug/2015 12:14:15] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:16:22] "POST /admin/poi/merchant/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:16:22] "GET /admin/poi/merchant/ HTTP/1.1" 200 14551
+[10/Aug/2015 12:16:23] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:16:25] "GET /admin/poi/show/ HTTP/1.1" 200 11310
+[10/Aug/2015 12:16:25] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:16:27] "GET /admin/poi/show/add/ HTTP/1.1" 200 10437
+[10/Aug/2015 12:16:27] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:16:30] "POST /admin/poi/show/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:16:30] "GET /admin/poi/show/ HTTP/1.1" 200 11855
+[10/Aug/2015 12:16:30] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:16:45] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:16:45] "GET /coop/ HTTP/1.1" 200 5018
+[10/Aug/2015 12:16:46] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:16:46] "GET /custom/ HTTP/1.1" 200 4105
+[10/Aug/2015 12:16:47] "GET /static/images/logo/u7293553932668853705fm21gp0.jpg HTTP/1.1" 200 6630
+[10/Aug/2015 12:16:47] "GET /static/images/logo/thumb.jpg HTTP/1.1" 200 15273
+[10/Aug/2015 12:16:47] "GET /admin/poi/merchant/ HTTP/1.1" 200 14284
+[10/Aug/2015 12:16:47] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:16:49] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14679
+[10/Aug/2015 12:16:50] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:17:00] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:17:00] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:17:00] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:17:00] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:17:00] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:17:00] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 12:17:00] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:17:00] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 12:17:00] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:17:02] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:17:04] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:17:04] "GET /custom/ HTTP/1.1" 200 4105
+[10/Aug/2015 12:17:04] "GET /static/images/logo/thumb.jpg HTTP/1.1" 200 15273
+[10/Aug/2015 12:17:04] "GET /static/images/logo/u7293553932668853705fm21gp0.jpg HTTP/1.1" 200 6630
+[10/Aug/2015 12:17:09] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 12:17:09] "GET /admin/poi/merchant/ HTTP/1.1" 200 14557
+[10/Aug/2015 12:17:09] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:17:16] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:17:16] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:17:16] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 12:17:16] "GET /news/3/ HTTP/1.1" 500 71350
+[10/Aug/2015 12:17:18] "GET /admin/ HTTP/1.1" 200 16074
+[10/Aug/2015 12:17:23] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:17:26] "GET /custom/ HTTP/1.1" 200 4105
+[10/Aug/2015 12:17:26] "GET /custom/ HTTP/1.1" 200 4105
+[10/Aug/2015 12:17:26] "GET /static/images/logo/thumb.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:17:26] "GET /static/images/logo/u7293553932668853705fm21gp0.jpg HTTP/1.1" 200 6630
+[10/Aug/2015 12:17:40] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:17:40] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:17:40] "GET /static/js/pages/area.js HTTP/1.1" 304 0
+[10/Aug/2015 12:18:33] "GET /admin/ HTTP/1.1" 200 16074
+[10/Aug/2015 12:18:36] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:18:38] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:18:38] "GET /custom/ HTTP/1.1" 200 4105
+[10/Aug/2015 12:18:38] "GET /static/images/logo/thumb.jpg HTTP/1.1" 200 15273
+[10/Aug/2015 12:18:38] "GET /static/images/logo/u7293553932668853705fm21gp0.jpg HTTP/1.1" 200 6630
+[10/Aug/2015 12:20:12] "GET /admin/ HTTP/1.1" 200 16074
+[10/Aug/2015 12:20:13] "GET /admin/poi/merchant/ HTTP/1.1" 200 14290
+[10/Aug/2015 12:20:14] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:20:15] "GET /admin/poi/merchant/ HTTP/1.1" 200 14290
+[10/Aug/2015 12:20:15] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:20:16] "GET /admin/poi/merchant/add/ HTTP/1.1" 200 13956
+[10/Aug/2015 12:20:16] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:21:13] "POST /admin/poi/merchant/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:21:13] "GET /admin/poi/merchant/ HTTP/1.1" 200 14901
+[10/Aug/2015 12:21:13] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:21:15] "GET /admin/poi/show/ HTTP/1.1" 200 11582
+[10/Aug/2015 12:21:15] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:21:17] "GET /admin/poi/show/add/ HTTP/1.1" 200 10476
+[10/Aug/2015 12:21:17] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:21:20] "POST /admin/poi/show/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:21:20] "GET /admin/poi/show/ HTTP/1.1" 200 12126
+[10/Aug/2015 12:21:20] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:21:27] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:21:30] "GET /custom/ HTTP/1.1" 200 4306
+[10/Aug/2015 12:21:30] "GET /static/images/logo/thumb.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:21:30] "GET /static/images/logo/u7293553932668853705fm21gp0.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:21:30] "GET /static/images/logo/CgYXBlUhPoGAHkiwAACloaaqPpM249.jpg HTTP/1.1" 200 42401
+[10/Aug/2015 12:24:20] "GET /custom/ HTTP/1.1" 200 4307
+[10/Aug/2015 12:24:20] "GET /static/images/logo/thumb.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:24:20] "GET /static/images/logo/u7293553932668853705fm21gp0.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:24:20] "GET /static/images/logo/CgYXBlUhPoGAHkiwAACloaaqPpM249.jpg HTTP/1.1" 200 42401
+[10/Aug/2015 12:24:39] "GET /admin/ HTTP/1.1" 200 16814
+[10/Aug/2015 12:24:44] "GET /admin/poi/merchant/ HTTP/1.1" 200 14631
+[10/Aug/2015 12:24:44] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:24:47] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14685
+[10/Aug/2015 12:24:47] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:24:57] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 12:24:57] "GET /admin/poi/merchant/ HTTP/1.1" 200 14898
+[10/Aug/2015 12:24:57] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:25:00] "GET /admin/poi/merchant/2/ HTTP/1.1" 200 14744
+[10/Aug/2015 12:25:00] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:25:12] "POST /admin/poi/merchant/2/ HTTP/1.1" 302 0
+[10/Aug/2015 12:25:12] "GET /admin/poi/merchant/ HTTP/1.1" 200 14898
+[10/Aug/2015 12:25:12] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:25:14] "GET /admin/poi/merchant/3/ HTTP/1.1" 200 14739
+[10/Aug/2015 12:25:14] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:25:20] "POST /admin/poi/merchant/3/ HTTP/1.1" 302 0
+[10/Aug/2015 12:25:20] "GET /admin/poi/merchant/ HTTP/1.1" 200 14901
+[10/Aug/2015 12:25:21] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:25:26] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:25:28] "GET /custom/ HTTP/1.1" 200 4275
+[10/Aug/2015 12:25:28] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 200 4141
+[10/Aug/2015 12:25:28] "GET /static/images/logo/%E9%B2%9C%E5%86%9C%E4%BA%86.jpg HTTP/1.1" 200 5379
+[10/Aug/2015 12:25:28] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 200 4388
+[10/Aug/2015 12:27:35] "GET /admin/ HTTP/1.1" 200 16793
+[10/Aug/2015 12:27:37] "GET /admin/poi/merchant/ HTTP/1.1" 200 14631
+[10/Aug/2015 12:27:37] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:27:38] "GET /admin/poi/merchant/ HTTP/1.1" 200 14631
+[10/Aug/2015 12:27:38] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:27:39] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:27:39] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:27:39] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 12:27:39] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:27:39] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 12:27:39] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 12:27:39] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 12:27:41] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:27:41] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:27:41] "GET /static/js/pages/coop.js HTTP/1.1" 304 0
+[10/Aug/2015 12:27:41] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 0
+[10/Aug/2015 12:27:42] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:27:42] "GET /custom/ HTTP/1.1" 200 4275
+[10/Aug/2015 12:27:42] "GET /static/images/logo/%E9%B2%9C%E5%86%9C%E4%BA%86.jpg HTTP/1.1" 200 5379
+[10/Aug/2015 12:27:42] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 200 4141
+[10/Aug/2015 12:27:42] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 200 4388
+[10/Aug/2015 12:27:42] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14711
+[10/Aug/2015 12:27:43] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:27:44] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:27:44] "GET /custom/ HTTP/1.1" 200 4275
+[10/Aug/2015 12:27:45] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:27:45] "GET /custom/ HTTP/1.1" 200 4275
+[10/Aug/2015 12:27:46] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:27:46] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:27:47] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:27:47] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:27:48] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:27:48] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:27:49] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:27:49] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:27:52] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:27:54] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 12:27:54] "GET /admin/poi/merchant/ HTTP/1.1" 200 14898
+[10/Aug/2015 12:27:54] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:27:54] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:27:54] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:27:57] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:27:57] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:27:58] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:27:58] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:27:58] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC.jpg HTTP/1.1" 200 4047
+[10/Aug/2015 12:28:04] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:28:04] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:28:04] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:28:05] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:28:05] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:28:05] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:28:05] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC.jpg HTTP/1.1" 200 4047
+[10/Aug/2015 12:28:06] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:28:06] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:28:06] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:28:06] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:28:08] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:28:08] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:28:10] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:28:10] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:29:02] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:29:02] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:29:02] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:29:03] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:29:03] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:29:03] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:31:28] "GET /admin/ HTTP/1.1" 200 16781
+[10/Aug/2015 12:31:36] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:31:36] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:31:37] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:31:37] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:31:38] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:31:38] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:31:39] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 12:31:39] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 12:31:40] "GET /static/js/pages/order.js HTTP/1.1" 304 0
+[10/Aug/2015 12:31:40] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:31:40] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:31:41] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 12:31:41] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 12:31:42] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:31:42] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:31:43] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:31:45] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:31:45] "GET /custom/ HTTP/1.1" 200 4278
+[10/Aug/2015 12:31:48] "GET /admin/poi/merchant/ HTTP/1.1" 200 14631
+[10/Aug/2015 12:31:48] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:31:51] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14711
+[10/Aug/2015 12:31:51] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:31:57] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 12:31:58] "GET /admin/poi/merchant/ HTTP/1.1" 200 14898
+[10/Aug/2015 12:31:58] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:32:06] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:32:08] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 12:32:08] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:32:08] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:32:08] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 200 4796
+[10/Aug/2015 12:32:14] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:32:14] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:32:15] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:32:15] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 12:32:16] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 200 4796
+[10/Aug/2015 12:33:01] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:33:11] "GET /admin/ HTTP/1.1" 200 16781
+[10/Aug/2015 12:33:13] "GET /admin/poi/merchant/ HTTP/1.1" 200 14631
+[10/Aug/2015 12:33:13] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:34:08] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:34:09] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 12:34:10] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:34:10] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:34:10] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:35:01] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:35:01] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 12:35:01] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 200 4796
+[10/Aug/2015 12:35:01] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 200 4388
+[10/Aug/2015 12:35:01] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 200 4141
+[10/Aug/2015 12:35:51] "GET /admin/ HTTP/1.1" 200 16781
+[10/Aug/2015 12:35:52] "GET /admin/poi/merchant/ HTTP/1.1" 200 14631
+[10/Aug/2015 12:35:52] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:35:54] "GET /admin/poi/merchant/ HTTP/1.1" 200 14631
+[10/Aug/2015 12:35:54] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:35:55] "GET /admin/poi/merchant/add/ HTTP/1.1" 200 13956
+[10/Aug/2015 12:35:55] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:38:24] "POST /admin/poi/merchant/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:38:24] "GET /admin/poi/merchant/ HTTP/1.1" 200 15224
+[10/Aug/2015 12:38:25] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:38:27] "GET /admin/poi/show/ HTTP/1.1" 200 11850
+[10/Aug/2015 12:38:27] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:38:28] "GET /admin/poi/show/add/ HTTP/1.1" 200 10515
+[10/Aug/2015 12:38:29] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:38:31] "POST /admin/poi/show/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:38:31] "GET /admin/poi/show/ HTTP/1.1" 200 12394
+[10/Aug/2015 12:38:32] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:38:36] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:38:38] "GET /custom/ HTTP/1.1" 200 4479
+[10/Aug/2015 12:38:38] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:38:38] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:38:38] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:38:38] "GET /static/images/logo/20130710_1373419780562.jpg HTTP/1.1" 200 9216
+[10/Aug/2015 12:38:46] "GET /custom/ HTTP/1.1" 200 4479
+[10/Aug/2015 12:38:46] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:38:46] "GET /static/images/logo/20130710_1373419780562.jpg HTTP/1.1" 200 9216
+[10/Aug/2015 12:39:34] "GET /admin/ HTTP/1.1" 200 16787
+[10/Aug/2015 12:39:37] "GET /admin/poi/merchant/ HTTP/1.1" 200 14954
+[10/Aug/2015 12:39:37] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:39:40] "GET /admin/poi/merchant/add/ HTTP/1.1" 200 13956
+[10/Aug/2015 12:39:40] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:40:49] "POST /admin/poi/merchant/add/ HTTP/1.1" 200 14325
+[10/Aug/2015 12:40:49] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:41:02] "POST /admin/poi/merchant/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:41:02] "GET /admin/poi/merchant/ HTTP/1.1" 200 15539
+[10/Aug/2015 12:41:02] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:41:06] "GET /admin/poi/merchant/4/ HTTP/1.1" 200 14705
+[10/Aug/2015 12:41:06] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:41:16] "POST /admin/poi/merchant/4/ HTTP/1.1" 302 0
+[10/Aug/2015 12:41:17] "GET /admin/poi/merchant/ HTTP/1.1" 200 15539
+[10/Aug/2015 12:41:17] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:41:19] "GET /admin/poi/show/ HTTP/1.1" 200 12118
+[10/Aug/2015 12:41:19] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:41:20] "GET /admin/poi/show/add/ HTTP/1.1" 200 10554
+[10/Aug/2015 12:41:20] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:41:24] "POST /admin/poi/show/add/ HTTP/1.1" 302 0
+[10/Aug/2015 12:41:24] "GET /admin/poi/show/ HTTP/1.1" 200 12662
+[10/Aug/2015 12:41:24] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:41:26] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:41:28] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:41:28] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:41:28] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:41:28] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:41:28] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 200 2571
+[10/Aug/2015 12:41:28] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 200 2771
+[10/Aug/2015 12:41:39] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:41:39] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 200 2771
+[10/Aug/2015 12:41:39] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:41:39] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 200 2571
+[10/Aug/2015 12:41:41] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:41:41] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:41:41] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 200 2571
+[10/Aug/2015 12:41:41] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 200 2771
+[10/Aug/2015 12:43:40] "GET /admin/ HTTP/1.1" 200 16790
+[10/Aug/2015 12:43:40] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[10/Aug/2015 12:43:40] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[10/Aug/2015 12:43:40] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[10/Aug/2015 12:43:40] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[10/Aug/2015 12:43:40] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[10/Aug/2015 12:43:41] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[10/Aug/2015 12:43:41] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 12:43:41] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[10/Aug/2015 12:43:41] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+[10/Aug/2015 12:43:41] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[10/Aug/2015 12:43:45] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:43:45] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 12:43:45] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 12:43:46] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 12:43:46] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 12:43:46] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 12:43:46] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 12:43:46] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 12:43:46] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 12:43:48] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 12:43:48] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:43:48] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 200 4796
+[10/Aug/2015 12:43:48] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 200 4141
+[10/Aug/2015 12:43:48] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 200 4388
+[10/Aug/2015 12:43:48] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 200 2571
+[10/Aug/2015 12:43:48] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 200 2771
+[10/Aug/2015 12:44:06] "GET /news/3/ HTTP/1.1" 500 72587
+[10/Aug/2015 12:44:13] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:44:16] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:44:16] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:16] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:16] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:16] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:16] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:44:28] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:28] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:44:29] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:44:29] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:31] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:46:32] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:46:32] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:46:33] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:33] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:46:36] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:46:36] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:48:09] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:48:12] "POST /api/v1/poi/login HTTP/1.1" 200 273
+[10/Aug/2015 12:48:13] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 12:48:13] "GET /list/1/ HTTP/1.1" 200 5927
+[10/Aug/2015 12:48:31] "POST /order/import HTTP/1.1" 500 78487
+[10/Aug/2015 12:48:34] "GET /list/1/ HTTP/1.1" 200 5927
+[10/Aug/2015 12:48:51] "POST /order/import HTTP/1.1" 500 77673
+[10/Aug/2015 12:48:53] "GET /list/1/ HTTP/1.1" 200 5927
+[10/Aug/2015 12:48:56] "GET /order/add/ HTTP/1.1" 200 8827
+[10/Aug/2015 12:49:49] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:49:51] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:49:51] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:51] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:51] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:51] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:51] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:49:54] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:49:54] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:50:36] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:36] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /custom/ HTTP/1.1" 200 4672
+[10/Aug/2015 12:50:38] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124008.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:38] "GET /static/images/logo/QQ%E5%9B%BE%E7%89%8720150810124049.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:50:57] "GET /admin/ HTTP/1.1" 200 16790
+[10/Aug/2015 12:50:59] "GET /admin/poi/merchant/ HTTP/1.1" 200 15269
+[10/Aug/2015 12:51:00] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:51:02] "GET /admin/poi/show/ HTTP/1.1" 200 12386
+[10/Aug/2015 12:51:02] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:51:18] "POST /admin/poi/show/ HTTP/1.1" 200 12624
+[10/Aug/2015 12:51:19] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:51:23] "GET /admin/poi/show/add/ HTTP/1.1" 200 10554
+[10/Aug/2015 12:51:24] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:51:30] "GET /admin/poi/merchant/ HTTP/1.1" 200 15269
+[10/Aug/2015 12:51:30] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:51:51] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14727
+[10/Aug/2015 12:51:51] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:51:58] "GET /admin/poi/show/ HTTP/1.1" 200 12386
+[10/Aug/2015 12:51:58] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:52:00] "GET /admin/poi/show/5/ HTTP/1.1" 200 10899
+[10/Aug/2015 12:52:00] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:52:02] "GET /admin/poi/show/5/delete/ HTTP/1.1" 200 8124
+[10/Aug/2015 12:52:04] "POST /admin/poi/show/5/delete/ HTTP/1.1" 302 0
+[10/Aug/2015 12:52:05] "GET /admin/poi/show/ HTTP/1.1" 200 12394
+[10/Aug/2015 12:52:05] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:52:07] "GET /admin/poi/show/4/ HTTP/1.1" 200 10899
+[10/Aug/2015 12:52:07] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:52:11] "GET /admin/poi/show/4/delete/ HTTP/1.1" 200 8124
+[10/Aug/2015 12:52:14] "POST /admin/poi/show/4/delete/ HTTP/1.1" 302 0
+[10/Aug/2015 12:52:14] "GET /admin/poi/show/ HTTP/1.1" 200 12126
+[10/Aug/2015 12:52:14] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:52:16] "GET /admin/poi/merchant/ HTTP/1.1" 200 15269
+[10/Aug/2015 12:52:17] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:52:22] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:52:25] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 12:52:25] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 12:52:27] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:52:27] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:52:50] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:52:52] "POST /api/v1/poi/login HTTP/1.1" 200 273
+[10/Aug/2015 12:52:52] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 12:52:52] "GET /list/1/ HTTP/1.1" 200 5927
+[10/Aug/2015 12:53:05] "POST /order/import HTTP/1.1" 302 0
+[10/Aug/2015 12:53:06] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 12:53:06] "GET /list/1/ HTTP/1.1" 200 11578
+[10/Aug/2015 12:54:07] "POST /order/import HTTP/1.1" 500 78487
+[10/Aug/2015 12:54:09] "GET /list/1/ HTTP/1.1" 200 11578
+[10/Aug/2015 12:54:13] "GET /order/143918238310 HTTP/1.1" 301 0
+[10/Aug/2015 12:54:14] "GET /order/143918238310/ HTTP/1.1" 200 8354
+[10/Aug/2015 12:54:14] "GET /static/images/icon/status-circle.png HTTP/1.1" 200 7420
+[10/Aug/2015 12:54:14] "GET /static/images/icon/status-gray.png HTTP/1.1" 200 8065
+[10/Aug/2015 12:54:14] "GET /static/js/pages/order.js HTTP/1.1" 304 0
+[10/Aug/2015 12:55:09] "GET /list/1/ HTTP/1.1" 200 11578
+[10/Aug/2015 12:55:23] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:57:36] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 12:57:36] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:57:36] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 12:57:36] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 12:57:36] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 12:57:38] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 12:57:38] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 12:57:38] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 12:57:38] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 12:57:38] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 12:57:38] "GET /static/images/intro/intro.png HTTP/1.1" 200 532480
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 12:57:38] "GET /static/images/intro/intro.png HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 12:57:47] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:57:47] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 12:57:47] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 12:57:49] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 12:57:49] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 12:57:49] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 12:57:49] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:57:49] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 12:57:49] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 12:57:51] "POST /api/v1/poi/login HTTP/1.1" 200 273
+[10/Aug/2015 12:57:51] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 12:57:51] "GET /list/1/ HTTP/1.1" 200 11578
+[10/Aug/2015 12:57:52] "GET /static/js/pages/poi/order_list.js HTTP/1.1" 200 1457
+[10/Aug/2015 12:57:57] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 12:57:57] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:57:57] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:57:57] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 12:58:02] "GET /order/143918238310 HTTP/1.1" 301 0
+[10/Aug/2015 12:58:02] "GET /order/143918238310/ HTTP/1.1" 200 8354
+[10/Aug/2015 12:58:02] "GET /static/images/icon/status-circle.png HTTP/1.1" 200 7420
+[10/Aug/2015 12:58:02] "GET /static/images/icon/status-gray.png HTTP/1.1" 200 8065
+[10/Aug/2015 12:58:02] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 12:58:34] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 12:58:42] "GET /admin/ HTTP/1.1" 200 16762
+[10/Aug/2015 12:58:46] "GET /admin/poi/show/ HTTP/1.1" 200 11850
+[10/Aug/2015 12:58:46] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 12:59:04] "GET /admin/poi/show/ HTTP/1.1" 200 11850
+[10/Aug/2015 12:59:04] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 13:00:41] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 13:00:58] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 13:00:58] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 13:00:59] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:00:59] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:00:59] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:01:11] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 13:01:13] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 13:01:13] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:01:13] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:01:13] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:03:57] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 13:03:58] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 13:03:58] "GET /static/js/pages/area.js HTTP/1.1" 200 5492
+[10/Aug/2015 13:04:13] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 13:04:13] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:04:14] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 13:04:14] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 13:04:15] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 13:04:15] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 13:04:16] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 13:04:17] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 13:04:17] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 13:04:18] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[10/Aug/2015 13:04:19] "GET /static/images/intro/store.png HTTP/1.1" 200 691215
+[10/Aug/2015 13:04:29] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 13:04:31] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 13:04:32] "POST /api/v1/poi/login HTTP/1.1" 200 273
+[10/Aug/2015 13:04:32] "GET /list/1/ HTTP/1.1" 200 11578
+[10/Aug/2015 13:04:39] "GET /order/add/ HTTP/1.1" 200 8827
+[10/Aug/2015 13:04:39] "GET /static/js/pages/poi/order.js HTTP/1.1" 200 2551
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[10/Aug/2015 13:25:52] "GET / HTTP/1.0" 200 7918
+[10/Aug/2015 13:26:01] code 400, message Bad request version ('\xbc+\x92\xa8H\x97\xcf\xbd9\x04\xcc\x16')
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 117, in handle
+    if not self.parse_request(): # An error code has been sent, just exit
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 253, in parse_request
+    self.send_error(400, "Bad request version (%r)" % version)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 368, in send_error
+    self.send_response(code, message)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 385, in send_response
+    self.log_request(code)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 138, in log_message
+    msg = "[%s] %s\n" % (self.log_date_time_string(), format % args)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xdc in position 5: invalid continuation byte
+[10/Aug/2015 13:39:55] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 13:39:55] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 13:39:56] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 13:39:56] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 13:39:59] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 13:39:59] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 13:40:00] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 13:40:00] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 13:40:01] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 13:40:01] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 13:40:02] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 13:40:02] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 13:40:16] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 13:40:17] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 13:40:19] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 13:40:19] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 13:40:22] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 13:40:22] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 13:40:22] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 13:40:22] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 13:40:22] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 13:40:22] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 13:40:22] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 13:40:24] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 13:40:24] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 13:40:27] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 13:40:27] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 13:40:28] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 13:40:28] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 13:40:28] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 13:40:28] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 13:40:32] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 13:40:32] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 13:40:39] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 13:40:39] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 13:47:21] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 13:47:21] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 13:47:21] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 13:51:48] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 13:51:48] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 13:51:48] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 13:57:39] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 13:57:41] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 13:57:41] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 13:57:41] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 13:57:41] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 13:57:41] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 13:57:42] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 13:57:42] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 13:57:42] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 14:08:05] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 14:08:05] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 14:08:06] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 14:08:13] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 14:08:13] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 14:08:14] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 14:08:14] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 14:08:15] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 14:08:15] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 14:08:16] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 14:08:16] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 14:09:27] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 14:10:00] "GET /intro/ HTTP/1.1" 200 9131
+[10/Aug/2015 14:36:26] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 14:36:27] "GET /static/js/pages/area.js HTTP/1.1" 304 0
+[10/Aug/2015 14:36:31] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 14:36:32] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 14:36:32] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 14:36:32] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 14:36:33] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 14:36:33] "GET /static/js/pages/coop.js HTTP/1.1" 304 0
+[10/Aug/2015 14:36:33] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 0
+[10/Aug/2015 14:36:35] "POST /api/v1/poi/login HTTP/1.1" 200 273
+[10/Aug/2015 14:36:35] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 14:36:35] "GET /list/1/ HTTP/1.1" 200 11578
+[10/Aug/2015 14:36:35] "GET /static/js/pages/poi/order_list.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:09] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 14:37:10] "GET /static/js/pages/order.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:10] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 14:37:12] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 14:37:15] "GET / HTTP/1.1" 200 7918
+[10/Aug/2015 14:37:15] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:15] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:19] "GET /intro?intro=6 HTTP/1.1" 301 0
+[10/Aug/2015 14:37:19] "GET /intro/?intro=6 HTTP/1.1" 200 9131
+[10/Aug/2015 14:37:19] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 14:37:19] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:19] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:19] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:19] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /admin/ HTTP/1.1" 200 16762
+[10/Aug/2015 14:37:29] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/css/suit.css HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/js/suit.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:29] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:30] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:31] "GET /admin/news/news/ HTTP/1.1" 200 9281
+[10/Aug/2015 14:37:31] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 14:37:31] "GET /static/ckeditor/configuration-ckeditor.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:31] "GET /static/ckeditor/ckeditor.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:32] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 304 0
+[10/Aug/2015 14:37:34] "GET /admin/news/news/add/ HTTP/1.1" 200 11974
+[10/Aug/2015 14:37:34] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 14:37:34] "GET /static/suit/js/suit-form-confirm.js HTTP/1.1" 304 0
+[10/Aug/2015 14:37:34] "GET /static/ckeditor/config.js?t=F61F HTTP/1.1" 200 1607
+[10/Aug/2015 14:37:34] "GET /static/ckeditor/lang/zh-cn.js?t=F61F HTTP/1.1" 200 14392
+[10/Aug/2015 14:37:34] "GET /static/ckeditor/skins/moono/editor.css?t=F61F HTTP/1.1" 200 36791
+[10/Aug/2015 14:37:34] "GET /static/ckeditor/styles.js?t=F61F HTTP/1.1" 200 3868
+[10/Aug/2015 14:37:34] "GET /static/ckeditor/plugins/colorbutton/plugin.js?t=F61F HTTP/1.1" 200 12330
+[10/Aug/2015 14:37:34] "GET /static/ckeditor/plugins/panelbutton/plugin.js?t=F61F HTTP/1.1" 200 4259
+[10/Aug/2015 14:37:35] "GET /static/ckeditor/plugins/colorbutton/lang/zh-cn.js?t=F61F HTTP/1.1" 200 1406
+[10/Aug/2015 14:37:35] "GET /static/ckeditor/skins/moono/icons.png HTTP/1.1" 200 10227
+[10/Aug/2015 14:37:35] "GET /static/ckeditor/plugins/colorbutton/icons/textcolor.png?t=F61F HTTP/1.1" 200 813
+[10/Aug/2015 14:37:35] "GET /static/ckeditor/contents.css?t=F61F HTTP/1.1" 200 2135
+[10/Aug/2015 14:37:36] "GET /static/ckeditor/plugins/colorbutton/icons/bgcolor.png?t=F61F HTTP/1.1" 200 906
+[10/Aug/2015 14:40:33] "GET /static/ckeditor/plugins/clipboard/dialogs/paste.js?t=F61F HTTP/1.1" 200 5540
+[10/Aug/2015 14:40:33] "GET /static/ckeditor/skins/moono/dialog.css?t=F61F HTTP/1.1" 200 16787
+[10/Aug/2015 14:40:34] "GET /static/ckeditor/skins/moono/images/close.png HTTP/1.1" 200 468
+[10/Aug/2015 14:41:11] "POST /admin/news/news/add/ HTTP/1.1" 302 0
+[10/Aug/2015 14:41:11] "GET /admin/news/news/ HTTP/1.1" 200 13161
+[10/Aug/2015 14:41:11] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 14:41:17] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 15:42:25] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 15:42:25] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 15:42:25] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 15:42:25] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 15:42:25] "GET /static/js/pages/area.js HTTP/1.1" 304 0
+[10/Aug/2015 15:42:25] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 15:42:25] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 15:42:25] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 15:42:47] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 15:42:47] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 15:42:47] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 15:43:48] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 15:43:48] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 15:43:48] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 15:43:48] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 15:43:48] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 15:43:48] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 15:43:48] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 15:45:04] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 15:45:04] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 15:45:04] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 15:45:04] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 15:46:18] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 15:46:18] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 15:46:18] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 200 4796
+[10/Aug/2015 15:46:18] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 200 4388
+[10/Aug/2015 15:46:19] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 200 4141
+[10/Aug/2015 15:46:38] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 15:46:38] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 15:46:38] "GET /static/js/pages/coop.js HTTP/1.1" 304 0
+[10/Aug/2015 15:46:38] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 0
+[10/Aug/2015 15:46:57] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 15:46:57] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 15:46:57] "GET /static/js/pages/order.js HTTP/1.1" 304 0
+[10/Aug/2015 15:48:07] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 15:51:52] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 15:51:52] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 15:51:55] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 15:51:55] "GET /intro HTTP/1.1" 301 0
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[10/Aug/2015 15:51:55] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 15:51:55] "GET /intro/ HTTP/1.1" 200 9275
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[10/Aug/2015 15:52:06] "GET /news/3 HTTP/1.1" 301 0
+[10/Aug/2015 15:52:06] "GET /news/3/ HTTP/1.1" 500 71673
+[10/Aug/2015 15:52:12] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 15:56:48] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 15:57:06] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 15:57:06] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 15:57:10] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:03:37] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:05:12] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:05:12] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:05:12] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 16:06:16] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 16:06:16] "GET /static/js/pages/area.js HTTP/1.1" 304 0
+[10/Aug/2015 16:06:31] "GET /admin/ HTTP/1.1" 200 16790
+[10/Aug/2015 16:06:33] "GET /admin/station/station/ HTTP/1.1" 200 20589
+[10/Aug/2015 16:06:33] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:06:36] "GET /admin/station/station/1/ HTTP/1.1" 200 14562
+[10/Aug/2015 16:06:36] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:07:47] "GET /admin/station/station/ HTTP/1.1" 200 20589
+[10/Aug/2015 16:07:48] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:07:57] "GET /admin/news/news/ HTTP/1.1" 200 12870
+[10/Aug/2015 16:07:57] "GET /static/ckeditor/configuration-ckeditor.js HTTP/1.1" 304 0
+[10/Aug/2015 16:07:57] "GET /static/ckeditor/ckeditor.js HTTP/1.1" 304 0
+[10/Aug/2015 16:07:57] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:08:07] "GET /admin/news/news/ HTTP/1.1" 200 12870
+[10/Aug/2015 16:08:07] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:08:13] "GET /admin/poi/merchant/ HTTP/1.1" 200 15269
+[10/Aug/2015 16:08:13] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:08:19] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14727
+[10/Aug/2015 16:08:19] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:08:25] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 16:08:25] "GET /admin/poi/merchant/ HTTP/1.1" 200 15536
+[10/Aug/2015 16:08:25] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:08:28] "GET /admin/poi/show/ HTTP/1.1" 200 11850
+[10/Aug/2015 16:08:28] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:08:34] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:08:34] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 16:08:34] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 16:08:36] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 16:08:36] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:08:36] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:08:36] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:08:52] "GET /admin/ HTTP/1.1" 200 16790
+[10/Aug/2015 16:09:05] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:09:05] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:09:23] "GET /admin/poi/merchant/ HTTP/1.1" 200 15269
+[10/Aug/2015 16:09:23] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:09:30] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14727
+[10/Aug/2015 16:09:30] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:09:37] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 16:09:37] "GET /admin/poi/merchant/ HTTP/1.1" 200 15545
+[10/Aug/2015 16:09:37] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:09:39] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:09:39] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:09:43] "GET /admin/order/order/?o=4 HTTP/1.1" 200 18462
+[10/Aug/2015 16:09:43] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:09:46] "GET /admin/order/order/?o=4 HTTP/1.1" 200 18462
+[10/Aug/2015 16:09:46] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:09:48] "GET /admin/order/order/9/?_changelist_filters=o%3D4 HTTP/1.1" 200 18013
+[10/Aug/2015 16:09:48] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:10:00] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:10:00] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:10:04] "GET /admin/station/station/ HTTP/1.1" 200 20589
+[10/Aug/2015 16:10:04] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:10:09] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:10:09] "GET /admin/station/station/14/ HTTP/1.1" 200 14566
+[10/Aug/2015 16:10:09] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:10:09] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Aug/2015 16:10:09] "GET /static/css/global.css HTTP/1.1" 304 0
+[10/Aug/2015 16:10:09] "GET /static/css/index2.css HTTP/1.1" 304 0
+[10/Aug/2015 16:10:09] "GET /static/images/logo.png HTTP/1.1" 304 0
+[10/Aug/2015 16:10:10] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[10/Aug/2015 16:10:10] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:10:10] "GET /static/images/process.png HTTP/1.1" 304 0
+[10/Aug/2015 16:10:10] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[10/Aug/2015 16:10:10] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[10/Aug/2015 16:10:10] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Aug/2015 16:10:10] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[10/Aug/2015 16:10:32] "GET /app HTTP/1.1" 301 0
+[10/Aug/2015 16:10:32] "GET /app/ HTTP/1.1" 200 4376
+[10/Aug/2015 16:10:32] "GET /static/images/app/qr/deliver.png HTTP/1.1" 200 410
+[10/Aug/2015 16:10:32] "GET /static/images/app/qr/driver.png HTTP/1.1" 200 410
+[10/Aug/2015 16:10:32] "GET /static/images/app/qr/site.png HTTP/1.1" 200 414
+[10/Aug/2015 16:11:40] "GET /admin/ HTTP/1.1" 200 16790
+[10/Aug/2015 16:11:41] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:11:41] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:11:47] "GET /admin/order/order/?o=1 HTTP/1.1" 200 18462
+[10/Aug/2015 16:11:48] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:11:50] "GET /admin/order/order/?o= HTTP/1.1" 200 17896
+[10/Aug/2015 16:11:50] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:11:52] "GET /admin/order/order/?o=1 HTTP/1.1" 200 18462
+[10/Aug/2015 16:11:52] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:11:53] "GET /admin/order/order/?o=-1 HTTP/1.1" 200 18476
+[10/Aug/2015 16:11:53] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:11:55] "GET /admin/order/order/?o=1 HTTP/1.1" 200 18462
+[10/Aug/2015 16:11:55] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:11:56] "GET /admin/order/order/?o= HTTP/1.1" 200 17896
+[10/Aug/2015 16:11:56] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:11:59] "GET /admin/order/order/?o=1 HTTP/1.1" 200 18462
+[10/Aug/2015 16:11:59] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:12:01] "GET /admin/order/order/?o= HTTP/1.1" 200 17896
+[10/Aug/2015 16:12:01] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:12:06] "GET /admin/order/order/1/?_changelist_filters=o%3D HTTP/1.1" 200 18014
+[10/Aug/2015 16:12:06] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:12:13] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:12:13] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 16:12:13] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 16:12:13] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 16:12:13] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 16:12:13] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 16:12:13] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 16:12:13] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 16:12:13] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 16:12:15] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:12:15] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:12:21] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:12:21] "GET /static/js/pages/station/login.js HTTP/1.1" 200 1364
+[10/Aug/2015 16:12:26] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:13:03] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:13:03] "GET /static/js/pages/station/login.js HTTP/1.1" 200 1364
+[10/Aug/2015 16:13:05] "POST /api/v1/station/login HTTP/1.1" 200 58
+[10/Aug/2015 16:13:05] "GET /static/js/pages/station/login.js HTTP/1.1" 200 1364
+[10/Aug/2015 16:13:05] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 16:13:06] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 16:13:18] "POST /api/v1/station/login HTTP/1.1" 200 58
+[10/Aug/2015 16:13:22] "GET /admin/ HTTP/1.1" 200 16790
+[10/Aug/2015 16:13:23] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[10/Aug/2015 16:13:23] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[10/Aug/2015 16:13:23] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[10/Aug/2015 16:13:23] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[10/Aug/2015 16:13:23] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[10/Aug/2015 16:13:23] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[10/Aug/2015 16:13:23] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 16:13:23] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[10/Aug/2015 16:13:23] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+[10/Aug/2015 16:13:23] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[10/Aug/2015 16:13:26] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:13:26] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:13:26] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+[10/Aug/2015 16:13:32] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14736
+[10/Aug/2015 16:13:32] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:13:32] "GET /static/suit/js/suit-form-confirm.js HTTP/1.1" 200 2297
+[10/Aug/2015 16:13:36] "POST /api/v1/station/login HTTP/1.1" 200 259
+[10/Aug/2015 16:13:36] "GET /station/list/2 HTTP/1.1" 301 0
+[10/Aug/2015 16:13:36] "GET /station/list/2/ HTTP/1.1" 200 4555
+[10/Aug/2015 16:13:36] "GET /static/js/pages/station/order_list.js HTTP/1.1" 404 1699
+[10/Aug/2015 16:13:40] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:13:56] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:14:05] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:14:05] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:14:31] "POST /api/v1/station/login HTTP/1.1" 200 58
+[10/Aug/2015 16:14:33] "POST /api/v1/station/login HTTP/1.1" 200 58
+[10/Aug/2015 16:14:38] "GET /admin/ HTTP/1.1" 200 16790
+[10/Aug/2015 16:14:41] "GET /admin/station/station/ HTTP/1.1" 200 20589
+[10/Aug/2015 16:14:41] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:14:46] "GET /admin/station/station/14/ HTTP/1.1" 200 14566
+[10/Aug/2015 16:14:46] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:14:57] "POST /admin/station/station/14/ HTTP/1.1" 302 0
+[10/Aug/2015 16:14:57] "GET /admin/station/station/ HTTP/1.1" 200 20862
+[10/Aug/2015 16:14:57] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:15:04] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:15:14] "POST /api/v1/station/login HTTP/1.1" 200 264
+[10/Aug/2015 16:15:14] "GET /station/list/14 HTTP/1.1" 301 0
+[10/Aug/2015 16:15:14] "GET /station/list/14/ HTTP/1.1" 200 8616
+[10/Aug/2015 16:15:15] "GET /static/js/pages/station/order_list.js HTTP/1.1" 404 1699
+[10/Aug/2015 16:15:28] "GET /order/143918238310 HTTP/1.1" 301 0
+[10/Aug/2015 16:15:28] "GET /order/143918238310/ HTTP/1.1" 200 8354
+[10/Aug/2015 16:15:29] "GET /static/images/icon/status-circle.png HTTP/1.1" 304 0
+[10/Aug/2015 16:15:29] "GET /static/images/icon/status-gray.png HTTP/1.1" 304 0
+[10/Aug/2015 16:15:29] "GET /static/js/pages/order.js HTTP/1.1" 304 0
+[10/Aug/2015 16:15:36] "GET /station/list/14/ HTTP/1.1" 200 8616
+[10/Aug/2015 16:15:43] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:15:43] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:15:43] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:15:45] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:15:45] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:15:57] "POST /api/v1/station/login HTTP/1.1" 200 264
+[10/Aug/2015 16:15:57] "GET /station/list/14 HTTP/1.1" 301 0
+[10/Aug/2015 16:15:57] "GET /station/list/14/ HTTP/1.1" 200 8616
+[10/Aug/2015 16:15:58] "GET /static/js/pages/station/order_list.js HTTP/1.1" 404 1699
+[10/Aug/2015 16:16:07] "GET /admin/ HTTP/1.1" 200 16787
+[10/Aug/2015 16:16:10] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:16:10] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:16:13] "GET /admin/poi/show/ HTTP/1.1" 200 11850
+[10/Aug/2015 16:16:14] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:16:18] "GET /admin/poi/show/1/ HTTP/1.1" 200 10896
+[10/Aug/2015 16:16:18] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:16:20] "GET /admin/poi/show/ HTTP/1.1" 200 11850
+[10/Aug/2015 16:16:21] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:16:22] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:16:23] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:16:25] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14736
+[10/Aug/2015 16:16:25] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:16:31] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 16:16:31] "GET /admin/poi/merchant/ HTTP/1.1" 200 15545
+[10/Aug/2015 16:16:31] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:16:41] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:16:44] "POST /api/v1/station/login HTTP/1.1" 200 264
+[10/Aug/2015 16:16:44] "GET /station/list/14 HTTP/1.1" 301 0
+[10/Aug/2015 16:16:44] "GET /station/list/14/ HTTP/1.1" 200 8616
+[10/Aug/2015 16:16:44] "GET /static/js/pages/station/order_list.js HTTP/1.1" 404 1699
+[10/Aug/2015 16:16:57] "GET /admin/ HTTP/1.1" 200 16772
+[10/Aug/2015 16:17:00] "GET /admin/station/station/ HTTP/1.1" 200 20589
+[10/Aug/2015 16:17:00] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:17:13] "GET /admin/news/news/ HTTP/1.1" 200 12870
+[10/Aug/2015 16:17:13] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:17:14] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:17:15] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:17:17] "GET /admin/deliver/driver/ HTTP/1.1" 200 10407
+[10/Aug/2015 16:17:17] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:17:18] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:17:18] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:17:28] "GET /admin/ HTTP/1.1" 200 16772
+[10/Aug/2015 16:20:39] "GET /admin/ HTTP/1.1" 200 16772
+[10/Aug/2015 16:20:43] "GET /admin/deliver/driver/ HTTP/1.1" 200 10407
+[10/Aug/2015 16:20:43] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:20:44] "GET /admin/order/order/ HTTP/1.1" 200 17671
+[10/Aug/2015 16:20:44] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:20:44] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 16:20:44] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 16:20:46] "GET /custom HTTP/1.1" 301 0
+[10/Aug/2015 16:20:46] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 16:20:48] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 16:20:48] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 16:20:49] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 16:20:49] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:20:52] "GET /order HTTP/1.1" 301 0
+[10/Aug/2015 16:20:52] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 16:20:53] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 16:20:53] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 16:20:55] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:22:23] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:22:25] "GET /area HTTP/1.1" 301 0
+[10/Aug/2015 16:22:25] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 16:22:26] "GET /static/js/pages/area.js HTTP/1.1" 200 5492
+[10/Aug/2015 16:22:28] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 16:22:28] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:22:28] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[10/Aug/2015 16:22:28] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[10/Aug/2015 16:22:29] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 16:22:29] "GET /coop HTTP/1.1" 301 0
+[10/Aug/2015 16:22:29] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 16:22:29] "GET /static/images/intro/intro.png HTTP/1.1" 200 212992
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 16:22:29] "GET /static/images/intro/intro.png HTTP/1.1" 500 59
+Validating models...
+
+0 errors found
+August 10, 2015 - 10:42:28
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('123.125.217.180', 4975)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('123.125.217.180', 58355)
+----------------------------------------
+Exception happened during processing of request from ('123.125.217.180', 58350)
+----------------------------------------
+Exception happened during processing of request from ('123.125.217.180', 58353----------------------------------------
+)----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('123.125.217.180', 58354)
+----------------------------------------
+
+----------------------------------------
+0
+0
+0
+0
+0
+朝阳门内大街南竹竿胡同2号银河soho14
+朝阳门内大街南竹竿胡同2号银河soho2
+麦子店街枣营北里社区23号楼1单元501室14
+麦子店街枣营北里社区23号楼1单元501室8
+北京市海淀区如家快捷酒店（北京上地店）306房间14
+北京市海淀区如家快捷酒店（北京上地店）306房间6
+大成路大成郡小区大成南里三区11号楼2单元70214
+大成路大成郡小区大成南里三区11号楼2单元7023
+北京市海淀区学院路北京航空航天大学北配楼21414
+北京市海淀区学院路北京航空航天大学北配楼2146
+朝阳区松榆南路38号院（东三环华威桥东300米）美景东方10号楼20914
+朝阳区松榆南路38号院（东三环华威桥东300米）美景东方10号楼2091
+北京市朝阳区朝阳门外大街6号新城国际20号楼3502室。邮编：10002014
+北京市朝阳区朝阳门外大街6号新城国际20号楼3502室。邮编：1000202
+青年路西里5号院润枫水尚14号楼5单元902（派送前先电话联系）14
+青年路西里5号院润枫水尚14号楼5单元902（派送前先电话联系）2
+北京市朝阳区育慧西里小区21号楼1001门14
+北京市朝阳区育慧西里小区21号楼1001门6
+1
+1
+1
+----------------------------------------
+Exception happened during processing of request from ('124.202.191.102', 11648)
+----------------------------------------
+1
+1
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.72', 40077)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.66', 44223)
+----------------------------------------
+1
+----------------------------------------
+Exception happened during processing of request from ('123.125.217.180', 9713)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('123.125.217.180', 9689)
+----------------------------------------
+0
+{'phone': u'400-8870-387', 'name': u'\u751c\u6c34\u56ed\u5e97', 'station_type': 0L, 'latitude': 39.929696, 'address': u'\u5317\u4eac\u5e02\u671d\u9633\u533a\u5ef6\u9759\u91cc6\u53f7\u697c\u540e', 'id': 2L, 'longitude': 116.485411}
+0
+0
+{'phone': u'400-8870-387', 'name': u'\u7acb\u6c34\u6865\u5e97', 'station_type': 0L, 'latitude': 40.052294, 'address': u'\u5317\u4eac\u5e02\u660c\u5e73\u533a\u9648\u8425\u6751\u536b\u751f\u9662\u65c1', 'id': 14L, 'longitude': 116.41828}
+1
+1
+0
+{'phone': u'400-8870-387', 'name': u'\u7acb\u6c34\u6865\u5e97', 'station_type': 0L, 'latitude': 40.052294, 'address': u'\u5317\u4eac\u5e02\u660c\u5e73\u533a\u9648\u8425\u6751\u536b\u751f\u9662\u65c1', 'id': 14L, 'longitude': 116.41828}
+1
+0
+{'phone': u'400-8870-387', 'name': u'\u7acb\u6c34\u6865\u5e97', 'station_type': 0L, 'latitude': 40.052294, 'address': u'\u5317\u4eac\u5e02\u660c\u5e73\u533a\u9648\u8425\u6751\u536b\u751f\u9662\u65c1', 'id': 14L, 'longitude': 116.41828}
+1
+----------------------------------------
+Exception happened duringTraceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 16:22:30] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 16:22:30] "GET /static/js/pages/coop.js HTTP/1.1" 200 1340
+[10/Aug/2015 16:22:31] "POST /api/v1/poi/login HTTP/1.1" 200 291
+[10/Aug/2015 16:22:31] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 16:22:31] "GET /list/1/ HTTP/1.1" 200 11578
+[10/Aug/2015 16:22:32] "GET /static/js/pages/poi/order_list.js HTTP/1.1" 200 1457
+[10/Aug/2015 16:22:35] "GET /order/14391823859 HTTP/1.1" 301 0
+[10/Aug/2015 16:22:35] "GET /order/14391823859/ HTTP/1.1" 200 8359
+[10/Aug/2015 16:22:35] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 16:22:35] "GET /static/images/icon/status-circle.png HTTP/1.1" 200 7420
+[10/Aug/2015 16:22:35] "GET /static/images/icon/status-gray.png HTTP/1.1" 200 8065
+[10/Aug/2015 16:22:59] "GET /order/add/ HTTP/1.1" 200 8836
+[10/Aug/2015 16:22:59] "GET /static/js/pages/poi/order.js HTTP/1.1" 200 2551
+[10/Aug/2015 16:23:23] "POST /api/v1/order/add HTTP/1.1" 200 34
+[10/Aug/2015 16:23:24] "GET /order/success/14391950038 HTTP/1.1" 301 0
+[10/Aug/2015 16:23:24] "GET /order/success/14391950038/ HTTP/1.1" 200 4119
+[10/Aug/2015 16:23:24] "GET /static/images/icon/order-ok.png HTTP/1.1" 200 13580
+[10/Aug/2015 16:23:34] "GET /admin HTTP/1.1" 301 0
+[10/Aug/2015 16:23:34] "GET /admin/ HTTP/1.1" 200 16772
+[10/Aug/2015 16:23:36] "GET /admin/order/order/ HTTP/1.1" 200 18086
+[10/Aug/2015 16:23:36] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:25:36] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:25:37] "GET /static/images/process.png HTTP/1.1" 200 84183
+[10/Aug/2015 16:25:38] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 16:25:38] "GET /static/images/intro/store.png HTTP/1.1" 200 507904
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 16:25:38] "GET /static/images/intro/store.png HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 16:25:39] "POST /api/v1/poi/login HTTP/1.1" 200 291
+[10/Aug/2015 16:25:39] "GET /list/1/ HTTP/1.1" 200 12193
+[10/Aug/2015 16:25:42] "GET /order/14391823859/ HTTP/1.1" 200 8359
+[10/Aug/2015 16:28:18] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:28:19] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:28:20] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:28:20] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:28:23] "GET /admin/poi/merchant/1/ HTTP/1.1" 200 14736
+[10/Aug/2015 16:28:23] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:28:30] "POST /admin/poi/merchant/1/ HTTP/1.1" 302 0
+[10/Aug/2015 16:28:30] "GET /admin/poi/merchant/ HTTP/1.1" 200 15545
+[10/Aug/2015 16:28:30] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:28:32] "GET /admin/order/order/ HTTP/1.1" 200 18086
+[10/Aug/2015 16:28:32] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:28:36] "GET /admin/order/order/10/ HTTP/1.1" 200 18017
+[10/Aug/2015 16:28:36] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:28:41] "GET /admin/order/order/ HTTP/1.1" 200 18086
+[10/Aug/2015 16:28:41] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:28:52] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:29:02] "POST /api/v1/station/login HTTP/1.1" 200 246
+[10/Aug/2015 16:29:02] "GET /station/list/9 HTTP/1.1" 301 0
+[10/Aug/2015 16:29:02] "GET /station/list/9/ HTTP/1.1" 200 5005
+[10/Aug/2015 16:29:03] "GET /static/js/pages/station/order_list.js HTTP/1.1" 404 1699
+[10/Aug/2015 16:30:00] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 16:30:02] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 16:30:02] "GET /static/js/pages/coop.js HTTP/1.1" 304 0
+[10/Aug/2015 16:30:02] "GET /static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 0
+[10/Aug/2015 16:30:05] "POST /api/v1/poi/login HTTP/1.1" 200 291
+[10/Aug/2015 16:30:05] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 16:30:05] "GET /list/1/ HTTP/1.1" 200 12193
+[10/Aug/2015 16:30:05] "GET /static/js/pages/poi/order_list.js HTTP/1.1" 304 0
+[10/Aug/2015 16:30:08] "GET /order/14391950038 HTTP/1.1" 301 0
+[10/Aug/2015 16:30:08] "GET /order/14391950038/ HTTP/1.1" 200 8349
+[10/Aug/2015 16:30:21] "GET /list/1/ HTTP/1.1" 200 12193
+[10/Aug/2015 16:30:25] "GET /order/add/ HTTP/1.1" 200 8836
+[10/Aug/2015 16:30:25] "GET /static/js/pages/poi/order.js HTTP/1.1" 304 0
+[10/Aug/2015 16:30:54] "POST /api/v1/order/add HTTP/1.1" 200 34
+[10/Aug/2015 16:30:54] "GET /order/success/14391954538 HTTP/1.1" 301 0
+[10/Aug/2015 16:30:54] "GET /order/success/14391954538/ HTTP/1.1" 200 4119
+[10/Aug/2015 16:30:54] "GET /static/images/icon/order-ok.png HTTP/1.1" 200 13580
+[10/Aug/2015 16:30:55] "GET /list/1 HTTP/1.1" 301 0
+[10/Aug/2015 16:30:55] "GET /list/1/ HTTP/1.1" 200 12809
+[10/Aug/2015 16:31:03] "GET /api/v1/station/login HTTP/1.1" 200 4701
+[10/Aug/2015 16:31:09] "POST /api/v1/station/login HTTP/1.1" 200 246
+[10/Aug/2015 16:31:09] "GET /station/list/9 HTTP/1.1" 301 0
+[10/Aug/2015 16:31:09] "GET /station/list/9/ HTTP/1.1" 200 5451
+[10/Aug/2015 16:31:09] "GET /static/js/pages/station/order_list.js HTTP/1.1" 404 1699
+[10/Aug/2015 16:32:05] "GET /order/14391954538 HTTP/1.1" 301 0
+[10/Aug/2015 16:32:06] "GET /order/14391954538/ HTTP/1.1" 200 8319
+[10/Aug/2015 16:32:18] "GET /admin/ HTTP/1.1" 200 16759
+[10/Aug/2015 16:32:20] "GET /admin/order/order/ HTTP/1.1" 200 18500
+[10/Aug/2015 16:32:20] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:33:07] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:33:07] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[10/Aug/2015 16:33:07] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[10/Aug/2015 16:33:14] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 16:33:14] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:33:15] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:33:38] "GET /admin HTTP/1.1" 301 0
+[10/Aug/2015 16:33:38] "GET /admin/ HTTP/1.1" 200 3315
+[10/Aug/2015 16:33:38] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[10/Aug/2015 16:33:38] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[10/Aug/2015 16:33:38] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[10/Aug/2015 16:33:38] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[10/Aug/2015 16:33:38] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[10/Aug/2015 16:33:38] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+[10/Aug/2015 16:33:38] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[10/Aug/2015 16:34:17] "POST /admin/ HTTP/1.1" 302 0
+[10/Aug/2015 16:34:17] "GET /admin/ HTTP/1.1" 200 16759
+[10/Aug/2015 16:34:17] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[10/Aug/2015 16:34:17] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[10/Aug/2015 16:34:17] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[10/Aug/2015 16:34:17] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+[10/Aug/2015 16:34:21] "GET /admin/order/order/ HTTP/1.1" 200 18500
+[10/Aug/2015 16:34:22] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:35:05] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:35:06] "GET /admin/order/order/ HTTP/1.1" 200 18500
+[10/Aug/2015 16:35:07] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:35:08] "GET /admin/deliver/driver/ HTTP/1.1" 200 10407
+[10/Aug/2015 16:35:08] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:35:11] "GET /admin/deliver/driver/ HTTP/1.1" 200 10407
+[10/Aug/2015 16:35:11] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:35:40] "GET /intro HTTP/1.1" 301 0
+[10/Aug/2015 16:35:40] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:35:42] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:36:12] "GET /admin/order/order/ HTTP/1.1" 200 18500
+[10/Aug/2015 16:36:12] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:36:14] "GET /admin/order/order/ HTTP/1.1" 200 18500
+[10/Aug/2015 16:36:14] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:36:16] "GET /admin/deliver/driver/ HTTP/1.1" 200 10407
+[10/Aug/2015 16:36:16] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:36:17] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:36:17] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:36:18] "GET /admin/news/news/ HTTP/1.1" 200 12870
+[10/Aug/2015 16:36:18] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:36:21] "GET /order/14391823859/ HTTP/1.1" 200 8359
+[10/Aug/2015 16:36:21] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 16:36:21] "GET /admin/poi/merchant/ HTTP/1.1" 200 15278
+[10/Aug/2015 16:36:21] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 16:36:21] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:36:21] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 16:36:22] "GET /static/images/icon/status-circle.png HTTP/1.1" 200 7420
+[10/Aug/2015 16:36:22] "GET /static/images/icon/status-gray.png HTTP/1.1" 200 8065
+[10/Aug/2015 16:36:22] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 16:36:22] "GET /static/js/pages/order.js HTTP/1.1" 200 474
+[10/Aug/2015 16:36:22] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 16:36:22] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 16:36:24] "GET /admin/station/station/ HTTP/1.1" 200 20589
+[10/Aug/2015 16:36:24] "GET /admin/jsi18n/ HTTP/1.1" 200 6538
+[10/Aug/2015 16:36:31] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 16:36:36] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:36:39] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 16:36:41] "GET /custom/ HTTP/1.1" 200 4286
+[10/Aug/2015 16:36:41] "GET /static/images/logo/thumb_%E5%89%AF%E6%9C%AC_iD9XRmk.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:36:41] "GET /static/images/logo/%E5%A4%A7%E9%B8%AD%E6%A2%A8.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:36:41] "GET /static/images/logo/%E9%98%BF%E7%94%98%E7%94%9F%E9%B2%9C.jpg HTTP/1.1" 304 0
+[10/Aug/2015 16:36:42] "GET /coop/ HTTP/1.1" 200 5027
+[10/Aug/2015 16:36:43] "GET /order/ HTTP/1.1" 200 4615
+[10/Aug/2015 16:38:07] "GET /static/images/intro/store.png HTTP/1.1" 200 479232
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[10/Aug/2015 16:38:07] "GET /static/images/intro/store.png HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 16:41:18] "GET /static/images/intro/intro.png HTTP/1.1" 200 581632
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[10/Aug/2015 16:41:18] "GET /static/images/intro/intro.png HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[10/Aug/2015 16:47:28] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 16:47:30] "GET / HTTP/1.1" 200 8018
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[10/Aug/2015 17:05:47] "GET /intro/ HTTP/1.1" 200 9275
+[10/Aug/2015 17:15:20] "GET /area/ HTTP/1.1" 200 18698
+[10/Aug/2015 21:48:23] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 21:48:23] "GET /static/css/global.css HTTP/1.1" 200 1836
+[10/Aug/2015 21:48:23] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[10/Aug/2015 21:48:23] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[10/Aug/2015 21:48:23] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[10/Aug/2015 21:48:23] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[10/Aug/2015 21:48:23] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[10/Aug/2015 21:48:23] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[10/Aug/2015 21:48:23] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[10/Aug/2015 22:11:39] "GET / HTTP/1.1" 200 8018
+[10/Aug/2015 22:12:53] "GET / HTTP/1.1" 200 8018
+Validating models...
+
+0 errors found
+August 11, 2015 - 11:55:55
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+CommandError: Usage is runserver [optional port number, or ipaddr:port]
+[11/Aug/2015 11:56:26] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 11:56:26] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 11:56:26] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[11/Aug/2015 11:56:26] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[11/Aug/2015 11:56:26] "GET /static/css/global.css HTTP/1.1" 200 1836
+[11/Aug/2015 11:56:26] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[11/Aug/2015 11:56:26] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[11/Aug/2015 11:56:26] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[11/Aug/2015 11:56:26] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[11/Aug/2015 11:56:26] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[11/Aug/2015 11:56:28] "GET /intro HTTP/1.1" 301 0
+[11/Aug/2015 11:56:28] "GET /intro/ HTTP/1.1" 200 9275
+[11/Aug/2015 11:56:28] "GET /static/js/pages/intro.js HTTP/1.1" 200 1195
+[11/Aug/2015 11:56:28] "GET /static/images/store.jpg HTTP/1.1" 200 34278
+[11/Aug/2015 11:56:28] "GET /static/images/process.png HTTP/1.1" 200 84183
+[11/Aug/2015 11:56:29] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 11:56:29] "GET /static/images/intro/intro.png HTTP/1.1" 200 707483
+[11/Aug/2015 11:56:29] "GET /static/images/intro/store.png HTTP/1.1" 200 532480
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[11/Aug/2015 11:56:29] "GET /static/images/intro/store.png HTTP/1.1" 500 59
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 651, in __init__
+    self.finish()
+  File "/usr/local/lib/python2.7/SocketServer.py", line 710, in finish
+    self.wfile.close()
+  File "/usr/local/lib/python2.7/socket.py", line 279, in close
+    self.flush()
+  File "/usr/local/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 32] Broken pipe
+[11/Aug/2015 11:56:33] "GET /admin HTTP/1.1" 301 0
+[11/Aug/2015 11:56:33] "GET /admin/ HTTP/1.1" 200 16741
+[11/Aug/2015 11:56:33] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[11/Aug/2015 11:56:33] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[11/Aug/2015 11:56:33] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[11/Aug/2015 11:56:33] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[11/Aug/2015 11:56:33] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[11/Aug/2015 11:56:33] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[11/Aug/2015 11:56:33] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[11/Aug/2015 11:56:33] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[11/Aug/2015 11:56:33] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[11/Aug/2015 11:56:33] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+[11/Aug/2015 11:56:37] "GET /admin/order/order/ HTTP/1.1" 200 18492
+[11/Aug/2015 11:56:37] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+[11/Aug/2015 11:56:37] "GET /static/suit/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 8777
+[11/Aug/2015 11:56:37] "GET /admin/order/order/ HTTP/1.1" 200 18492
+[11/Aug/2015 11:56:37] "GET /admin/jsi18n/ HTTP/1.1" 200 2372
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[11/Aug/2015 13:28:35] "GET / HTTP/1.0" 200 8018
+[11/Aug/2015 13:28:44] code 400, message Bad request version ('\xbc+\x92\xa8H\x97\xcf\xbd9\x04\xcc\x16')
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 117, in handle
+    if not self.parse_request(): # An error code has been sent, just exit
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 253, in parse_request
+    self.send_error(400, "Bad request version (%r)" % version)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 368, in send_error
+    self.send_response(code, message)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 385, in send_response
+    self.log_request(code)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 138, in log_message
+    msg = "[%s] %s\n" % (self.log_date_time_string(), format % args)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xdc in position 5: invalid continuation byte
+[11/Aug/2015 15:19:37] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 15:19:37] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/css/global.css HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/css/index2.css HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/images/logo.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[11/Aug/2015 15:19:37] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[11/Aug/2015 15:19:38] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[11/Aug/2015 15:19:53] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 15:19:58] "GET /intro?intro=2 HTTP/1.1" 301 0
+[11/Aug/2015 15:19:58] "GET /intro/?intro=2 HTTP/1.1" 200 9275
+[11/Aug/2015 15:19:58] "GET /static/images/intro/intro.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:58] "GET /static/images/process.png HTTP/1.1" 304 0
+[11/Aug/2015 15:19:58] "GET /static/images/store.jpg HTTP/1.1" 304 0
+[11/Aug/2015 15:19:58] "GET /static/images/intro/store.png HTTP/1.1" 304 0
+[11/Aug/2015 15:20:00] "GET /static/js/pages/intro.js HTTP/1.1" 304 0
+[11/Aug/2015 15:23:55] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 15:31:36] "GET /intro HTTP/1.1" 301 0
+[11/Aug/2015 15:31:36] "GET /intro/ HTTP/1.1" 200 9275
+[11/Aug/2015 16:16:15] "GET / HTTP/1.1" 200 8018
+[11/Aug/2015 16:16:25] "GET /intro HTTP/1.1" 301 0
+[11/Aug/2015 16:16:25] "GET /intro/ HTTP/1.1" 200 9275
+[11/Aug/2015 16:20:02] "GET /news/3 HTTP/1.1" 301 0
+[11/Aug/2015 16:20:02] "GET /news/3/ HTTP/1.1" 500 73343
+[11/Aug/2015 16:20:23] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:32:38] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:32:38] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:32:38] "GET /static/css/global.css HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/css/index2.css HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/js/pages/index.js HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+[12/Aug/2015 10:32:38] "GET /static/images/logo.png HTTP/1.1" 304 0
+[12/Aug/2015 10:32:39] "GET /static/images/app/qr/merchant.png HTTP/1.1" 304 0
+[12/Aug/2015 10:38:36] "GET / HTTP/1.1" 200 8018
+[12/Aug/2015 10:38:36] "GET /static/css/global.css HTTP/1.1" 200 1836
+[12/Aug/2015 10:38:36] "GET /static/css/index2.css HTTP/1.1" 200 1340
+[12/Aug/2015 10:38:36] "GET /static/images/logo.png HTTP/1.1" 200 24491
+[12/Aug/2015 10:38:36] "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 39401
+[12/Aug/2015 10:38:36] "GET /static/js/pages/index.js HTTP/1.1" 200 47
+[12/Aug/2015 10:38:36] "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 128671
+[12/Aug/2015 10:38:36] "GET /static/images/app/qr/merchant.png HTTP/1.1" 200 402
+[12/Aug/2015 10:38:36] "GET /static/bootstrap/jquery-1.11.2.min.js HTTP/1.1" 200 145822
+[12/Aug/2015 10:38:41] "GET /admin/ HTTP/1.1" 200 16759
+[12/Aug/2015 10:38:42] "GET /static/suit/js/suit.js HTTP/1.1" 200 6413
+[12/Aug/2015 10:38:42] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 15732
+[12/Aug/2015 10:38:42] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 107369
+[12/Aug/2015 10:38:42] "GET /static/suit/css/suit.css HTTP/1.1" 200 60928
+[12/Aug/2015 10:38:42] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 200 93636
+[12/Aug/2015 10:38:42] "GET /static/suit/img/bg_left_white.gif HTTP/1.1" 200 105
+[12/Aug/2015 10:38:42] "GET /static/suit/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 12799
+[12/Aug/2015 10:38:42] "GET /static/suit/img/glyphicons-halflings-white-nav.png HTTP/1.1" 200 40145
+[12/Aug/2015 10:38:42] "GET /static/suit/img/cc_active_nav.png HTTP/1.1" 200 432
+[12/Aug/2015 10:38:42] "GET /static/suit/img/glyphicons-halflings-white-shadow.png HTTP/1.1" 200 27257
+Validating models...
+
+0 errors found
+August 11, 2015 - 11:56:09
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('114.253.251.39', 50675)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.70', 27636)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.65', 31013)
+----------------------------------------
+Validating models...
+
+0 errors found
+August 12, 2015 - 12:51:05
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 116, in handle
+    self.raw_requestline = self.rfile.readline()
+  File "/usr/local/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[12/Aug/2015 13:17:29] "GET / HTTP/1.0" 200 8018
+[12/Aug/2015 13:17:35] code 400, message Bad request version ('\xbc+\x92\xa8H\x97\xcf\xbd9\x04\xcc\x16')
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/SocketServer.py", line 593, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 126, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/SocketServer.py", line 649, in __init__
+    self.handle()
+  File "/usr/local/lib/python2.7/wsgiref/simple_server.py", line 117, in handle
+    if not self.parse_request(): # An error code has been sent, just exit
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 253, in parse_request
+    self.send_error(400, "Bad request version (%r)" % version)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 368, in send_error
+    self.send_response(code, message)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 385, in send_response
+    self.log_request(code)
+  File "/usr/local/lib/python2.7/BaseHTTPServer.py", line 422, in log_request
+    self.requestline, str(code), str(size))
+  File "/root/code/.virtualenvs/gl/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 138, in log_message
+    msg = "[%s] %s\n" % (self.log_date_time_string(), format % args)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xdc in position 5: invalid continuation byte
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:05:26
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.66', 20660)
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('115.239.212.68', 23723)
+----------------------------------------
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:20:57
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:21:50
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[12/Aug/2015 13:40:01] "GET /admin/ HTTP/1.1" 200 16759
+[12/Aug/2015 13:40:01] "GET /static/suit/css/suit.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/js/suit.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:06] "GET /admin/ HTTP/1.1" 200 16759
+[12/Aug/2015 13:40:07] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/css/suit.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/js/suit.js HTTP/1.1" 404 2664
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:31:35
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:40:32
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.

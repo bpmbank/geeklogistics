@@ -25,11 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'titww8r+_p*po$rqytl&$z5c_ncp!1im(dno+=a5a!14v_1=_='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 FILE_CHARSET = 'utf-8'
 DEFAULT_CHARSET = 'utf-8'
@@ -156,11 +156,18 @@ CKEDITOR_CONFIGS = {
     },
 }
 STATICFILES_DIRS = (
-    ("css", os.path.join(STATIC_ROOT, 'css')),
-    ("js", os.path.join(STATIC_ROOT, 'js')),
-    ("images", os.path.join(STATIC_ROOT, 'images')),
-    ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
-    ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
+   ("css", os.path.join(STATIC_ROOT, 'css')),
+   ("js", os.path.join(STATIC_ROOT, 'js')),
+   ("images", os.path.join(STATIC_ROOT, 'images')),
+   ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
+   ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
+)
 
+STATICFILES_FINDERS = (
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder"
+)
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
 )
 STATIC_URL = '/static/'
