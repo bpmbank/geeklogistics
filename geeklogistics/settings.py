@@ -156,11 +156,11 @@ CKEDITOR_CONFIGS = {
     },
 }
 STATICFILES_DIRS = (
-    ("css", os.path.join(STATIC_ROOT, 'css')),
-    ("js", os.path.join(STATIC_ROOT, 'js')),
-    ("images", os.path.join(STATIC_ROOT, 'images')),
-    ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
-    ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
+   ("css", os.path.join(STATIC_ROOT, 'css')),
+   ("js", os.path.join(STATIC_ROOT, 'js')),
+   ("images", os.path.join(STATIC_ROOT, 'images')),
+   ("bootstrap", os.path.join(STATIC_ROOT, 'bootstrap')),
+   ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
 )
 
 STATICFILES_FINDERS = (

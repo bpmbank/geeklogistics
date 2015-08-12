@@ -2521,3 +2521,36 @@ August 12, 2015 - 13:20:57
 Django version 1.6.10, using settings 'geeklogistics.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:21:50
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[12/Aug/2015 13:40:01] "GET /admin/ HTTP/1.1" 200 16759
+[12/Aug/2015 13:40:01] "GET /static/suit/css/suit.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:01] "GET /static/suit/js/suit.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:06] "GET /admin/ HTTP/1.1" 200 16759
+[12/Aug/2015 13:40:07] "GET /static/suit/js/jquery-1.8.3.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/css/suit.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/bootstrap/js/bootstrap.min.js HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/bootstrap/css/bootstrap.min.css HTTP/1.1" 404 2664
+[12/Aug/2015 13:40:07] "GET /static/suit/js/suit.js HTTP/1.1" 404 2664
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:31:35
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Validating models...
+
+0 errors found
+August 12, 2015 - 13:40:32
+Django version 1.6.10, using settings 'geeklogistics.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
