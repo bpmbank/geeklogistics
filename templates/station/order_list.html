@@ -21,6 +21,7 @@
                     <th>#</th>
                     <th>订单编号</th>
                     <th>配送编号</th>
+                    <th>收货人</th>
                     <th>商家名称</th>
                     <th>取货地址</th>
                     <th>商家电话</th>
@@ -33,6 +34,7 @@
                         <th scope="row">{{ start_index|add:forloop.counter0 }}</th>
                         <td>{{ order.order_detail.order_id|default_if_none:"未填写" }}</td>
                         <td><a href="/order/{{ order.deliver_id }}">{{ order.deliver_id }}</a></td>
+                        <td>{{ order.order_detail.customer_name }}</td>
                         <td>{{ order.order_detail.name }}</td>
                         <td>{{ order.order_detail.address }}</td>
                         <td>{{ order.order_detail.phone }}</td>
