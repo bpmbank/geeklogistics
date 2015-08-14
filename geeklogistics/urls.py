@@ -61,3 +61,9 @@ urlpatterns = patterns('',
                        url(r'^m/static/(?P<path>.*)$', 'django.views.static.serve',
                            {'document_root': settings.M_MEDIA_SITE})
                        )
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+             (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes':True}),
+         )
+

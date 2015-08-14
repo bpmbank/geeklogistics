@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'titww8r+_p*po$rqytl&$z5c_ncp!1im(dno+=a5a!14v_1=_='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = False
 
@@ -79,7 +79,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'geeklogistics.urls'
 
-WSGI_APPLICATION = 'geeklogistics.wsgi.application'
+# WSGI_APPLICATION = 'geeklogistics.wsgi.application'
 
 
 # Database
